@@ -36,8 +36,9 @@ def get_block_details(block_tuple):
 
             response_str = str(response.read())
             # print(response_str)
-            timestamp = int(response_str[response_str.find('"timestamp"') + 13:][0:response_str[response_str.find('"timestamp"') + 13:].find('"')], 16)
-            block_timestamps_map[current_block] = datetime.fromtimestamp(timestamp / 1000.0)
+            # timestamp = int(response_str[response_str.find('"timestamp"') + 13:][0:response_str[response_str.find('"timestamp"') + 13:].find('"')], 16)
+            # block_timestamps_map[current_block] = datetime.fromtimestamp(timestamp / 1000.0)
+            block_timestamps_map[current_block] = response_str
 
             current_block += 1
             if current_block % 100000 == 0:
