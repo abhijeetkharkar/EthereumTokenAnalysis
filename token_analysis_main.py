@@ -16,7 +16,7 @@ if __name__ == "__main__":
         elif instruction == "block_details":
             earliest_block = 3788557
             latest_block = 6638613
-            process_count = 4
+            process_count = 1
 
             input_list = list()
             size = latest_block - earliest_block + 1
@@ -33,4 +33,4 @@ if __name__ == "__main__":
             block_timestamps_dump = open("pickled_objects/block_timestamps_map", "wb")
             pickle.dump(chunks, block_timestamps_dump)
 
-            # ebt.get_block_details()
+            # ebt.get_block_details((1, 2))
