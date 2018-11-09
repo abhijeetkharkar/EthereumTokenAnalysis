@@ -45,6 +45,9 @@ def get_block_details(block_tuple):
             current_block += 1
         except ConnectionError:
             pass
+        except:
+            sys.stdout.write("\n")
+            raise
 
     # print(block_timestamps_map)
 
@@ -60,7 +63,7 @@ def send_request(req, current_block, data, block_timestamps_map):
     # print("%r" % response.json())
     block_details = response.json()["result"]
 
-    sys.stdout.write("Block: %s\r" % current_block)
+    sys.stdout.write("\rBlock: %s" % current_block)
 
     # if current_block == 4643576:
     #     print("Response:", response)
