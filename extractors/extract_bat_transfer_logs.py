@@ -1,7 +1,10 @@
 import urllib.request
 import json
-from config_files import config
+from utilities import config
 import pickle
+import time
+import sys
+import os
 
 
 def get_bat_transfer_logs():
@@ -41,28 +44,34 @@ def get_bat_transfer_logs():
                 row = ""
                 event_data = {}
                 for key in events.keys():
-                    if key.strip() == "topics":
-                        row += events.get(key)[1].strip() + ","
-                        event_data[key.strip()] = events.get(key)[1].strip()
-                    elif key.strip() == "removed":
-                        pass
-                    else:
-                        # print(key.strip())
-                        if key.strip() == "data":
-                            row += str(int(events.get(key), 16) / 10**18) + ","
-                            event_data[key.strip()] = int(events.get(key), 16) / 10**18
-                        else:
-                            row += events.get(key).strip() + ","
-                            event_data[key.strip()] = events.get(key)[1].strip()
+                    if key.strip() != "removed":
+                        event_data[key.strip()] = events.get(key)
+
+                    # if key.strip() == "topics":
+                    #     row += events.get(key)[1].strip() + ","
+                    #     event_data[key.strip()] = events.get(key)[1].strip()
+                    # elif key.strip() == "removed":
+                    #     pass
+                    # else:
+                    #     # print(key.strip())
+                    #     if key.strip() == "data":
+                    #         row += str(int(events.get(key), 16) / 10**18) + ","
+                    #         event_data[key.strip()] = int(events.get(key), 16) / 10**18
+                    #     else:
+                    #         row += events.get(key).strip() + ","
+                    #         event_data[key.strip()] = events.get(key)[1].strip()
                 # row = row[:-1]
                 # print(row)
                 events_list.append(event_data)
                 # events_csv.write(row+"\n")
+
             earliest_block += 50001
             counter += 1
             index_after_last_pass = len(events_list)
         except ConnectionError:
             events_list = events_list[0:index_after_last_pass]
+    print("Total Transactions:", len(events_list), ", Size(in MB):", sys.getsizeof(events_list) / 1024.0 / 1024.0)
+    os.system("vmstat")
+    # time.sleep(120)
     bat_transfer_events_dump = open("pickled_objects/bat_transfer_events_list", "wb")
     pickle.dump(events_list, bat_transfer_events_dump)
-    print("Total Transactions:", len(events_list))
