@@ -1,4 +1,5 @@
 .idea
 env
 *.pyc
-pickled_objects/block_timestamps_map*
+pickled_objects/*
+db/*
