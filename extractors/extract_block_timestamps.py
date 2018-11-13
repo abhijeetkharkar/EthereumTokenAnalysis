@@ -1,6 +1,6 @@
 import urllib.request
 import json
-from config_files import config
+from utilities import config
 from datetime import datetime
 import multiprocessing
 import contextlib
