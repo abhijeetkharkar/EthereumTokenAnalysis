@@ -2,7 +2,7 @@ import sqlite3
 from sqlite3 import Error
 
 
-def create_transfer_events_table(db_file="db/bat_details.sqlite"):
+def create_transfer_events_table(db_file="db/blockchain.db"):
     try:
         conn = sqlite3.connect(db_file)
         c = conn.cursor()
@@ -12,7 +12,8 @@ def create_transfer_events_table(db_file="db/bat_details.sqlite"):
     except Error:
         raise
 
-def create_create_events_table(db_file="db/bat_details.sqlite"):
+
+def create_create_events_table(db_file="db/blockchain.db"):
     try:
         conn = sqlite3.connect(db_file)
         c = conn.cursor()
@@ -23,7 +24,7 @@ def create_create_events_table(db_file="db/bat_details.sqlite"):
         raise
 
 
-def create_block_details_table(db_file="db/bat_details.sqlite"):
+def create_block_details_table(db_file="db/blockchain.db"):
     try:
         conn = sqlite3.connect(db_file)
         c = conn.cursor()
@@ -34,7 +35,7 @@ def create_block_details_table(db_file="db/bat_details.sqlite"):
         raise
 
 
-def drop_table(table_name, db_file="db/bat_details.sqlite"):
+def drop_table(table_name, db_file="db/blockchain.db"):
     try:
         conn = sqlite3.connect(db_file)
         c = conn.cursor()
@@ -45,7 +46,7 @@ def drop_table(table_name, db_file="db/bat_details.sqlite"):
         raise
 
 
-def truncate_table(table_name, db_file="db/bat_details.sqlite"):
+def truncate_table(table_name, db_file="db/blockchain.db"):
     try:
         conn = sqlite3.connect(db_file)
         c = conn.cursor()
@@ -56,7 +57,7 @@ def truncate_table(table_name, db_file="db/bat_details.sqlite"):
         raise
 
 
-def show_tables(db_file="db/bat_details.sqlite"):
+def show_tables(db_file="db/blockchain.db"):
     try:
         conn = sqlite3.connect(db_file)
         c = conn.cursor()
@@ -68,7 +69,7 @@ def show_tables(db_file="db/bat_details.sqlite"):
         raise
 
 
-def insert_records_batch(table_name, data, columns, db_file="db/bat_details.sqlite"):
+def insert_records_batch(table_name, data, columns, db_file="db/blockchain.db"):
     count = 0
 
     try:
@@ -91,6 +92,47 @@ def insert_records_batch(table_name, data, columns, db_file="db/bat_details.sqli
         raise
 
 
+def select_records(is_query, arguments,db_file="db/blockchain.db"):
+    """
+    :param is_query:    True if a direct query is being sent. False if arguments are being passed to build a query.
+    :param arguments:   A dictionary containing a key "query" if is_query = True.
+                        If is_query = False, then the dictionary should contain keys like selectors (default: *), is_where_clause (True = where clause present), where_clause_params (where clause params in plain string)
+    :param db_file:     Default value is "db/blockchain.db". Pass a path to any other sqlite file of your choice.
+    :return:            List of tuples
+    """
+    try:
+        conn = sqlite3.connect(db_file)
+        c = conn.cursor()
+
+        c.execute('BEGIN TRANSACTION')
+
+        if is_query:
+            if "query" not in arguments:
+                raise ValueError("Key 'query' absent in arguments")
+            else:
+                query = arguments.get("query")
+        else:
+            if "selectors" not in arguments:
+                selectors = "*"
+            else:
+                selectors = str(arguments.get("selectors"))[1:-1]
+            if "is_where_clause" not in arguments and not arguments.get("is_where_clause"):
+                query = "SELECT " + selectors + " FROM " + arguments.get("table_name")
+            elif arguments.get("is_where_clause") and "where_clause_params" not in arguments:
+                raise ValueError("Params required for the where clause")
+            else:
+                query = "SELECT " + selectors + " FROM " + arguments.get("table_name") + " WHERE " + arguments.get("where_clause_params")
+
+        c.execute(query)
+        rows = c.fetchall()
+
+        c.execute('COMMIT')
+        conn.close()
+        return rows
+    except Error:
+        raise
+
+
 # UPDATE QUERIES:
 # UPDATE CREATE_EVENTS
 # SET TIMESTAMP = (SELECT TIMESTAMP FROM BLOCK WHERE BLOCK.BLOCKNUMBER = CREATE_EVENTS.BLOCK_NUMBER)
@@ -99,7 +141,7 @@ def insert_records_batch(table_name, data, columns, db_file="db/bat_details.sqli
 
 if __name__ == "__main__":
     db_file_main = "../db/blockchain.db"
-    operation = 4
+    operation = 5
     if operation == 1:
         create_transfer_events_table(db_file_main)
     elif operation == 2:
