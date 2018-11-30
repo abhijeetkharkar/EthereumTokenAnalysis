@@ -2,15 +2,17 @@ from extractors import extract_bat_transfer_logs as ebtl
 from extractors import extract_block_timestamps as ebt
 from extractors import extract_bat_create_logs as ebcl
 from utilities import config
+from utilities import misc_operations
 from multiprocessing import Pool
 import pickle
 from dao import load_data
+from analyzers import analyze_bat_transfer_logs as abtl
 
 
 if __name__ == "__main__":
     config.init()
-    mode = "load"
-    instruction = "bat_transfer_events"
+    mode = "analyze"
+    instruction = "check_path"
 
     if mode == "extraction":
         if instruction == "bat_transfer_events":
@@ -18,8 +20,9 @@ if __name__ == "__main__":
         elif instruction == "bat_create_events":
             ebcl.get_bat_create_logs()
         elif instruction == "block_details":
-            batches = [(3788557, 4073562), (4073562, 4358568), (4358568, 4643574), (4643574, 4928579), (4928579, 5213585),
-                       (5213585, 5300000), (5300000, 5400000), (5400000, 5498591), (5498591, 5783596), (5783596, 6068602), (6068602, 6353608), (6353608, 6638615)]
+            batches = [(3788557, 4073562), (4073562, 4358568), (4358568, 4643574), (4643574, 4928579),
+                       (4928579, 5213585), (5213585, 5300000), (5300000, 5400000), (5400000, 5498591),
+                       (5498591, 5783596), (5783596, 6068602), (6068602, 6353608), (6353608, 6638615)]
             # earliest_block = 3788557
             current_batch = 5
             earliest_block = batches[current_batch][0]
@@ -48,3 +51,19 @@ if __name__ == "__main__":
             load_data.load_bat_transfers()
         elif instruction == "bat_create_events":
             load_data.load_bat_create_events()
+    elif mode == "analyze":
+        if instruction == "graph_generation":  # One time generation as a pickle object is created and stored for future use
+            abtl.generate_graph()
+        elif instruction == "bfs_tree":
+            abtl.get_bfs_tree_level_nodes(3, '0x000000000000000000000000ce8d78428f969e3f2437e274f5068c0e2344be36')
+        elif instruction == "strongly_connected_components_evolution_analysis":
+            abtl.generate_component_evolution_graphs_per_month()
+        elif instruction == "transaction_analysis":
+            abtl.generate_transaction_plots()
+        elif instruction == "degree_analysis":
+            abtl.generate_indegree_outdegree_plots()
+        elif instruction == "betweenness_centrality_analysis":
+            abtl.generate_betweenness_centrality_plots()
+        elif instruction == "check_path":
+            abtl.is_there_a_path(source="0x00000000000000000000000088e2efac3d2ef957fcd82ec201a506871ad06204",
+                                 destination="0x0000000000000000000000007a5e4424bf67acc5ec6751f79aebd7ec9b896cd3")
