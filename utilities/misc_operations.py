@@ -20,7 +20,7 @@ def dump_load_pickle_object(action="", filename="", data=""):
 
 
 # Plotting Function
-def plot_basic_line_chart(x_data, y_data, title, x_label, y_label, save="Y", show="N", date=False):
+def plot_basic_line_chart(x_data, y_data, title, x_label, y_label, save="Y", show="N", date=False, x_label_font_size=8):
     colors = ['b', 'g', 'r', 'c', 'm', 'y']
     plt.figure(figsize=(20, 9), dpi=100)
     plt.style.use("ggplot")
@@ -34,14 +34,14 @@ def plot_basic_line_chart(x_data, y_data, title, x_label, y_label, save="Y", sho
     plt.xlabel(x_label, fontsize=12)
     plt.ylabel(y_label, fontsize=12)
     plt.axis([min(x_data), max(x_data), min(y_data), max(y_data)])
-    plt.xticks(rotation=90, fontsize=8)
+    plt.xticks(rotation=90, fontsize=x_label_font_size)
     if save == "Y":
         plt.savefig("output/plots/" + title.replace('/', '') + ".png", dpi=500, bbox_inches='tight')
     if show == "Y":
         plt.show()
 
 
-def plot_multiple_lines_chart(data_map, title, x_label, y_label, save="Y", show="N", date=False):
+def plot_multiple_lines_chart(data_map, title, x_label, y_label, save="Y", show="N", date=False, x_label_font_size=8):
     colors = ['b', 'g', 'r', 'c', 'm', 'y']
     plt.figure(figsize=(20, 9), dpi=100)
     plt.style.use("ggplot")
@@ -76,7 +76,7 @@ def plot_multiple_lines_chart(data_map, title, x_label, y_label, save="Y", show=
     plt.ylabel(y_label, fontsize=12)
     if date:
         plt.axis([x_min, x_max, y_min, y_max])
-    plt.xticks(rotation=90, fontsize=8)
+    plt.xticks(rotation=90, fontsize=x_label_font_size)
     plt.legend()
     if save == "Y":
         plt.savefig("output/plots/" + title.replace('/', '') + ".png", dpi=500, bbox_inches='tight')

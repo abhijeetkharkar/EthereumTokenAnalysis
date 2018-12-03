@@ -12,7 +12,7 @@ from analyzers import analyze_bat_transfer_logs as abtl
 if __name__ == "__main__":
     config.init()
     mode = "analyze"
-    instruction = "check_path"
+    instruction = "average_distance_computation"
 
     if mode == "extraction":
         if instruction == "bat_transfer_events":
@@ -53,7 +53,7 @@ if __name__ == "__main__":
             load_data.load_bat_create_events()
     elif mode == "analyze":
         if instruction == "graph_generation":  # One time generation as a pickle object is created and stored for future use
-            abtl.generate_graph()
+            abtl.generate_graph_nx()
         elif instruction == "bfs_tree":
             abtl.get_bfs_tree_level_nodes(3, '0x000000000000000000000000ce8d78428f969e3f2437e274f5068c0e2344be36')
         elif instruction == "strongly_connected_components_evolution_analysis":
@@ -66,4 +66,8 @@ if __name__ == "__main__":
             abtl.generate_betweenness_centrality_plots()
         elif instruction == "check_path":
             abtl.is_there_a_path(source="0x00000000000000000000000088e2efac3d2ef957fcd82ec201a506871ad06204",
-                                 destination="0x0000000000000000000000007a5e4424bf67acc5ec6751f79aebd7ec9b896cd3")
+                                 destination="0x000000000000000000000000fb0ee19f427a09d28efe23b73c3e95c8789df9b7")
+        elif instruction == "average_distance_computation":
+            abtl.generate_average_distance_of_scc_from_brave()
+        elif instruction == "create_gephi_graph":
+            abtl.create_gephi_graph()

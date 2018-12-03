@@ -2,26 +2,24 @@ from utilities import db_operations
 from utilities import misc_operations
 import networkx as nx
 from datetime import datetime
-from time import time
-from datetime import date
 from datetime import timedelta
 import matplotlib.dates
 import operator
+import numpy as np
+import os
+import sys
 
 
 def generate_graph_nx(limit="ALL"):
     print("Graph generation started", str(datetime.today()))
-    query = "SELECT FROM_ADDRESS, TO_ADDRESS, TIMESTAMP, DATA_FLOAT FROM TRANSFER_EVENTS WHERE LOG"
+    query = "SELECT FROM_ADDRESS, TO_ADDRESS, TIMESTAMP, DATA_FLOAT FROM TRANSFER_EVENTS"
     if limit == "ALL":
         records = db_operations.select_records(True, {"query": query})
     else:
         records = db_operations.select_records(True, {"query": query + " LIMIT " + str(limit)})
-    bat_transfer_graph = nx.Graph()
+    directed_bat_transfer_graph = nx.DiGraph()
     for record in records:
-        bat_transfer_graph.add_edge(record[0], record[1], weight=(record[2], record[3]))
-    # print(bat_transfer_graph.number_of_nodes())
-    # print(list(nx.bfs_edges(bat_transfer_graph, "0x00000000000000000000000088e2efac3d2ef957fcd82ec201a506871ad06204")))
-    directed_bat_transfer_graph = nx.DiGraph(bat_transfer_graph)
+        directed_bat_transfer_graph.add_edge(record[0], record[1], weight=(record[2], record[3]))
     misc_operations.dump_load_pickle_object("dump", "pickled_objects/transfer_events_graph_nx", directed_bat_transfer_graph)
     print("Graph generation ended", str(datetime.today()))
 
@@ -106,27 +104,41 @@ def get_bfs_tree_level_nodes(level=0, root="0x00000000000000000000000088e2efac3d
 def generate_component_evolution_graphs_per_month(seed_date="2017-05-29"):
     print("Component Analysis started", str(datetime.today()))
     current_date = datetime.strptime(seed_date, "%Y-%m-%d")
-    end_date = datetime.strptime("2018-10-11", "%Y-%m-%d")
+    end_date = datetime.strptime("2018-11-09", "%Y-%m-%d")
     # end_date = datetime.strptime("2017-07-28", "%Y-%m-%d")
     x_data = []
     number_of_scc = []
     component_size_range = {"Size 1": [], "Size 2 - 10": [], "Size 11 - 100": [], "Size 101 - 1000": [],
                             "Size 1001 - 10000": [], "Size >10000": []}
     largest_sccs = []
-    while current_date < end_date:
+    node_list_as_time_progresses = []
+    max_size_node_list = 0
+    while True:
         # query = "SELECT FROM_ADDRESS, TO_ADDRESS, TIMESTAMP, DATA_FLOAT FROM TRANSFER_EVENTS WHERE TIMESTAMP BETWEEN " \
         #         + str(current_date.timestamp()) + " AND " + str((current_date + timedelta(weeks=4)).timestamp())
         query = "SELECT FROM_ADDRESS, TO_ADDRESS, TIMESTAMP, DATA_FLOAT FROM TRANSFER_EVENTS WHERE TIMESTAMP < " + str((current_date + timedelta(weeks=4)).timestamp())
         records = db_operations.select_records(True, {"query": query})
-        # print(query)
-        bat_transfer_graph = nx.Graph()
+
+        directed_bat_transfer_graph = nx.DiGraph()
         for record in records:
-            bat_transfer_graph.add_edge(record[0], record[1], weight=(record[2], record[3]))
-        directed_bat_transfer_graph = nx.DiGraph(bat_transfer_graph)
+            directed_bat_transfer_graph.add_edge(record[0], record[1], weight=(record[2], record[3]))
+        # directed_bat_transfer_graph = nx.DiGraph(bat_transfer_graph)
         scc = [component for component in nx.strongly_connected_component_subgraphs(directed_bat_transfer_graph)]
+
+        # directed_bat_transfer_graph = nx.DiGraph()
+        # directed_bat_transfer_graph.add_edge('b', 'a')
+        # directed_bat_transfer_graph.add_edge('a', 'c')
+        # directed_bat_transfer_graph.add_edge('c', 'd')
+        # directed_bat_transfer_graph.add_edge('d', 'b')
+        # directed_bat_transfer_graph.add_edge('c', 'b')
+        # directed_bat_transfer_graph.add_node('e')
+        # directed_bat_transfer_graph.add_node('f')
+        # scc = [component for component in nx.strongly_connected_component_subgraphs(directed_bat_transfer_graph)]
+
         x_data.append(datetime.strftime(current_date + timedelta(weeks=4), "%Y-%m-%d"))
         number_of_scc.append(len(scc))
 
+        # Binning
         bin_1 = 0
         bin_2 = 0
         bin_3 = 0
@@ -151,19 +163,6 @@ def generate_component_evolution_graphs_per_month(seed_date="2017-05-29"):
             if len(component.nodes) > max_size:
                 max_size = len(component.nodes)
 
-        sub_graphs = [sg for sg in scc]
-        top_5_scc_size = [len(sub_graph.nodes) for sub_graph in sub_graphs]
-        top_5_scc_size.sort(reverse=True)
-        degree_distribution_each_sub_graph_sorted_by_degree = [sorted(sg.degree, key=lambda x: x[1], reverse=True) for sg in sub_graphs]
-        degree_distribution_each_sub_graph_sorted_by_degree.sort(key=lambda x: -len(x))
-        # highest_degree_node_in_each_scc = [degree_distribution[0][0] for degree_distribution in
-        # [sorted(sg.degree, key=lambda x: x[1], reverse=True) for sg in components_sg]]
-        top_5_largest_components_with_highest_degree_node_in_them = [component[0] for component in degree_distribution_each_sub_graph_sorted_by_degree[0:5]]
-
-        largest_sccs.append(top_5_scc_size[0])
-
-        print("Highest Degree Nodes in Top 5 Largest SCC till", datetime.strftime((current_date + timedelta(weeks=4)), "%Y-%m-%d"), ":\n", top_5_scc_size[0:5], "\n", top_5_largest_components_with_highest_degree_node_in_them)
-
         component_size_range.get("Size 1").append(bin_1)
         component_size_range.get("Size 2 - 10").append(bin_2)
         component_size_range.get("Size 11 - 100").append(bin_3)
@@ -171,7 +170,66 @@ def generate_component_evolution_graphs_per_month(seed_date="2017-05-29"):
         component_size_range.get("Size 1001 - 10000").append(bin_5)
         component_size_range.get("Size >10000").append(bin_6)
 
-        current_date = current_date + timedelta(weeks=4)
+        sub_graphs = [sg for sg in scc]
+
+        # Size of the Largest SCC
+        top_5_scc_size = [len(sub_graph.nodes) for sub_graph in sub_graphs]
+        top_5_scc_size.sort(reverse=True)
+        largest_sccs.append(top_5_scc_size[0])
+
+        # Top-5 Largest SCCs with Top-5 highest degree nodes in them (degree = in_degree + out_degree + in_degree * out_degree)
+        degree_distribution_each_sub_graph_sorted_by_degree = list()
+        for sg in sub_graphs:
+            in_degree_list = list(sg.in_degree)
+            out_degree_list = list(sg.out_degree)
+            in_degree_list = sorted(in_degree_list, key=lambda x: x[0])
+            out_degree_list = sorted(out_degree_list, key=lambda x: x[0])
+            # for i in range(len(in_degree_list)):
+            #     if in_degree_list[i][1] != out_degree_list[i][1]:
+            #         raise ValueError("Good")
+            sg_degree_recomputed = list()
+
+            for index in range(len(in_degree_list)):
+                node = in_degree_list[index][0]
+                in_degree = in_degree_list[index][1]
+                out_degree = out_degree_list[index][1]
+                sg_degree_recomputed.append((node, in_degree + out_degree + in_degree * out_degree, in_degree, out_degree))
+
+            sg_degree_recomputed = sorted(sg_degree_recomputed, key=lambda x: x[1], reverse=True)
+            # print(len(sg.nodes), ":::::", sg_degree_recomputed)
+            degree_distribution_each_sub_graph_sorted_by_degree.append(sg_degree_recomputed)
+
+        degree_distribution_each_sub_graph_sorted_by_degree.sort(key=lambda x: -len(x))
+
+        top_5_largest_components_with_top_5_highest_degree_nodes_in_them = [component[0:5] for component in degree_distribution_each_sub_graph_sorted_by_degree[0:5]]
+
+        print("Highest Degree Nodes in Top 5 Largest SCC till", datetime.strftime((current_date + timedelta(weeks=4)), "%Y-%m-%d"), ":\n", top_5_scc_size[0:5], "\n", top_5_largest_components_with_top_5_highest_degree_nodes_in_them)
+
+        # Intersection of Sets of Nodes involved in top few SCC excluding the astronomical SCC
+        sub_graphs_sorted = sorted(sub_graphs, key=lambda x: len(x.nodes), reverse=True)[1:]
+        node_limit = 200
+        total_nodes = 0
+        node_list = []
+        for sg in sub_graphs_sorted:
+            nodes = list(sg.nodes)
+            total_nodes += len(nodes)
+            node_list.extend(nodes)
+            if total_nodes > node_limit:
+                break
+        node_list_as_time_progresses.append(set(node_list))
+        if max_size_node_list < len(node_list):
+            max_size_node_list = len(node_list)
+
+        percent_similarity = len(set.intersection(*node_list_as_time_progresses)) / max_size_node_list * 100
+        print("Percent Similarity In Smaller Components:", percent_similarity)
+
+        # Calling the Average and Median Distance from Brave Calculator
+        # generate_average_distance_of_scc_from_brave(directed_bat_transfer_graph, scc, datetime.strftime(current_date + timedelta(weeks=4), "%Y-%m-%d"))
+
+        if current_date + timedelta(weeks=4) > end_date:
+            break
+        else:
+            current_date += timedelta(weeks=4)
 
     # print(component_size_range)
 
@@ -185,7 +243,89 @@ def generate_component_evolution_graphs_per_month(seed_date="2017-05-29"):
     misc_operations.plot_multiple_lines_chart(component_size_range, "Frequency_of_Bins_of_Strongly_Connected_Components v/s Date",
                                               "Date", "Frequency", date=False)
 
+    component_size_range.pop("Size 1", None)
+
+    misc_operations.plot_multiple_lines_chart(component_size_range,
+                                              "Frequency_of_Bins_of_Strongly_Connected_Components (w.o. most frequent bin) v/s Date",
+                                              "Date", "Frequency", date=False)
+
+    node_list_as_time_progresses.sort(key=lambda x: len(x), reverse=True)
+    percent_similarity = len(set.intersection(*node_list_as_time_progresses)) / len(node_list_as_time_progresses[0]) * 100
+    print("Node List:", node_list_as_time_progresses)
+    # print("Max(sorted):", len(node_list_as_time_progresses[0]), "|", "Max(variable):", max_size_node_list)
+    print("Percent Similarity In Smaller Components:", percent_similarity)
+
     print("Component Analysis ended", str(datetime.today()))
+
+
+def generate_average_distance_of_scc_from_brave(seed_date="2017-05-29"):
+    print("Avg. Distance Computation started", str(datetime.today()))
+
+    current_date = datetime.strptime(seed_date, "%Y-%m-%d")
+    end_date = datetime.strptime("2018-11-09", "%Y-%m-%d")
+    # end_date = datetime.strptime("2017-08-09", "%Y-%m-%d")
+
+    x_data = []
+    number_of_scc = []
+
+    while True:
+
+        query = "SELECT FROM_ADDRESS, TO_ADDRESS, TIMESTAMP, DATA_FLOAT FROM TRANSFER_EVENTS WHERE TIMESTAMP < " + str((current_date + timedelta(weeks=4)).timestamp())
+        records = db_operations.select_records(True, {"query": query})
+
+        directed_bat_transfer_graph = nx.DiGraph()
+        for record in records:
+            directed_bat_transfer_graph.add_edge(record[0], record[1], weight=(record[2], record[3]))
+
+        sccs = [component for component in nx.strongly_connected_component_subgraphs(directed_bat_transfer_graph)]
+        sccs.sort(key=lambda x: len(x.nodes), reverse=True)
+
+        x_data.append(datetime.strftime(current_date + timedelta(weeks=4), "%Y-%m-%d"))
+
+        sys.stdout.write("\rCurrent Execution Date: " + datetime.strftime(current_date + timedelta(weeks=4), "%Y-%m-%d"))
+        print()
+
+        data_map = {"mean": [[], []], "median": [[], []]}
+        index = 1
+        number_ssc_less_than_6_hops_away = 0
+        for scc in sccs[1:]:
+            sys.stdout.write("\rPercent Completion: " + str(round(float(index-1)/float(len(sccs)) * 100, 3)))
+            nodes = list(scc.nodes)
+            distance_list = []
+            if "0x00000000000000000000000088e2efac3d2ef957fcd82ec201a506871ad06204" in nodes:
+                data_map.get("mean")[0].append("00")
+                data_map.get("median")[0].append("00")
+            else:
+                data_map.get("mean")[0].append(str(index))
+                data_map.get("median")[0].append(str(index))
+
+            for node in nodes:
+                if nx.has_path(directed_bat_transfer_graph, source="0x00000000000000000000000088e2efac3d2ef957fcd82ec201a506871ad06204", target=node):
+                    distance_list.append(nx.shortest_path_length(directed_bat_transfer_graph, source="0x00000000000000000000000088e2efac3d2ef957fcd82ec201a506871ad06204", target=node))
+                else:
+                    distance_list.append(10000)
+
+            for node in nodes:
+                if nx.has_path(directed_bat_transfer_graph, source="0x00000000000000000000000088e2efac3d2ef957fcd82ec201a506871ad06204", target=node) and nx.shortest_path_length(directed_bat_transfer_graph, source="0x00000000000000000000000088e2efac3d2ef957fcd82ec201a506871ad06204", target=node) < 6:
+                    number_ssc_less_than_6_hops_away += 1
+                    break
+
+            data_map.get("mean")[1].append(np.mean(distance_list))
+            data_map.get("median")[1].append(np.median(distance_list))
+            index += 1
+
+        number_of_scc.append(number_ssc_less_than_6_hops_away)
+
+        # print(data_map)
+
+        if current_date + timedelta(weeks=4) > end_date:
+            break
+        else:
+            current_date += timedelta(weeks=4)
+
+    # misc_operations.plot_multiple_lines_chart(data_map, "Average distance of SCCs from Brave till " + date, "SCC", "Hops", x_label_font_size=4)
+    misc_operations.plot_basic_bar_chart(x_data, number_of_scc, "#SCC greater than 6 Hops Away from Brave as Time progresses", "Date", "#SCC", x_label_font_size=7)
+    print("Avg. Distance Computation ended", str(datetime.today()))
 
 
 def generate_transaction_plots(limit="ALL"):
@@ -321,5 +461,26 @@ def generate_betweenness_centrality_plots():
 
 def is_there_a_path(source, destination):
     graph = misc_operations.dump_load_pickle_object("load", "pickled_objects/transfer_events_graph_nx")
-    print(nx.has_path(graph, source="0x00000000000000000000000088e2efac3d2ef957fcd82ec201a506871ad06204", target="0x0000000000000000000000007a5e4424bf67acc5ec6751f79aebd7ec9b896cd3"))
-    print(nx.shortest_path_length(graph, source="0x00000000000000000000000088e2efac3d2ef957fcd82ec201a506871ad06204", target="0x0000000000000000000000007a5e4424bf67acc5ec6751f79aebd7ec9b896cd3"))
+    check = nx.has_path(graph, source=source, target=destination)
+    print(check)
+    if check:
+        print(nx.shortest_path_length(graph, source=source, target=destination))
+
+
+def create_gephi_graph():
+    limit = "ALL"
+    query = "SELECT FROM_ADDRESS, TO_ADDRESS, TIMESTAMP, DATA_FLOAT FROM TRANSFER_EVENTS"
+    if limit == "ALL":
+        records = db_operations.select_records(True, {"query": query})
+    else:
+        records = db_operations.select_records(True, {"query": query + " LIMIT " + str(limit)})
+
+    directed_bat_transfer_graph_count = nx.DiGraph()
+    directed_bat_transfer_graph_bat = nx.DiGraph()
+    for record in records:
+        directed_bat_transfer_graph_count.add_edge(record[0], record[1], weight=1)
+        directed_bat_transfer_graph_bat.add_edge(record[0], record[1], weight=record[3])
+
+    nx.write_gexf(directed_bat_transfer_graph_count, "output/gephi/transfer_events_graph_nx_count.gexf")
+    nx.write_gexf(directed_bat_transfer_graph_bat, "output/gephi/transfer_events_graph_nx_bat.gexf")
+
