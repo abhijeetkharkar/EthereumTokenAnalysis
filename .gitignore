@@ -4,3 +4,4 @@ env
 test/test.py
 output/gephi/*
 pickled_objects/*
+db/*
