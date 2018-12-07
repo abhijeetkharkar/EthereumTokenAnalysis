@@ -85,15 +85,16 @@ def plot_multiple_lines_chart(data_map, title, x_label, y_label, save="Y", show=
 
 
 def plot_basic_bar_chart(x_axis, y_axis, title, x_label, y_label, x_label_font_size=8, save="Y", show="N"):
-    plt.figure(figsize=(20, 9), dpi=100)
+    plt.figure(figsize=(8, 6), dpi=100)
     plt.style.use("ggplot")
+    plt.tight_layout()
     plt.bar(np.arange(len(x_axis)), y_axis, align='center', alpha=0.5)
     plt.xticks(np.arange(len(x_axis)), x_axis, fontsize=10)
     plt.xlabel(x_label)
     plt.ylabel(y_label)
     plt.title(title)
-    plt.xticks(rotation=90, fontsize=x_label_font_size)
+    plt.xticks(rotation=45, fontsize=x_label_font_size)
     if save == 'Y':
-        plt.savefig("output/plots/" + title.replace('/', '') + ".png", dpi=500)
+        plt.savefig("output/plots/" + title.replace('/', '') + ".png", dpi=500, bbox_inches="tight")
     if show == 'Y':
         plt.show()
