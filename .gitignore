@@ -2,3 +2,5 @@
 env
 *.pyc
 test/test.py
+output/gephi/*
+pickled_objects/*
