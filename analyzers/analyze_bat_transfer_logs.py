@@ -8,6 +8,8 @@ import operator
 import numpy as np
 import os
 import sys
+from multiprocessing import Pool
+import multiprocessing
 
 
 def generate_graph_nx(limit="ALL"):
@@ -63,21 +65,30 @@ def get_bfs_tree_level_nodes(level=0, root="0x00000000000000000000000088e2efac3d
     #                 if len(tuples[1][0]) > 1:
     #                     print(graph[from_address])
     #                     break
-    if root not in graph:
-        raise ValueError("Invalid Root")
-    # bfs_tree_levels = bfs(graph, root)
+    if type(root) == str:
+        if root not in graph:
+            raise ValueError("Invalid Root")
+        # bfs_tree_levels = bfs(graph, root)
 
-    # unvisited_nodes => list(address)
-    unvisited_nodes = list(graph.keys())
-    unvisited_nodes.remove(root)
+        # unvisited_nodes => list(address)
+        unvisited_nodes = list(graph.keys())
+        unvisited_nodes.remove(root)
 
-    # print(unvisited_nodes.count("0x00000000000000000000000067fa2c06c9c6d4332f330e14a66bdf1873ef3d2b"))
+        # print(unvisited_nodes.count("0x00000000000000000000000067fa2c06c9c6d4332f330e14a66bdf1873ef3d2b"))
 
-    # current_level => list(tuple(tuple(address, tuple(timestamp, #bat)), parent_address))
-    current_level = [((root, (None, None)), None)]
+        # current_level => list(tuple(tuple(address, tuple(timestamp, #bat)), parent_address))
+        current_level = [((root, (None, None)), None)]
 
-    # bfs_tree_levels => list(list(tuple(tuple(address, tuple(timestamp, #bat)), parent_address)))
-    bfs_tree_levels = [[((root, (None, None)), None)]]
+        # bfs_tree_levels => list(list(tuple(tuple(address, tuple(timestamp, #bat)), parent_address)))
+        bfs_tree_levels = [[((root, (None, None)), None)]]
+    else:
+        unvisited_nodes = list(graph.keys())
+        current_level = []
+        for node in root:
+            current_level.append(((node, (None, None)), None))
+            if node in unvisited_nodes:
+                unvisited_nodes.remove(node)
+        bfs_tree_levels = [current_level]
 
     while len(unvisited_nodes) != 0:
         # print(current_level)
@@ -98,7 +109,10 @@ def get_bfs_tree_level_nodes(level=0, root="0x00000000000000000000000088e2efac3d
     for index in range(len(bfs_tree_levels)):
         print("Level", index, ":", len(bfs_tree_levels[index]))
     print("BFS Tree level nodes generation ended", str(datetime.today()))
-    return bfs_tree_levels[level]
+    if level == "ALL":
+        return bfs_tree_levels
+    else:
+        return bfs_tree_levels[level]
 
 
 def generate_component_evolution_graphs_per_month(seed_date="2017-05-29"):
@@ -222,6 +236,7 @@ def generate_component_evolution_graphs_per_month(seed_date="2017-05-29"):
 
         percent_similarity = len(set.intersection(*node_list_as_time_progresses)) / max_size_node_list * 100
         print("Percent Similarity In Smaller Components:", percent_similarity)
+        print("Intersecting Addresses:", set.intersection(*node_list_as_time_progresses))
 
         # Calling the Average and Median Distance from Brave Calculator
         # generate_average_distance_of_scc_from_brave(directed_bat_transfer_graph, scc, datetime.strftime(current_date + timedelta(weeks=4), "%Y-%m-%d"))
@@ -236,18 +251,18 @@ def generate_component_evolution_graphs_per_month(seed_date="2017-05-29"):
     for bin_name in component_size_range:
         component_size_range[bin_name] = (x_data, component_size_range.get(bin_name))
 
-    misc_operations.plot_basic_bar_chart(x_data, number_of_scc, "#Strongly_Connected_Components v/s Date", "Date", "#SCC")
+    misc_operations.plot_basic_bar_chart(x_data, number_of_scc, "#Strongly_Connected_Components v/s Date", "Date", "#SCC", x_label_font_size=7)
 
-    misc_operations.plot_basic_bar_chart(x_data, largest_sccs, "Largest_Strongly_Connected_Components v/s Date", "Date", "Size")
+    misc_operations.plot_basic_bar_chart(x_data, largest_sccs, "Largest_Strongly_Connected_Components v/s Date", "Date", "Size", x_label_font_size=7)
 
     misc_operations.plot_multiple_lines_chart(component_size_range, "Frequency_of_Bins_of_Strongly_Connected_Components v/s Date",
-                                              "Date", "Frequency", date=False)
+                                              "Date", "Frequency", date=False, x_label_font_size=7)
 
     component_size_range.pop("Size 1", None)
 
     misc_operations.plot_multiple_lines_chart(component_size_range,
                                               "Frequency_of_Bins_of_Strongly_Connected_Components (w.o. most frequent bin) v/s Date",
-                                              "Date", "Frequency", date=False)
+                                              "Date", "Frequency", date=False, x_label_font_size=7)
 
     node_list_as_time_progresses.sort(key=lambda x: len(x), reverse=True)
     percent_similarity = len(set.intersection(*node_list_as_time_progresses)) / len(node_list_as_time_progresses[0]) * 100
@@ -420,47 +435,88 @@ def generate_indegree_outdegree_plots(limit="ALL"):
 
     # print(in_degree_map_descending)
     # print(out_degree_multi_edge_merged_count_map_descending)
+
+    x_set = set()
+
     x_data = []
     y_data = []
-    for i in range(20):
-        x_data.append(in_degree_map_descending[i][0][26:36])
+    for i in range(10):
+        x_data.append(in_degree_map_descending[i][0][26:30])
         y_data.append(in_degree_map_descending[i][1])
-    misc_operations.plot_basic_bar_chart(x_data, y_data, "Top In-Degree Nodes (keeping Multi-edges)", "Address", "Degree", 6)
+        x_set.add(in_degree_map_descending[i][0])
+    misc_operations.plot_basic_bar_chart(x_data, y_data, "Top In-Degree Nodes (keeping Multi-edges)", "Address", "Degree", 12)
 
     x_data = []
     y_data = []
-    for i in range(20):
-        x_data.append(out_degree_map_descending[i][0][26:36])
+    for i in range(10):
+        x_data.append(out_degree_map_descending[i][0][26:30])
         y_data.append(out_degree_map_descending[i][1])
-    misc_operations.plot_basic_bar_chart(x_data, y_data, "Top Out-Degree Nodes (keeping Multi-edges)", "Address", "Degree", 6)
+        x_set.add(out_degree_map_descending[i][0])
+    misc_operations.plot_basic_bar_chart(x_data, y_data, "Top Out-Degree Nodes (keeping Multi-edges)", "Address", "Degree", 12)
 
     x_data = []
     y_data = []
-    for i in range(20):
-        x_data.append(in_degree_multi_edge_merged_count_map_descending[i][0][26:36])
+    for i in range(10):
+        x_data.append(in_degree_multi_edge_merged_count_map_descending[i][0][26:30])
         y_data.append(in_degree_multi_edge_merged_count_map_descending[i][1])
-    misc_operations.plot_basic_bar_chart(x_data, y_data, "Top In-Degree Nodes (merging Multi-edges)", "Address", "Degree", 6)
+        x_set.add(in_degree_multi_edge_merged_count_map_descending[i][0])
+    misc_operations.plot_basic_bar_chart(x_data, y_data, "Top In-Degree Nodes (merging Multi-edges)", "Address", "Degree", 12)
 
     x_data = []
     y_data = []
-    for i in range(20):
-        x_data.append(out_degree_multi_edge_merged_count_map_descending[i][0][26:36])
+    for i in range(10):
+        x_data.append(out_degree_multi_edge_merged_count_map_descending[i][0][26:30])
         y_data.append(out_degree_multi_edge_merged_count_map_descending[i][1])
-    misc_operations.plot_basic_bar_chart(x_data, y_data, "Top Out-Degree Nodes (merging Multi-edges)", "Address", "Degree", 6)
+        x_set.add(out_degree_multi_edge_merged_count_map_descending[i][0])
+    misc_operations.plot_basic_bar_chart(x_data, y_data, "Top Out-Degree Nodes (merging Multi-edges)", "Address", "Degree", 12)
+
+    print("Union of X-Data:")
+    [print(address) for address in x_set]
 
     print("In-Degree Out-Degree Analysis ended", str(datetime.today()))
 
 
 def generate_betweenness_centrality_plots():
-    print("Betweenness Centrality Analysis started", str(datetime.today()))
-    graph = misc_operations.dump_load_pickle_object("load", "pickled_objects/transfer_events_graph_nx")
-    betweenness_centrality = nx.betweenness_centrality(graph)
+    print("Betweenness Centrality Analysis started at", str(datetime.today()))
+    process_count = 5
+    input_list = [i for i in range(10)]
+    p = Pool(processes=process_count)
+    chunks = p.map(generate_betweenness_centrality_random_pivots, input_list)
+    p.close()
+
+    betweenness_centrality = dict()
+    for chunk in chunks:
+        for address in chunk:
+            if address in betweenness_centrality:
+                betweenness_centrality.get(address).append(chunk.get(address))
+            else:
+                betweenness_centrality[address] = [chunk.get(address)]
+
     misc_operations.dump_load_pickle_object("dump", "pickled_objects/betweenness_centrality_map", betweenness_centrality)
-    print("Betweenness Centrality Analysis ended", str(datetime.today()))
+
+    betweenness_centrality_mean = {address: np.mean(betweenness_centrality.get(address)) for address in betweenness_centrality}
+
+    betweenness_centrality = None
+
+    sorted_betweenness_centrality_mean = sorted(betweenness_centrality_mean.items(), key=lambda x: x[1], reverse=True)
+
+    for item in sorted_betweenness_centrality_mean[: 10]:
+        print(item)
+
+    print("Betweenness Centrality Analysis ended at", str(datetime.today()))
+
+
+def generate_betweenness_centrality_random_pivots(dummy):
+    print("Random Pivots started (", multiprocessing.current_process().name, ") at", str(datetime.today()))
+    graph = misc_operations.dump_load_pickle_object("load", "pickled_objects/transfer_events_graph_nx")
+    betweenness_centrality_random_pivot = nx.betweenness_centrality(graph, k=1000)
+    print("Random Pivots ended (", multiprocessing.current_process().name, ") at", str(datetime.today()))
+    return betweenness_centrality_random_pivot
 
 
 def is_there_a_path(source, destination):
     graph = misc_operations.dump_load_pickle_object("load", "pickled_objects/transfer_events_graph_nx")
+    print(len(graph.nodes))
     check = nx.has_path(graph, source=source, target=destination)
     print(check)
     if check:
