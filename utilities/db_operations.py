@@ -149,8 +149,14 @@ if __name__ == "__main__":
     elif operation == 3:
         create_block_details_table(db_file_main)
     elif operation == 4:
-        truncate_table("CREATE_EVENTS", db_file_main)
+        confirmation = input("Type YES to continue")
+        while confirmation != "YES":
+            pass
+        truncate_table("BLOCK", db_file_main)
     elif operation == 5:
         show_tables(db_file_main)
     elif operation == 6:
-        drop_table("CREATE_EVENTS", db_file_main)
+        confirmation = input("Type YES to continue")
+        while confirmation != "YES":
+            pass
+        drop_table("BLOCK", db_file_main)
