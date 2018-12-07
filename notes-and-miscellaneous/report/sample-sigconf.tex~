@@ -1,0 +1,46 @@
+\documentclass[sigconf]{acmart}
+
+\begin{document}
+
+\title{Studying an Ethereum Token: BAT}
+
+\author{Abhijeet}
+\affiliation{%
+  \institution{University of Iowa}
+  \city{Dublin}
+  \state{Ohio}
+}
+\email{trovato@corporation.com}
+
+\author{Anthony}
+\affiliation{%
+  \institution{Institute for Clarity in Documentation}
+  \city{Dublin}
+  \state{Ohio}
+}
+\email{webmaster@marysville-ohio.com}
+
+
+\begin{abstract}
+\end{abstract}
+
+
+\maketitle
+
+\section{Introduction}
+
+\section{Related Work}
+
+\section{Data}
+
+\section{Measurement}
+
+\section{Analysis}
+
+\section{Conclusion}
+
+
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{bibliography}
+
+\end{document}

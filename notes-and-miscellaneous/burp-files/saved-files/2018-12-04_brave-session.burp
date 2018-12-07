@@ -1,0 +1,698 @@
+<?xml version="1.0"?>
+<!DOCTYPE items [
+<!ELEMENT items (item*)>
+<!ATTLIST items burpVersion CDATA "">
+<!ATTLIST items exportTime CDATA "">
+<!ELEMENT item (time, url, host, port, protocol, method, path, extension, request, status, responselength, mimetype, response, comment)>
+<!ELEMENT time (#PCDATA)>
+<!ELEMENT url (#PCDATA)>
+<!ELEMENT host (#PCDATA)>
+<!ATTLIST host ip CDATA "">
+<!ELEMENT port (#PCDATA)>
+<!ELEMENT protocol (#PCDATA)>
+<!ELEMENT method (#PCDATA)>
+<!ELEMENT path (#PCDATA)>
+<!ELEMENT extension (#PCDATA)>
+<!ELEMENT request (#PCDATA)>
+<!ATTLIST request base64 (true|false) "false">
+<!ELEMENT status (#PCDATA)>
+<!ELEMENT responselength (#PCDATA)>
+<!ELEMENT mimetype (#PCDATA)>
+<!ELEMENT response (#PCDATA)>
+<!ATTLIST response base64 (true|false) "false">
+<!ELEMENT comment (#PCDATA)>
+]>
+<items burpVersion="1.7.36" exportTime="Tue Dec 04 22:45:21 CST 2018">
+  <item>
+    <time>Tue Dec 04 22:24:58 CST 2018</time>
+    <url><![CDATA[https://balance.mercury.basicattentiontoken.org/v2/wallet/ec30a106-addb-42dd-9c61-699822cc93ee/balance]]></url>
+    <host ip="52.73.9.93">balance.mercury.basicattentiontoken.org</host>
+    <port>443</port>
+    <protocol>https</protocol>
+    <method><![CDATA[GET]]></method>
+    <path><![CDATA[/v2/wallet/ec30a106-addb-42dd-9c61-699822cc93ee/balance]]></path>
+    <extension>null</extension>
+    <request base64="true"><![CDATA[R0VUIC92Mi93YWxsZXQvZWMzMGExMDYtYWRkYi00MmRkLTljNjEtNjk5ODIyY2M5M2VlL2JhbGFuY2UgSFRUUC8xLjENCkhvc3Q6IGJhbGFuY2UubWVyY3VyeS5iYXNpY2F0dGVudGlvbnRva2VuLm9yZw0KQ29ubmVjdGlvbjogY2xvc2UNClVzZXItQWdlbnQ6IE1vemlsbGEvNS4wIChYMTE7IExpbnV4IHg4Nl82NCkgQXBwbGVXZWJLaXQvNTM3LjM2IChLSFRNTCwgbGlrZSBHZWNrbykgQ2hyb21lLzcwLjAuMzUzOC43NyBTYWZhcmkvNTM3LjM2DQpBY2NlcHQtRW5jb2Rpbmc6IGd6aXAsIGRlZmxhdGUNCg0K]]></request>
+    <status>200</status>
+    <responselength>750</responselength>
+    <mimetype>JSON</mimetype>
+    <response base64="true"><![CDATA[SFRUUC8xLjEgMjAwIE9LDQpTZXJ2ZXI6IENvd2JveQ0KQ29ubmVjdGlvbjogY2xvc2UNClgtUmF0ZS1MaW1pdC1SZW1haW5pbmc6IDU5DQpYLVJhdGUtTGltaXQtTGltaXQ6IDYwDQpYLVJhdGUtTGltaXQtUmVzZXQ6IDE1NDM5ODM5NzYNCkNhY2hlLUNvbnRyb2w6IHByaXZhdGUNCkNvbnRlbnQtVHlwZTogYXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA0KVmFyeTogYWNjZXB0LWVuY29kaW5nDQpEYXRlOiBXZWQsIDA1IERlYyAyMDE4IDA0OjI1OjE2IEdNVA0KVmlhOiAxLjEgdmVndXINCkNvbnRlbnQtTGVuZ3RoOiA0NDQNCg0KeyJhbHRjdXJyZW5jeSI6IkJBVCIsInByb2JpIjoiMCIsImJhbGFuY2UiOiIwLjAwMDAiLCJ1bmNvbmZpcm1lZCI6IjAuMDAwMCIsInJhdGVzIjp7IkJUQyI6MC4wMDAwNDA0MjQ2NTI5OTg2NTksIkVUSCI6MC4wMDE0NjA1NTc5Nzc0NTc4NDksIlhSUCI6MC40NTE5Mjk5MDI1NzU2MDQ4LCJCQ0giOjAuMDAxMTA3NDE5MTQ4NDg1NDksIkxUQyI6MC4wMDUxNzMxNTE3NTA5NzI3NjMsIkRBU0giOjAuMDAxOTI0MzU2MTc0MDYyMDg3LCJCVEciOjAuMDA5ODIwMDUwMjE5Mjk0Nzc3LCJVU0QiOjAuMTU2ODQzNzc0LCJFVVIiOjAuMTM4NDYwODk5NDY4MzN9LCJwYXJhbWV0ZXJzIjp7ImFkRnJlZSI6eyJjdXJyZW5jeSI6IkJBVCIsImZlZSI6eyJCQVQiOjMwfSwiY2hvaWNlcyI6eyJCQVQiOlsyMCwzMCw1MCw4NSwxMDBdfSwicmFuZ2UiOnsiQkFUIjpbMjAsMTAwXX0sImRheXMiOjMwfX19]]></response>
+    <comment></comment>
+  </item>
+  <item>
+    <time>Tue Dec 04 22:24:58 CST 2018</time>
+    <url><![CDATA[https://ledger.mercury.basicattentiontoken.org/v2/grants?paymentId=ec30a106-addb-42dd-9c61-699822cc93ee]]></url>
+    <host ip="52.203.53.176">ledger.mercury.basicattentiontoken.org</host>
+    <port>443</port>
+    <protocol>https</protocol>
+    <method><![CDATA[GET]]></method>
+    <path><![CDATA[/v2/grants?paymentId=ec30a106-addb-42dd-9c61-699822cc93ee]]></path>
+    <extension>null</extension>
+    <request base64="true"><![CDATA[R0VUIC92Mi9ncmFudHM/cGF5bWVudElkPWVjMzBhMTA2LWFkZGItNDJkZC05YzYxLTY5OTgyMmNjOTNlZSBIVFRQLzEuMQ0KSG9zdDogbGVkZ2VyLm1lcmN1cnkuYmFzaWNhdHRlbnRpb250b2tlbi5vcmcNCkNvbm5lY3Rpb246IGNsb3NlDQpVc2VyLUFnZW50OiBNb3ppbGxhLzUuMCAoWDExOyBMaW51eCB4ODZfNjQpIEFwcGxlV2ViS2l0LzUzNy4zNiAoS0hUTUwsIGxpa2UgR2Vja28pIENocm9tZS83MC4wLjM1MzguNzcgU2FmYXJpLzUzNy4zNg0KQWNjZXB0LUVuY29kaW5nOiBnemlwLCBkZWZsYXRlDQoNCg==]]></request>
+    <status>200</status>
+    <responselength>2878</responselength>
+    <mimetype>JSON</mimetype>
+    <response base64="true"><![CDATA[SFRUUC8xLjEgMjAwIE9LDQpTZXJ2ZXI6IENvd2JveQ0KQ29ubmVjdGlvbjogY2xvc2UNClgtUmF0ZS1MaW1pdC1SZW1haW5pbmc6IDU5DQpYLVJhdGUtTGltaXQtTGltaXQ6IDYwDQpYLVJhdGUtTGltaXQtUmVzZXQ6IDE1NDM5ODM5NzYNCkNhY2hlLUNvbnRyb2w6IHByaXZhdGUNCkNvbnRlbnQtVHlwZTogYXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA0KVmFyeTogYWNjZXB0LWVuY29kaW5nDQpEYXRlOiBXZWQsIDA1IERlYyAyMDE4IDA0OjI1OjE2IEdNVA0KVmlhOiAxLjEgdmVndXINCkNvbnRlbnQtTGVuZ3RoOiAyNTcxDQoNCnsicHJvbW90aW9uSWQiOiI1MGQzZTIxYy01ZGUxLTQwNDUtYWQ4Yy0wZDcwMjFiZjBhNGIiLCJtaW5pbXVtUmVjb25jaWxlVGltZXN0YW1wIjoxNTQzMTkwNDAwMDAwLCJwcm90b2NvbFZlcnNpb24iOjIsInN0YXRlV2FsbGV0Ijp7ImRpc2FibGVkV2FsbGV0Ijp7Im5vdGlmaWNhdGlvbiI6eyJvcHRpb25zIjp7InBlcnNpc3QiOmZhbHNlLCJzdHlsZSI6ImdyZWV0aW5nU3R5bGUifSwibWVzc2FnZUFjdGlvbiI6Im9wdEluUHJvbW90aW9uIiwiZ3JlZXRpbmciOiJIZWxsbyEiLCJtZXNzYWdlIjoiUmVhZHkgdG8gc3VwcG9ydCB5b3VyIGZhdm9yaXRlIHNpdGVzPyBCcmF2ZSB3aWxsIGZpbGwgeW91ciB3YWxsZXQgd2l0aCB0b2tlbnMgdG8gZ2V0IHlvdSBzdGFydGVkISIsImJ1dHRvbnMiOlt7ImJ1dHRvbkFjdGlvbklkIjoicmVtaW5kTGF0ZXIiLCJ0ZXh0IjoiTWF5YmUgbGF0ZXIifSx7ImNsYXNzTmFtZSI6InByaW1hcnlCdXR0b24iLCJidXR0b25BY3Rpb25JZCI6Im9wdEluUHJvbW90aW9uIiwidGV4dCI6IkknbSByZWFkeSJ9XX0sInBhbmVsIjp7Im9wdGVkSW5CdXR0b24iOiJDbGFpbSBteSBmcmVlIHRva2VucyIsIm9wdEluTWFya3VwIjp7InRpdGxlIjoiQnJhdmUgaGFzIGNyZWF0ZWQgYSBzaW1wbGUgd2F5IGZvciB5b3UgdG8gY29udHJpYnV0ZSB0byB0aGUgc2l0ZXMgeW91IHVzZSBtb3N0LiIsIm1lc3NhZ2UiOlsiTm93LCBmb3IgYSBsaW1pdGVkIHRpbWUsIEJyYXZlIHdpbGwgZnVuZCB5b3VyIHdhbGxldCB3aXRoIHRva2VucyB0byBnZXQgeW91IHN0YXJ0ZWQhIiwiVG8gc3RhcnQgdXNpbmcgQnJhdmUgUGF5bWVudHMgYW5kIGFjY2VwdCB5b3VyIHRva2Vucywgc2ltcGx5IGZsaXAgdGhlIHN3aXRjaCBhdCB0aGUgdG9wIG9mIHRoaXMgd2luZG93IGFuZCB0aGVuIGNob29zZSBcIkNsYWltIG15IGZyZWUgVG9rZW5zXCIuIiwiVGhlIHJlc3QgaXMgZWFzeS4iXX0sImRpc2NsYWltZXIiOiJJZiB0aGVzZSB0b2tlbnMgYXJlIG5vdCB1c2VkIHdpdGhpbiA5MCBkYXlzIHRvIHN1cHBvcnQgY29udGVudCBjcmVhdG9ycywgdGhleSB3aWxsIGF1dG9tYXRpY2FsbHkgcmV0dXJuIHRvIHRoZSBCcmF2ZSBVc2VyIEdyb3d0aCBQb29sLiJ9fSwiZW1wdHlXYWxsZXQiOnsibm90aWZpY2F0aW9uIjp7Im9wdGlvbnMiOnsicGVyc2lzdCI6ZmFsc2UsInN0eWxlIjoiZ3JlZXRpbmdTdHlsZSJ9LCJtZXNzYWdlQWN0aW9uIjoib3B0SW5Qcm9tb3Rpb24iLCJncmVldGluZyI6IkhlbGxvISIsIm1lc3NhZ2UiOiJCcmF2ZSBpcyBvZmZlcmluZyB5b3UgZnJlZSB0b2tlbnMgdG8gZ2V0IHlvdSBzdGFydGVkIHdpdGggQnJhdmUgUGF5bWVudHMhIiwiYnV0dG9ucyI6W3siYnV0dG9uQWN0aW9uSWQiOiJyZW1pbmRMYXRlciIsInRleHQiOiJNYXliZSBsYXRlciJ9LHsiY2xhc3NOYW1lIjoicHJpbWFyeUJ1dHRvbiIsImJ1dHRvbkFjdGlvbklkIjoib3B0SW5Qcm9tb3Rpb24iLCJ0ZXh0IjoiQ2xhaW0gbXkgdG9rZW5zLi4uIn1dfSwicGFuZWwiOnsib3B0ZWRJbkJ1dHRvbiI6IkNsYWltIG15IGZyZWUgdG9rZW5zIiwic3VjY2Vzc1RleHQiOnsidGl0bGUiOiJCcmF2byEiLCJtZXNzYWdlIjoiSXQncyB5b3VyIGx1Y2t5IGRheS4gWW91ciB0b2tlbiBncmFudCBpcyBvbiBpdHMgd2F5LiJ9LCJkaXNjbGFpbWVyIjoiWW91ciBuZXcgdG9rZW5zIHdpbGwgYXBwZWFyIGluIHlvdXIgYWNjb3VudCBzaG9ydGx5LiBJZiB0aGVzZSB0b2tlbnMgYXJlIG5vdCB1c2VkIHdpdGhpbiA5MCBkYXlzIHRvIHN1cHBvcnQgY29udGVudCBjcmVhdG9ycywgdGhleSB3aWxsIGF1dG9tYXRpY2FsbHkgcmV0dXJuIHRvIHRoZSBCcmF2ZSBVc2VyIEdyb3d0aCBQb29sLiJ9fSwiZnVuZGVkV2FsbGV0Ijp7Im5vdGlmaWNhdGlvbiI6eyJvcHRpb25zIjp7InBlcnNpc3QiOmZhbHNlLCJzdHlsZSI6ImdyZWV0aW5nU3R5bGUifSwibWVzc2FnZUFjdGlvbiI6Im9wdEluUHJvbW90aW9uIiwiZ3JlZXRpbmciOiJIZWxsbyEiLCJtZXNzYWdlIjoiVGhhbmsgeW91IGZvciBiZWluZyBhIGdyZWF0IGNvbnRyaWJ1dG9yISBIZXJlIGFyZSBzb21lIEJBVCB0b2tlbnMsIG9uIHVzISIsImJ1dHRvbnMiOlt7ImJ1dHRvbkFjdGlvbklkIjoicmVtaW5kTGF0ZXIiLCJ0ZXh0IjoiTWF5YmUgbGF0ZXIifSx7ImNsYXNzTmFtZSI6InByaW1hcnlCdXR0b24iLCJidXR0b25BY3Rpb25JZCI6Im9wdEluUHJvbW90aW9uIiwidGV4dCI6IkNsYWltIG15IHRva2Vucy4uLiJ9XX0sInBhbmVsIjp7Im9wdGVkSW5CdXR0b24iOiJDbGFpbSBteSBmcmVlIHRva2VucyIsInN1Y2Nlc3NUZXh0Ijp7ImdyZWV0aW5nIjoiQnJhdm8hIiwibWVzc2FnZSI6Ikl0J3MgeW91ciBsdWNreSBkYXkuIFlvdXIgdG9rZW4gZ3JhbnQgaXMgb24gaXRzIHdheS4ifSwiZGlzY2xhaW1lciI6IllvdXIgbmV3IHRva2VucyB3aWxsIGFwcGVhciBpbiB5b3VyIGFjY291bnQgc2hvcnRseS4gSWYgdGhlc2UgdG9rZW5zIGFyZSBub3QgdXNlZCB3aXRoaW4gOTAgZGF5cyB0byBzdXBwb3J0IGNvbnRlbnQgY3JlYXRvcnMsIHRoZXkgd2lsbCBhdXRvbWF0aWNhbGx5IHJldHVybiB0byB0aGUgQnJhdmUgVXNlciBHcm93dGggUG9vbC4ifX19fQ==]]></response>
+    <comment></comment>
+  </item>
+  <item>
+    <time>Tue Dec 04 22:24:58 CST 2018</time>
+    <url><![CDATA[https://no-thanks.invalid/ListAccounts?gpsia=1&source=durations_metrics,counter:0,load_time_ms:51&json=standard]]></url>
+    <host ip="">no-thanks.invalid</host>
+    <port>443</port>
+    <protocol>https</protocol>
+    <method><![CDATA[POST]]></method>
+    <path><![CDATA[/ListAccounts?gpsia=1&source=durations_metrics,counter:0,load_time_ms:51&json=standard]]></path>
+    <extension>null</extension>
+    <request base64="true"><![CDATA[UE9TVCAvTGlzdEFjY291bnRzP2dwc2lhPTEmc291cmNlPWR1cmF0aW9uc19tZXRyaWNzLGNvdW50ZXI6MCxsb2FkX3RpbWVfbXM6NTEmanNvbj1zdGFuZGFyZCBIVFRQLzEuMQ0KSG9zdDogbm8tdGhhbmtzLmludmFsaWQNCkNvbm5lY3Rpb246IGNsb3NlDQpDb250ZW50LUxlbmd0aDogMQ0KT3JpZ2luOiBodHRwczovL3d3dy5nb29nbGUuY29tDQpDb250ZW50LVR5cGU6IGFwcGxpY2F0aW9uL3gtd3d3LWZvcm0tdXJsZW5jb2RlZA0KVXNlci1BZ2VudDogTW96aWxsYS81LjAgKFgxMTsgTGludXggeDg2XzY0KSBBcHBsZVdlYktpdC81MzcuMzYgKEtIVE1MLCBsaWtlIEdlY2tvKSBDaHJvbWUvNzAuMC4zNTM4Ljc3IFNhZmFyaS81MzcuMzYNCkFjY2VwdC1FbmNvZGluZzogZ3ppcCwgZGVmbGF0ZQ0KQWNjZXB0LUxhbmd1YWdlOiBlbi1VUyxlbjtxPTAuOQ0KDQog]]></request>
+    <status></status>
+    <responselength></responselength>
+    <mimetype></mimetype>
+    <response base64="true"></response>
+    <comment></comment>
+  </item>
+  <item>
+    <time>Tue Dec 04 22:24:58 CST 2018</time>
+    <url><![CDATA[https://laptop-updates.brave.com/promo/custom-headers]]></url>
+    <host ip="151.101.185.7">laptop-updates.brave.com</host>
+    <port>443</port>
+    <protocol>https</protocol>
+    <method><![CDATA[GET]]></method>
+    <path><![CDATA[/promo/custom-headers]]></path>
+    <extension>null</extension>
+    <request base64="true"><![CDATA[R0VUIC9wcm9tby9jdXN0b20taGVhZGVycyBIVFRQLzEuMQ0KSG9zdDogbGFwdG9wLXVwZGF0ZXMuYnJhdmUuY29tDQpDb25uZWN0aW9uOiBjbG9zZQ0KUHJhZ21hOiBuby1jYWNoZQ0KQ2FjaGUtQ29udHJvbDogbm8tY2FjaGUNClVzZXItQWdlbnQ6IE1vemlsbGEvNS4wIChYMTE7IExpbnV4IHg4Nl82NCkgQXBwbGVXZWJLaXQvNTM3LjM2IChLSFRNTCwgbGlrZSBHZWNrbykgQ2hyb21lLzcwLjAuMzUzOC43NyBTYWZhcmkvNTM3LjM2DQpBY2NlcHQtRW5jb2Rpbmc6IGd6aXAsIGRlZmxhdGUNCg0K]]></request>
+    <status>200</status>
+    <responselength>753</responselength>
+    <mimetype>JSON</mimetype>
+    <response base64="true"><![CDATA[SFRUUC8xLjEgMjAwIE9LDQpTZXJ2ZXI6IENvd2JveQ0KQ2FjaGUtQ29udHJvbDogbm8tY2FjaGUsIG5vLXN0b3JlLCBtdXN0LXJldmFsaWRhdGUsIHByaXZhdGUsIG1heC1hZ2U9MA0KUHJhZ21hOiBuby1jYWNoZQ0KRXhwaXJlczogMA0KVmlhOiAxLjEgdmVndXINCkFjY2VwdC1SYW5nZXM6IGJ5dGVzDQpBY2NlcHQtUmFuZ2VzOiBieXRlcw0KRGF0ZTogV2VkLCAwNSBEZWMgMjAxOCAwNDoyNToxNiBHTVQNClZpYTogMS4xIHZhcm5pc2gNCkFnZTogMA0KQ29ubmVjdGlvbjogY2xvc2UNClgtU2VydmVkLUJ5OiBjYWNoZS1tZHcxNzM1Ni1NRFcNClgtQ2FjaGU6IE1JU1MNClgtQ2FjaGUtSGl0czogMA0KWC1UaW1lcjogUzE1NDM5ODM5MTcuNTk1MzIwLFZTMCxWRTE2Mw0KVmFyeTogYWNjZXB0LWVuY29kaW5nDQpDb250ZW50LUxlbmd0aDogMzI2DQoNClt7ImRvbWFpbnMiOlsibWFya2V0d2F0Y2guY29tIiwiYmFycm9ucy5jb20iXSwiaGVhZGVycyI6eyJYLUJyYXZlLVBhcnRuZXIiOiJkb3dqb25lcyJ9LCJjb29raWVOYW1lcyI6W10sImV4cGlyYXRpb24iOjMxNTM2MDAwMDAwfSx7ImRvbWFpbnMiOlsidG93bnNxdWFyZWJsb2dzLmNvbSIsInRhc3Rlb2Zjb3VudHJ5LmNvbSIsInVsdGltYXRlY2xhc3NpY3JvY2suY29tIiwieHhsbWFnLmNvbSIsInBvcGNydXNoLmNvbSJdLCJoZWFkZXJzIjp7IlgtQnJhdmUtUGFydG5lciI6InRvd25zcXVhcmUifSwiY29va2llTmFtZXMiOltdLCJleHBpcmF0aW9uIjozMTUzNjAwMDAwMH1d]]></response>
+    <comment></comment>
+  </item>
+  <item>
+    <time>Tue Dec 04 22:24:58 CST 2018</time>
+    <url><![CDATA[https://go-updater.brave.com/extensions]]></url>
+    <host ip="151.101.185.7">go-updater.brave.com</host>
+    <port>443</port>
+    <protocol>https</protocol>
+    <method><![CDATA[POST]]></method>
+    <path><![CDATA[/extensions]]></path>
+    <extension>null</extension>
+    <request base64="true"><![CDATA[UE9TVCAvZXh0ZW5zaW9ucyBIVFRQLzEuMQ0KSG9zdDogZ28tdXBkYXRlci5icmF2ZS5jb20NCkNvbm5lY3Rpb246IGNsb3NlDQpDb250ZW50LUxlbmd0aDogNjA5DQpYLUdvb2ctVXBkYXRlLUFwcElkOiBvb2ZpYW5hbmJvb2RqYmJtZGVsZ2RvbW1paGpia2ZhZw0KWC1Hb29nLVVwZGF0ZS1JbnRlcmFjdGl2aXR5OiBmZw0KWC1Hb29nLVVwZGF0ZS1VcGRhdGVyOiAtNzAuMC41Ni4xMg0KQ29udGVudC1UeXBlOiBhcHBsaWNhdGlvbi94bWwNClVzZXItQWdlbnQ6IE1vemlsbGEvNS4wIChYMTE7IExpbnV4IHg4Nl82NCkgQXBwbGVXZWJLaXQvNTM3LjM2IChLSFRNTCwgbGlrZSBHZWNrbykgQ2hyb21lLzcwLjAuMzUzOC43NyBTYWZhcmkvNTM3LjM2DQpBY2NlcHQtRW5jb2Rpbmc6IGd6aXAsIGRlZmxhdGUNCg0KPD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48cmVxdWVzdCBwcm90b2NvbD0iMy4xIiBkZWR1cD0iY3IiIGFjY2VwdGZvcm1hdD0iY3J4MixjcngzIiBzZXNzaW9uaWQ9InsxYzc4MDAxOS0xNDZiLTRmYTgtOWE1OS1kZTU1YWU5NDNlZTd9IiByZXF1ZXN0aWQ9InswMTM3MTEwYS0xOTllLTQxMTMtOTA4Ni0zMGI2N2JjZTUzNmN9IiB1cGRhdGVyPSIiIHVwZGF0ZXJ2ZXJzaW9uPSI3MC4wLjU2LjEyIiBwcm9kdmVyc2lvbj0iNzAuMC41Ni4xMiIgbGFuZz0iIiB1cGRhdGVyY2hhbm5lbD0ic3RhYmxlIiBwcm9kY2hhbm5lbD0ic3RhYmxlIiBvcz0ibGludXgiIGFyY2g9Ing2NCIgbmFjbF9hcmNoPSJ4ODYtNjQiPjxodyBwaHlzbWVtb3J5PSI4Ii8+PG9zIHBsYXRmb3JtPSJMaW51eCIgYXJjaD0ieDg2XzY0IiB2ZXJzaW9uPSI0LjE4LjEzLTEwMC5mYzI3Lng4Nl82NCIvPjxhcHAgYXBwaWQ9Im9vZmlhbmFuYm9vZGpiYm1kZWxnZG9tbWloamJrZmFnIiB2ZXJzaW9uPSIxLjAuOCIgaW5zdGFsbHNvdXJjZT0ib25kZW1hbmQiIGVuYWJsZWQ9IjEiPjx1cGRhdGVjaGVjay8+PHBpbmcgcj0iLTIiIHBpbmdfZnJlc2huZXNzPSIiLz48L2FwcD48L3JlcXVlc3Q+]]></request>
+    <status>200</status>
+    <responselength>319</responselength>
+    <mimetype>XML</mimetype>
+    <response base64="true"><![CDATA[SFRUUC8xLjEgMjAwIE9LDQpDb250ZW50LVR5cGU6IGFwcGxpY2F0aW9uL3htbA0KQ29udGVudC1MZW5ndGg6IDUwDQpBY2NlcHQtUmFuZ2VzOiBieXRlcw0KRGF0ZTogV2VkLCAwNSBEZWMgMjAxOCAwNDoyNToxNiBHTVQNClZpYTogMS4xIHZhcm5pc2gNCkNvbm5lY3Rpb246IGNsb3NlDQpYLVNlcnZlZC1CeTogY2FjaGUtbWR3MTczNDEtTURXDQpYLUNhY2hlOiBNSVNTDQpYLUNhY2hlLUhpdHM6IDANClgtVGltZXI6IFMxNTQzOTgzOTE3LjU5MjAwOCxWUzAsVkU4Ng0KDQo8cmVzcG9uc2UgcHJvdG9jb2w9IjMuMSIgc2VydmVyPSJwcm9kIj48L3Jlc3BvbnNlPg==]]></response>
+    <comment></comment>
+  </item>
+  <item>
+    <time>Tue Dec 04 22:24:58 CST 2018</time>
+    <url><![CDATA[https://go-updater.brave.com/extensions]]></url>
+    <host ip="151.101.185.7">go-updater.brave.com</host>
+    <port>443</port>
+    <protocol>https</protocol>
+    <method><![CDATA[POST]]></method>
+    <path><![CDATA[/extensions]]></path>
+    <extension>null</extension>
+    <request base64="true"><![CDATA[UE9TVCAvZXh0ZW5zaW9ucyBIVFRQLzEuMQ0KSG9zdDogZ28tdXBkYXRlci5icmF2ZS5jb20NCkNvbm5lY3Rpb246IGNsb3NlDQpDb250ZW50LUxlbmd0aDogNjA5DQpYLUdvb2ctVXBkYXRlLUFwcElkOiBiaWFocGdiZG1ka2ZnbmRjbWZpaXBnY2Vib2JvamprcA0KWC1Hb29nLVVwZGF0ZS1JbnRlcmFjdGl2aXR5OiBmZw0KWC1Hb29nLVVwZGF0ZS1VcGRhdGVyOiAtNzAuMC41Ni4xMg0KQ29udGVudC1UeXBlOiBhcHBsaWNhdGlvbi94bWwNClVzZXItQWdlbnQ6IE1vemlsbGEvNS4wIChYMTE7IExpbnV4IHg4Nl82NCkgQXBwbGVXZWJLaXQvNTM3LjM2IChLSFRNTCwgbGlrZSBHZWNrbykgQ2hyb21lLzcwLjAuMzUzOC43NyBTYWZhcmkvNTM3LjM2DQpBY2NlcHQtRW5jb2Rpbmc6IGd6aXAsIGRlZmxhdGUNCg0KPD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48cmVxdWVzdCBwcm90b2NvbD0iMy4xIiBkZWR1cD0iY3IiIGFjY2VwdGZvcm1hdD0iY3J4MixjcngzIiBzZXNzaW9uaWQ9InszNWJmZDE0YS0xNjk2LTRkZWEtYTA5OS05OTY5YWM0MTk2Y2N9IiByZXF1ZXN0aWQ9Ins4ZGY2NDdkNi1mYjg3LTQ3YmItOWJiMS0zOGQ3NGQ0MmU4ZGV9IiB1cGRhdGVyPSIiIHVwZGF0ZXJ2ZXJzaW9uPSI3MC4wLjU2LjEyIiBwcm9kdmVyc2lvbj0iNzAuMC41Ni4xMiIgbGFuZz0iIiB1cGRhdGVyY2hhbm5lbD0ic3RhYmxlIiBwcm9kY2hhbm5lbD0ic3RhYmxlIiBvcz0ibGludXgiIGFyY2g9Ing2NCIgbmFjbF9hcmNoPSJ4ODYtNjQiPjxodyBwaHlzbWVtb3J5PSI4Ii8+PG9zIHBsYXRmb3JtPSJMaW51eCIgYXJjaD0ieDg2XzY0IiB2ZXJzaW9uPSI0LjE4LjEzLTEwMC5mYzI3Lng4Nl82NCIvPjxhcHAgYXBwaWQ9ImJpYWhwZ2JkbWRrZmduZGNtZmlpcGdjZWJvYm9qamtwIiB2ZXJzaW9uPSIxLjAuMyIgaW5zdGFsbHNvdXJjZT0ib25kZW1hbmQiIGVuYWJsZWQ9IjEiPjx1cGRhdGVjaGVjay8+PHBpbmcgcj0iLTIiIHBpbmdfZnJlc2huZXNzPSIiLz48L2FwcD48L3JlcXVlc3Q+]]></request>
+    <status>200</status>
+    <responselength>319</responselength>
+    <mimetype>XML</mimetype>
+    <response base64="true"><![CDATA[SFRUUC8xLjEgMjAwIE9LDQpDb250ZW50LVR5cGU6IGFwcGxpY2F0aW9uL3htbA0KQ29udGVudC1MZW5ndGg6IDUwDQpBY2NlcHQtUmFuZ2VzOiBieXRlcw0KRGF0ZTogV2VkLCAwNSBEZWMgMjAxOCAwNDoyNToxNiBHTVQNClZpYTogMS4xIHZhcm5pc2gNCkNvbm5lY3Rpb246IGNsb3NlDQpYLVNlcnZlZC1CeTogY2FjaGUtbWR3MTczMjgtTURXDQpYLUNhY2hlOiBNSVNTDQpYLUNhY2hlLUhpdHM6IDANClgtVGltZXI6IFMxNTQzOTgzOTE3LjU5MDYwOCxWUzAsVkU4Nw0KDQo8cmVzcG9uc2UgcHJvdG9jb2w9IjMuMSIgc2VydmVyPSJwcm9kIj48L3Jlc3BvbnNlPg==]]></response>
+    <comment></comment>
+  </item>
+  <item>
+    <time>Tue Dec 04 22:24:58 CST 2018</time>
+    <url><![CDATA[https://go-updater.brave.com/extensions]]></url>
+    <host ip="151.101.185.7">go-updater.brave.com</host>
+    <port>443</port>
+    <protocol>https</protocol>
+    <method><![CDATA[POST]]></method>
+    <path><![CDATA[/extensions]]></path>
+    <extension>null</extension>
+    <request base64="true"><![CDATA[UE9TVCAvZXh0ZW5zaW9ucyBIVFRQLzEuMQ0KSG9zdDogZ28tdXBkYXRlci5icmF2ZS5jb20NCkNvbm5lY3Rpb246IGNsb3NlDQpDb250ZW50LUxlbmd0aDogNjEwDQpYLUdvb2ctVXBkYXRlLUFwcElkOiBjZmZrcGJhbG1sbGtkb2VuaG1kbXBia2FqaXBkamZhbQ0KWC1Hb29nLVVwZGF0ZS1JbnRlcmFjdGl2aXR5OiBmZw0KWC1Hb29nLVVwZGF0ZS1VcGRhdGVyOiAtNzAuMC41Ni4xMg0KQ29udGVudC1UeXBlOiBhcHBsaWNhdGlvbi94bWwNClVzZXItQWdlbnQ6IE1vemlsbGEvNS4wIChYMTE7IExpbnV4IHg4Nl82NCkgQXBwbGVXZWJLaXQvNTM3LjM2IChLSFRNTCwgbGlrZSBHZWNrbykgQ2hyb21lLzcwLjAuMzUzOC43NyBTYWZhcmkvNTM3LjM2DQpBY2NlcHQtRW5jb2Rpbmc6IGd6aXAsIGRlZmxhdGUNCg0KPD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48cmVxdWVzdCBwcm90b2NvbD0iMy4xIiBkZWR1cD0iY3IiIGFjY2VwdGZvcm1hdD0iY3J4MixjcngzIiBzZXNzaW9uaWQ9IntjNDllODc5OC00NjliLTRlMzQtYmJiMC0wMzY4ZjQ2MDljMmV9IiByZXF1ZXN0aWQ9InsyMTRmMzUyNS0yZWI4LTRhODUtYWMzZi05Y2M4MTVhOGVmNTV9IiB1cGRhdGVyPSIiIHVwZGF0ZXJ2ZXJzaW9uPSI3MC4wLjU2LjEyIiBwcm9kdmVyc2lvbj0iNzAuMC41Ni4xMiIgbGFuZz0iIiB1cGRhdGVyY2hhbm5lbD0ic3RhYmxlIiBwcm9kY2hhbm5lbD0ic3RhYmxlIiBvcz0ibGludXgiIGFyY2g9Ing2NCIgbmFjbF9hcmNoPSJ4ODYtNjQiPjxodyBwaHlzbWVtb3J5PSI4Ii8+PG9zIHBsYXRmb3JtPSJMaW51eCIgYXJjaD0ieDg2XzY0IiB2ZXJzaW9uPSI0LjE4LjEzLTEwMC5mYzI3Lng4Nl82NCIvPjxhcHAgYXBwaWQ9ImNmZmtwYmFsbWxsa2RvZW5obWRtcGJrYWppcGRqZmFtIiB2ZXJzaW9uPSIxLjAuNjIiIGluc3RhbGxzb3VyY2U9Im9uZGVtYW5kIiBlbmFibGVkPSIxIj48dXBkYXRlY2hlY2svPjxwaW5nIHI9Ii0yIiBwaW5nX2ZyZXNobmVzcz0iIi8+PC9hcHA+PC9yZXF1ZXN0Pg==]]></request>
+    <status>200</status>
+    <responselength>319</responselength>
+    <mimetype>XML</mimetype>
+    <response base64="true"><![CDATA[SFRUUC8xLjEgMjAwIE9LDQpDb250ZW50LVR5cGU6IGFwcGxpY2F0aW9uL3htbA0KQ29udGVudC1MZW5ndGg6IDUwDQpBY2NlcHQtUmFuZ2VzOiBieXRlcw0KRGF0ZTogV2VkLCAwNSBEZWMgMjAxOCAwNDoyNToxNiBHTVQNClZpYTogMS4xIHZhcm5pc2gNCkNvbm5lY3Rpb246IGNsb3NlDQpYLVNlcnZlZC1CeTogY2FjaGUtbWR3MTczNzYtTURXDQpYLUNhY2hlOiBNSVNTDQpYLUNhY2hlLUhpdHM6IDANClgtVGltZXI6IFMxNTQzOTgzOTE3LjU4NzYxNyxWUzAsVkUxMg0KDQo8cmVzcG9uc2UgcHJvdG9jb2w9IjMuMSIgc2VydmVyPSJwcm9kIj48L3Jlc3BvbnNlPg==]]></response>
+    <comment></comment>
+  </item>
+  <item>
+    <time>Tue Dec 04 22:24:58 CST 2018</time>
+    <url><![CDATA[https://go-updater.brave.com/extensions]]></url>
+    <host ip="151.101.185.7">go-updater.brave.com</host>
+    <port>443</port>
+    <protocol>https</protocol>
+    <method><![CDATA[POST]]></method>
+    <path><![CDATA[/extensions]]></path>
+    <extension>null</extension>
+    <request base64="true"><![CDATA[UE9TVCAvZXh0ZW5zaW9ucyBIVFRQLzEuMQ0KSG9zdDogZ28tdXBkYXRlci5icmF2ZS5jb20NCkNvbm5lY3Rpb246IGNsb3NlDQpDb250ZW50LUxlbmd0aDogNjExDQpYLUdvb2ctVXBkYXRlLUFwcElkOiBvZW1tbmRjYmxkYm9pZWJmbmxhZGRhY2JkZm1hZGFkbQ0KWC1Hb29nLVVwZGF0ZS1JbnRlcmFjdGl2aXR5OiBmZw0KWC1Hb29nLVVwZGF0ZS1VcGRhdGVyOiAtNzAuMC41Ni4xMg0KQ29udGVudC1UeXBlOiBhcHBsaWNhdGlvbi94bWwNClVzZXItQWdlbnQ6IE1vemlsbGEvNS4wIChYMTE7IExpbnV4IHg4Nl82NCkgQXBwbGVXZWJLaXQvNTM3LjM2IChLSFRNTCwgbGlrZSBHZWNrbykgQ2hyb21lLzcwLjAuMzUzOC43NyBTYWZhcmkvNTM3LjM2DQpBY2NlcHQtRW5jb2Rpbmc6IGd6aXAsIGRlZmxhdGUNCg0KPD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48cmVxdWVzdCBwcm90b2NvbD0iMy4xIiBkZWR1cD0iY3IiIGFjY2VwdGZvcm1hdD0iY3J4MixjcngzIiBzZXNzaW9uaWQ9InszZmI4YWE5Yi1iNzExLTQxNDYtYmZlYy1jMTE3MjRmMjIwNTl9IiByZXF1ZXN0aWQ9Ins1ZjljYjA3ZS1hY2M5LTRlMmItYmYwMy1hNzFiZTc5ZjBhY2J9IiB1cGRhdGVyPSIiIHVwZGF0ZXJ2ZXJzaW9uPSI3MC4wLjU2LjEyIiBwcm9kdmVyc2lvbj0iNzAuMC41Ni4xMiIgbGFuZz0iIiB1cGRhdGVyY2hhbm5lbD0ic3RhYmxlIiBwcm9kY2hhbm5lbD0ic3RhYmxlIiBvcz0ibGludXgiIGFyY2g9Ing2NCIgbmFjbF9hcmNoPSJ4ODYtNjQiPjxodyBwaHlzbWVtb3J5PSI4Ii8+PG9zIHBsYXRmb3JtPSJMaW51eCIgYXJjaD0ieDg2XzY0IiB2ZXJzaW9uPSI0LjE4LjEzLTEwMC5mYzI3Lng4Nl82NCIvPjxhcHAgYXBwaWQ9Im9lbW1uZGNibGRib2llYmZubGFkZGFjYmRmbWFkYWRtIiB2ZXJzaW9uPSIyLjAuNjczIiBpbnN0YWxsc291cmNlPSJvbmRlbWFuZCIgZW5hYmxlZD0iMSI+PHVwZGF0ZWNoZWNrLz48cGluZyByPSItMiIgcGluZ19mcmVzaG5lc3M9IiIvPjwvYXBwPjwvcmVxdWVzdD4=]]></request>
+    <status>200</status>
+    <responselength>319</responselength>
+    <mimetype>XML</mimetype>
+    <response base64="true"><![CDATA[SFRUUC8xLjEgMjAwIE9LDQpDb250ZW50LVR5cGU6IGFwcGxpY2F0aW9uL3htbA0KQ29udGVudC1MZW5ndGg6IDUwDQpBY2NlcHQtUmFuZ2VzOiBieXRlcw0KRGF0ZTogV2VkLCAwNSBEZWMgMjAxOCAwNDoyNToxNiBHTVQNClZpYTogMS4xIHZhcm5pc2gNCkNvbm5lY3Rpb246IGNsb3NlDQpYLVNlcnZlZC1CeTogY2FjaGUtbWR3MTczMjctTURXDQpYLUNhY2hlOiBNSVNTDQpYLUNhY2hlLUhpdHM6IDANClgtVGltZXI6IFMxNTQzOTgzOTE3LjU4ODU5MyxWUzAsVkUxMg0KDQo8cmVzcG9uc2UgcHJvdG9jb2w9IjMuMSIgc2VydmVyPSJwcm9kIj48L3Jlc3BvbnNlPg==]]></response>
+    <comment></comment>
+  </item>
+  <item>
+    <time>Tue Dec 04 22:24:58 CST 2018</time>
+    <url><![CDATA[https://go-updater.brave.com/extensions]]></url>
+    <host ip="151.101.185.7">go-updater.brave.com</host>
+    <port>443</port>
+    <protocol>https</protocol>
+    <method><![CDATA[POST]]></method>
+    <path><![CDATA[/extensions]]></path>
+    <extension>null</extension>
+    <request base64="true"><![CDATA[UE9TVCAvZXh0ZW5zaW9ucyBIVFRQLzEuMQ0KSG9zdDogZ28tdXBkYXRlci5icmF2ZS5jb20NCkNvbm5lY3Rpb246IGNsb3NlDQpDb250ZW50LUxlbmd0aDogNjA5DQpYLUdvb2ctVXBkYXRlLUFwcElkOiBhZmFsYWtwbGZmbm5ubGtuY2poYm1haGpmamhtbGthbA0KWC1Hb29nLVVwZGF0ZS1JbnRlcmFjdGl2aXR5OiBmZw0KWC1Hb29nLVVwZGF0ZS1VcGRhdGVyOiAtNzAuMC41Ni4xMg0KQ29udGVudC1UeXBlOiBhcHBsaWNhdGlvbi94bWwNClVzZXItQWdlbnQ6IE1vemlsbGEvNS4wIChYMTE7IExpbnV4IHg4Nl82NCkgQXBwbGVXZWJLaXQvNTM3LjM2IChLSFRNTCwgbGlrZSBHZWNrbykgQ2hyb21lLzcwLjAuMzUzOC43NyBTYWZhcmkvNTM3LjM2DQpBY2NlcHQtRW5jb2Rpbmc6IGd6aXAsIGRlZmxhdGUNCg0KPD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48cmVxdWVzdCBwcm90b2NvbD0iMy4xIiBkZWR1cD0iY3IiIGFjY2VwdGZvcm1hdD0iY3J4MixjcngzIiBzZXNzaW9uaWQ9Ins1NGYxMDc2OS05NDIyLTQ0ZjUtYThkNC01ZGFjNjMzNzhiM2F9IiByZXF1ZXN0aWQ9InsyNDg2MDY3Yy0zMDRkLTQ0MDktOTI2OS1mNDZiOWRiNDNlODd9IiB1cGRhdGVyPSIiIHVwZGF0ZXJ2ZXJzaW9uPSI3MC4wLjU2LjEyIiBwcm9kdmVyc2lvbj0iNzAuMC41Ni4xMiIgbGFuZz0iIiB1cGRhdGVyY2hhbm5lbD0ic3RhYmxlIiBwcm9kY2hhbm5lbD0ic3RhYmxlIiBvcz0ibGludXgiIGFyY2g9Ing2NCIgbmFjbF9hcmNoPSJ4ODYtNjQiPjxodyBwaHlzbWVtb3J5PSI4Ii8+PG9zIHBsYXRmb3JtPSJMaW51eCIgYXJjaD0ieDg2XzY0IiB2ZXJzaW9uPSI0LjE4LjEzLTEwMC5mYzI3Lng4Nl82NCIvPjxhcHAgYXBwaWQ9ImFmYWxha3BsZmZubm5sa25jamhibWFoamZqaG1sa2FsIiB2ZXJzaW9uPSIxLjAuMyIgaW5zdGFsbHNvdXJjZT0ib25kZW1hbmQiIGVuYWJsZWQ9IjEiPjx1cGRhdGVjaGVjay8+PHBpbmcgcj0iLTIiIHBpbmdfZnJlc2huZXNzPSIiLz48L2FwcD48L3JlcXVlc3Q+]]></request>
+    <status>200</status>
+    <responselength>319</responselength>
+    <mimetype>XML</mimetype>
+    <response base64="true"><![CDATA[SFRUUC8xLjEgMjAwIE9LDQpDb250ZW50LVR5cGU6IGFwcGxpY2F0aW9uL3htbA0KQ29udGVudC1MZW5ndGg6IDUwDQpBY2NlcHQtUmFuZ2VzOiBieXRlcw0KRGF0ZTogV2VkLCAwNSBEZWMgMjAxOCAwNDoyNToxNiBHTVQNClZpYTogMS4xIHZhcm5pc2gNCkNvbm5lY3Rpb246IGNsb3NlDQpYLVNlcnZlZC1CeTogY2FjaGUtbWR3MTczNTAtTURXDQpYLUNhY2hlOiBNSVNTDQpYLUNhY2hlLUhpdHM6IDANClgtVGltZXI6IFMxNTQzOTgzOTE3LjU4NzU4OSxWUzAsVkU4Ng0KDQo8cmVzcG9uc2UgcHJvdG9jb2w9IjMuMSIgc2VydmVyPSJwcm9kIj48L3Jlc3BvbnNlPg==]]></response>
+    <comment></comment>
+  </item>
+  <item>
+    <time>Tue Dec 04 22:25:03 CST 2018</time>
+    <url><![CDATA[http://sgxvtwqwzka/]]></url>
+    <host ip="">sgxvtwqwzka</host>
+    <port>80</port>
+    <protocol>http</protocol>
+    <method><![CDATA[HEAD]]></method>
+    <path><![CDATA[/]]></path>
+    <extension>null</extension>
+    <request base64="true"><![CDATA[SEVBRCAvIEhUVFAvMS4xDQpIb3N0OiBzZ3h2dHdxd3prYQ0KVXNlci1BZ2VudDogTW96aWxsYS81LjAgKFgxMTsgTGludXggeDg2XzY0KSBBcHBsZVdlYktpdC81MzcuMzYgKEtIVE1MLCBsaWtlIEdlY2tvKSBDaHJvbWUvNzAuMC4zNTM4Ljc3IFNhZmFyaS81MzcuMzYNCkFjY2VwdC1FbmNvZGluZzogZ3ppcCwgZGVmbGF0ZQ0KQ29ubmVjdGlvbjogY2xvc2UNCg0K]]></request>
+    <status></status>
+    <responselength></responselength>
+    <mimetype></mimetype>
+    <response base64="true"></response>
+    <comment></comment>
+  </item>
+  <item>
+    <time>Tue Dec 04 22:25:03 CST 2018</time>
+    <url><![CDATA[http://czuadpdoea/]]></url>
+    <host ip="">czuadpdoea</host>
+    <port>80</port>
+    <protocol>http</protocol>
+    <method><![CDATA[HEAD]]></method>
+    <path><![CDATA[/]]></path>
+    <extension>null</extension>
+    <request base64="true"><![CDATA[SEVBRCAvIEhUVFAvMS4xDQpIb3N0OiBjenVhZHBkb2VhDQpVc2VyLUFnZW50OiBNb3ppbGxhLzUuMCAoWDExOyBMaW51eCB4ODZfNjQpIEFwcGxlV2ViS2l0LzUzNy4zNiAoS0hUTUwsIGxpa2UgR2Vja28pIENocm9tZS83MC4wLjM1MzguNzcgU2FmYXJpLzUzNy4zNg0KQWNjZXB0LUVuY29kaW5nOiBnemlwLCBkZWZsYXRlDQpDb25uZWN0aW9uOiBjbG9zZQ0KDQo=]]></request>
+    <status></status>
+    <responselength></responselength>
+    <mimetype></mimetype>
+    <response base64="true"></response>
+    <comment></comment>
+  </item>
+  <item>
+    <time>Tue Dec 04 22:25:03 CST 2018</time>
+    <url><![CDATA[http://ffrxgjpmsk/]]></url>
+    <host ip="">ffrxgjpmsk</host>
+    <port>80</port>
+    <protocol>http</protocol>
+    <method><![CDATA[HEAD]]></method>
+    <path><![CDATA[/]]></path>
+    <extension>null</extension>
+    <request base64="true"><![CDATA[SEVBRCAvIEhUVFAvMS4xDQpIb3N0OiBmZnJ4Z2pwbXNrDQpVc2VyLUFnZW50OiBNb3ppbGxhLzUuMCAoWDExOyBMaW51eCB4ODZfNjQpIEFwcGxlV2ViS2l0LzUzNy4zNiAoS0hUTUwsIGxpa2UgR2Vja28pIENocm9tZS83MC4wLjM1MzguNzcgU2FmYXJpLzUzNy4zNg0KQWNjZXB0LUVuY29kaW5nOiBnemlwLCBkZWZsYXRlDQpDb25uZWN0aW9uOiBjbG9zZQ0KDQo=]]></request>
+    <status></status>
+    <responselength></responselength>
+    <mimetype></mimetype>
+    <response base64="true"></response>
+    <comment></comment>
+  </item>
+  <item>
+    <time>Tue Dec 04 22:25:56 CST 2018</time>
+    <url><![CDATA[https://static1.brave.com/chrome/config/plugins_3/plugins_linux.json]]></url>
+    <host ip="104.28.23.242">static1.brave.com</host>
+    <port>443</port>
+    <protocol>https</protocol>
+    <method><![CDATA[GET]]></method>
+    <path><![CDATA[/chrome/config/plugins_3/plugins_linux.json]]></path>
+    <extension>json</extension>
+    <request base64="true"><![CDATA[R0VUIC9jaHJvbWUvY29uZmlnL3BsdWdpbnNfMy9wbHVnaW5zX2xpbnV4Lmpzb24gSFRUUC8xLjENCkhvc3Q6IHN0YXRpYzEuYnJhdmUuY29tDQpDb25uZWN0aW9uOiBjbG9zZQ0KVXNlci1BZ2VudDogTW96aWxsYS81LjAgKFgxMTsgTGludXggeDg2XzY0KSBBcHBsZVdlYktpdC81MzcuMzYgKEtIVE1MLCBsaWtlIEdlY2tvKSBDaHJvbWUvNzAuMC4zNTM4Ljc3IFNhZmFyaS81MzcuMzYNCkFjY2VwdC1FbmNvZGluZzogZ3ppcCwgZGVmbGF0ZQ0KDQo=]]></request>
+    <status>200</status>
+    <responselength>4555</responselength>
+    <mimetype>JSON</mimetype>
+    <response base64="true"><![CDATA[SFRUUC8xLjEgMjAwIE9LDQpEYXRlOiBXZWQsIDA1IERlYyAyMDE4IDA0OjI1OjU2IEdNVA0KQ29udGVudC1UeXBlOiBhcHBsaWNhdGlvbi9qc29uDQpDb250ZW50LUxlbmd0aDogMzgxNA0KQ29ubmVjdGlvbjogY2xvc2UNClNldC1Db29raWU6IF9fY2ZkdWlkPWRhMjk2YjY2NzcyMGU2Y2U5ODI3YjE0OGJlYjMyOWQxYjE1NDM5ODM5NTY7IGV4cGlyZXM9VGh1LCAwNS1EZWMtMTkgMDQ6MjU6NTYgR01UOyBwYXRoPS87IGRvbWFpbj0uYnJhdmUuY29tOyBIdHRwT25seQ0KRXhwaXJlczogV2VkLCAwNSBEZWMgMjAxOCAwNDoyNTo1NiBHTVQNCkxhc3QtTW9kaWZpZWQ6IFRodSwgMjYgT2N0IDIwMTcgMjA6NDU6MDAgR01UDQpYLUNvbnRlbnQtVHlwZS1PcHRpb25zOiBub3NuaWZmDQpYLVhTUy1Qcm90ZWN0aW9uOiAxOyBtb2RlPWJsb2NrDQpDYWNoZS1Db250cm9sOiBwdWJsaWMsIG1heC1hZ2U9MA0KQWNjZXB0LVJhbmdlczogYnl0ZXMNClZpYTogMS4xIHZhcm5pc2gNCkFnZTogMA0KWC1TZXJ2ZWQtQnk6IGNhY2hlLW1kdzE3MzQ1LU1EVw0KWC1DYWNoZTogTUlTUw0KWC1DYWNoZS1IaXRzOiAwDQpWYXJ5OiBBY2NlcHQtRW5jb2RpbmcNCkV4cGVjdC1DVDogbWF4LWFnZT02MDQ4MDAsIHJlcG9ydC11cmk9Imh0dHBzOi8vcmVwb3J0LXVyaS5jbG91ZGZsYXJlLmNvbS9jZG4tY2dpL2JlYWNvbi9leHBlY3QtY3QiDQpTZXJ2ZXI6IGNsb3VkZmxhcmUNCkNGLVJBWTogNDg0M2MwNmY1YjVmYzU0ZS1PUkQNCg0KewogICJnb29nbGUtdGFsayI6IHsKICAgICJtaW1lX3R5cGVzIjogWwogICAgXSwKICAgICJ2ZXJzaW9ucyI6IFsKICAgICAgewogICAgICAgICJ2ZXJzaW9uIjogIjAiLAogICAgICAgICJzdGF0dXMiOiAidXBfdG9fZGF0ZSIsCiAgICAgICAgImNvbW1lbnQiOiAiJ0dvb2dsZSBUYWxrIFBsdWdpbicgYW5kICdHb29nbGUgVGFsayBQbHVnaW4gVmlkZW8gQWNjZWxlcmF0b3InIHVzZSB0d28gY29tcGxldGVseSBkaWZmZXJlbnQgdmVyc2lvbmluZyBzY2hlbWVzLCBzbyB3ZSBjYW4ndCBkZWZpbmUgYSBtaW5pbXVtIHZlcnNpb24uIgogICAgICB9CiAgICBdLAogICAgIm5hbWUiOiAiR29vZ2xlIFRhbGsiLAogICAgImdyb3VwX25hbWVfbWF0Y2hlciI6ICIqR29vZ2xlIFRhbGsqIgogIH0sCiAgImphdmEtcnVudGltZS1lbnZpcm9ubWVudCI6IHsKICAgICJtaW1lX3R5cGVzIjogWwogICAgICAiYXBwbGljYXRpb24veC1qYXZhLWFwcGxldCIsCiAgICAgICJhcHBsaWNhdGlvbi94LWphdmEtYXBwbGV0LHZlcnNpb249MS4xIiwKICAgICAgImFwcGxpY2F0aW9uL3gtamF2YS1hcHBsZXQsdmVyc2lvbj0xLjEuMSIsCiAgICAgICJhcHBsaWNhdGlvbi94LWphdmEtYXBwbGV0LHZlcnNpb249MS4xLjIiLAogICAgICAiYXBwbGljYXRpb24veC1qYXZhLWFwcGxldCx2ZXJzaW9uPTEuMS4zIiwKICAgICAgImFwcGxpY2F0aW9uL3gtamF2YS1hcHBsZXQsdmVyc2lvbj0xLjIiLAogICAgICAiYXBwbGljYXRpb24veC1qYXZhLWFwcGxldCx2ZXJzaW9uPTEuMi4xIiwKICAgICAgImFwcGxpY2F0aW9uL3gtamF2YS1hcHBsZXQsdmVyc2lvbj0xLjIuMiIsCiAgICAgICJhcHBsaWNhdGlvbi94LWphdmEtYXBwbGV0LHZlcnNpb249MS4zIiwKICAgICAgImFwcGxpY2F0aW9uL3gtamF2YS1hcHBsZXQsdmVyc2lvbj0xLjMuMSIsCiAgICAgICJhcHBsaWNhdGlvbi94LWphdmEtYXBwbGV0LHZlcnNpb249MS40IiwKICAgICAgImFwcGxpY2F0aW9uL3gtamF2YS1hcHBsZXQsdmVyc2lvbj0xLjQuMSIsCiAgICAgICJhcHBsaWNhdGlvbi94LWphdmEtYXBwbGV0LHZlcnNpb249MS40LjIiLAogICAgICAiYXBwbGljYXRpb24veC1qYXZhLWFwcGxldCx2ZXJzaW9uPTEuNSIsCiAgICAgICJhcHBsaWNhdGlvbi94LWphdmEtYXBwbGV0LHZlcnNpb249MS42IiwKICAgICAgImFwcGxpY2F0aW9uL3gtamF2YS1hcHBsZXQsdmVyc2lvbj0xLjciLAogICAgICAiYXBwbGljYXRpb24veC1qYXZhLWJlYW4iLAogICAgICAiYXBwbGljYXRpb24veC1qYXZhLWJlYW4sdmVyc2lvbj0xLjEiLAogICAgICAiYXBwbGljYXRpb24veC1qYXZhLWJlYW4sdmVyc2lvbj0xLjEuMSIsCiAgICAgICJhcHBsaWNhdGlvbi94LWphdmEtYmVhbix2ZXJzaW9uPTEuMS4yIiwKICAgICAgImFwcGxpY2F0aW9uL3gtamF2YS1iZWFuLHZlcnNpb249MS4xLjMiLAogICAgICAiYXBwbGljYXRpb24veC1qYXZhLWJlYW4sdmVyc2lvbj0xLjIiLAogICAgICAiYXBwbGljYXRpb24veC1qYXZhLWJlYW4sdmVyc2lvbj0xLjIuMSIsCiAgICAgICJhcHBsaWNhdGlvbi94LWphdmEtYmVhbix2ZXJzaW9uPTEuMi4yIiwKICAgICAgImFwcGxpY2F0aW9uL3gtamF2YS1iZWFuLHZlcnNpb249MS4zIiwKICAgICAgImFwcGxpY2F0aW9uL3gtamF2YS1iZWFuLHZlcnNpb249MS4zLjEiLAogICAgICAiYXBwbGljYXRpb24veC1qYXZhLWJlYW4sdmVyc2lvbj0xLjQiLAogICAgICAiYXBwbGljYXRpb24veC1qYXZhLWJlYW4sdmVyc2lvbj0xLjQuMSIsCiAgICAgICJhcHBsaWNhdGlvbi94LWphdmEtYmVhbix2ZXJzaW9uPTEuNC4yIiwKICAgICAgImFwcGxpY2F0aW9uL3gtamF2YS1iZWFuLHZlcnNpb249MS41IiwKICAgICAgImFwcGxpY2F0aW9uL3gtamF2YS1iZWFuLHZlcnNpb249MS42IiwKICAgICAgImFwcGxpY2F0aW9uL3gtamF2YS1iZWFuLHZlcnNpb249MS43IiwKICAgICAgImFwcGxpY2F0aW9uL3gtamF2YS12bSIKICAgIF0sCiAgICAidmVyc2lvbnMiOiBbCiAgICAgIHsKICAgICAgICAidmVyc2lvbiI6ICIxLjYuMC4zOSIsCiAgICAgICAgInN0YXR1cyI6ICJyZXF1aXJlc19hdXRob3JpemF0aW9uIgogICAgICB9LAogICAgICB7CiAgICAgICAgInZlcnNpb24iOiAiMS43IiwKICAgICAgICAic3RhdHVzIjogIm91dF9vZl9kYXRlIgogICAgICB9LAogICAgICB7CiAgICAgICAgInZlcnNpb24iOiAiMS43LjAuMTMiLAogICAgICAgICJzdGF0dXMiOiAicmVxdWlyZXNfYXV0aG9yaXphdGlvbiIKICAgICAgfQogICAgXSwKICAgICJsYW5nIjogImVuLVVTIiwKICAgICJuYW1lIjogIkphdmEoVE0pIiwKICAgICJoZWxwX3VybCI6ICJodHRwczovL3N1cHBvcnQuZ29vZ2xlLmNvbS9jaHJvbWUvP3A9cGx1Z2luX2phdmEiLAogICAgInVybCI6ICJodHRwOi8vamF2YS5jb20vZG93bmxvYWQiLAogICAgImRpc3BsYXl1cmwiOiB0cnVlLAogICAgImdyb3VwX25hbWVfbWF0Y2hlciI6ICJKYXZhKiIKICB9LAogICJhZG9iZS1mbGFzaC1wbGF5ZXIiOiB7CiAgICAibWltZV90eXBlcyI6IFsKICAgICAgImFwcGxpY2F0aW9uL2Z1dHVyZXNwbGFzaCIsCiAgICAgICJhcHBsaWNhdGlvbi94LXNob2Nrd2F2ZS1mbGFzaCIKICAgIF0sCiAgICAibWF0Y2hpbmdfbWltZV90eXBlcyI6IFsKICAgICAgImFwcGxpY2F0aW9uL2Z1dHVyZXNwbGFzaCIKICAgIF0sCiAgICAidmVyc2lvbnMiOiBbCiAgICAgIHsKICAgICAgICAidmVyc2lvbiI6ICIxMS4xLjEwMiIsCiAgICAgICAgInN0YXR1cyI6ICJ1cF90b19kYXRlIiwKICAgICAgICAicmVmZXJlbmNlIjogImh0dHA6Ly93d3cuYWRvYmUuY29tL3N1cHBvcnQvc2VjdXJpdHkvYnVsbGV0aW5zL2Fwc2IxMi0wMy5odG1sIgogICAgICB9CiAgICBdLAogICAgImxhbmciOiAiZW4tVVMiLAogICAgIm5hbWUiOiAiQWRvYmUgRmxhc2ggUGxheWVyIiwKICAgICJoZWxwX3VybCI6ICJodHRwczovL3N1cHBvcnQuZ29vZ2xlLmNvbS9jaHJvbWUvP3A9cGx1Z2luX2ZsYXNoIiwKICAgICJ1cmwiOiAiaHR0cDovL2dldC5hZG9iZS5jb20vZmxhc2hwbGF5ZXIvIiwKICAgICJkaXNwbGF5dXJsIjogdHJ1ZSwKICAgICJncm91cF9uYW1lX21hdGNoZXIiOiAiKlNob2Nrd2F2ZSBGbGFzaCoiCiAgfSwKICAibGlnaHRzcGFyayI6IHsKICAgICJtaW1lX3R5cGVzIjogWwogICAgICAiYXBwbGljYXRpb24veC1saWdodHNwYXJrIgogICAgXSwKICAgICJtYXRjaGluZ19taW1lX3R5cGVzIjogWwogICAgICAiYXBwbGljYXRpb24veC1saWdodHNwYXJrIgogICAgXSwKICAgICJ2ZXJzaW9ucyI6IFsKICAgICAgewogICAgICAgICJ2ZXJzaW9uIjogIjAiLAogICAgICAgICJzdGF0dXMiOiAicmVxdWlyZXNfYXV0aG9yaXphdGlvbiIKICAgICAgfQogICAgXSwKICAgICJsYW5nIjogImVuLVVTIiwKICAgICJuYW1lIjogIkxpZ2h0c3BhcmsiLAogICAgImRpc3BsYXl1cmwiOiB0cnVlLAogICAgInVybCI6ICJodHRwczovL2xhdW5jaHBhZC5uZXQvbGlnaHRzcGFyayIsCiAgICAiZ3JvdXBfbmFtZV9tYXRjaGVyIjogIipTaG9ja3dhdmUgRmxhc2gqIgogIH0sCiAgImdvb2dsZS1jaHJvbWUtcGRmIjogewogICAgIm1pbWVfdHlwZXMiOiBbCiAgICBdLAogICAgInZlcnNpb25zIjogWwogICAgICB7CiAgICAgICAgInZlcnNpb24iOiAiMCIsCiAgICAgICAgInN0YXR1cyI6ICJ1cF90b19kYXRlIiwKICAgICAgICAiY29tbWVudCI6ICJHb29nbGUgQ2hyb21lIFBERiBoYXMgbm8gdmVyc2lvbiBpbmZvcm1hdGlvbi4iCiAgICAgIH0KICAgIF0sCiAgICAibmFtZSI6ICJDaHJvbWUgUERGIFZpZXdlciIsCiAgICAiZ3JvdXBfbmFtZV9tYXRjaGVyIjogIipDaHJvbWUgUERGIFZpZXdlcioiCiAgfQp9Cg==]]></response>
+    <comment></comment>
+  </item>
+  <item>
+    <time>Tue Dec 04 22:25:57 CST 2018</time>
+    <url><![CDATA[https://balance.mercury.basicattentiontoken.org/v2/wallet/ec30a106-addb-42dd-9c61-699822cc93ee/balance]]></url>
+    <host ip="52.73.9.93">balance.mercury.basicattentiontoken.org</host>
+    <port>443</port>
+    <protocol>https</protocol>
+    <method><![CDATA[GET]]></method>
+    <path><![CDATA[/v2/wallet/ec30a106-addb-42dd-9c61-699822cc93ee/balance]]></path>
+    <extension>null</extension>
+    <request base64="true"><![CDATA[R0VUIC92Mi93YWxsZXQvZWMzMGExMDYtYWRkYi00MmRkLTljNjEtNjk5ODIyY2M5M2VlL2JhbGFuY2UgSFRUUC8xLjENCkhvc3Q6IGJhbGFuY2UubWVyY3VyeS5iYXNpY2F0dGVudGlvbnRva2VuLm9yZw0KQ29ubmVjdGlvbjogY2xvc2UNClVzZXItQWdlbnQ6IE1vemlsbGEvNS4wIChYMTE7IExpbnV4IHg4Nl82NCkgQXBwbGVXZWJLaXQvNTM3LjM2IChLSFRNTCwgbGlrZSBHZWNrbykgQ2hyb21lLzcwLjAuMzUzOC43NyBTYWZhcmkvNTM3LjM2DQpBY2NlcHQtRW5jb2Rpbmc6IGd6aXAsIGRlZmxhdGUNCg0K]]></request>
+    <status>200</status>
+    <responselength>750</responselength>
+    <mimetype>JSON</mimetype>
+    <response base64="true"><![CDATA[SFRUUC8xLjEgMjAwIE9LDQpTZXJ2ZXI6IENvd2JveQ0KQ29ubmVjdGlvbjogY2xvc2UNClgtUmF0ZS1MaW1pdC1SZW1haW5pbmc6IDU4DQpYLVJhdGUtTGltaXQtTGltaXQ6IDYwDQpYLVJhdGUtTGltaXQtUmVzZXQ6IDE1NDM5ODM5NzcNCkNhY2hlLUNvbnRyb2w6IHByaXZhdGUNCkNvbnRlbnQtVHlwZTogYXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA0KVmFyeTogYWNjZXB0LWVuY29kaW5nDQpEYXRlOiBXZWQsIDA1IERlYyAyMDE4IDA0OjI1OjU4IEdNVA0KVmlhOiAxLjEgdmVndXINCkNvbnRlbnQtTGVuZ3RoOiA0NDQNCg0KeyJhbHRjdXJyZW5jeSI6IkJBVCIsInByb2JpIjoiMCIsImJhbGFuY2UiOiIwLjAwMDAiLCJ1bmNvbmZpcm1lZCI6IjAuMDAwMCIsInJhdGVzIjp7IkJUQyI6MC4wMDAwNDA0MjQ2NTI5OTg2NTksIkVUSCI6MC4wMDE0NjA1NTc5Nzc0NTc4NDksIlhSUCI6MC40NTE5Mjk5MDI1NzU2MDQ4LCJCQ0giOjAuMDAxMTA3NDE5MTQ4NDg1NDksIkxUQyI6MC4wMDUxNzMxNTE3NTA5NzI3NjMsIkRBU0giOjAuMDAxOTI0MzU2MTc0MDYyMDg3LCJCVEciOjAuMDA5ODIwMDUwMjE5Mjk0Nzc3LCJVU0QiOjAuMTU2ODQzNzc0LCJFVVIiOjAuMTM4NDYwODk5NDY4MzN9LCJwYXJhbWV0ZXJzIjp7ImFkRnJlZSI6eyJjdXJyZW5jeSI6IkJBVCIsImZlZSI6eyJCQVQiOjMwfSwiY2hvaWNlcyI6eyJCQVQiOlsyMCwzMCw1MCw4NSwxMDBdfSwicmFuZ2UiOnsiQkFUIjpbMjAsMTAwXX0sImRheXMiOjMwfX19]]></response>
+    <comment></comment>
+  </item>
+  <item>
+    <time>Tue Dec 04 22:26:57 CST 2018</time>
+    <url><![CDATA[https://balance.mercury.basicattentiontoken.org/v2/wallet/ec30a106-addb-42dd-9c61-699822cc93ee/balance]]></url>
+    <host ip="52.73.9.93">balance.mercury.basicattentiontoken.org</host>
+    <port>443</port>
+    <protocol>https</protocol>
+    <method><![CDATA[GET]]></method>
+    <path><![CDATA[/v2/wallet/ec30a106-addb-42dd-9c61-699822cc93ee/balance]]></path>
+    <extension>null</extension>
+    <request base64="true"><![CDATA[R0VUIC92Mi93YWxsZXQvZWMzMGExMDYtYWRkYi00MmRkLTljNjEtNjk5ODIyY2M5M2VlL2JhbGFuY2UgSFRUUC8xLjENCkhvc3Q6IGJhbGFuY2UubWVyY3VyeS5iYXNpY2F0dGVudGlvbnRva2VuLm9yZw0KQ29ubmVjdGlvbjogY2xvc2UNClVzZXItQWdlbnQ6IE1vemlsbGEvNS4wIChYMTE7IExpbnV4IHg4Nl82NCkgQXBwbGVXZWJLaXQvNTM3LjM2IChLSFRNTCwgbGlrZSBHZWNrbykgQ2hyb21lLzcwLjAuMzUzOC43NyBTYWZhcmkvNTM3LjM2DQpBY2NlcHQtRW5jb2Rpbmc6IGd6aXAsIGRlZmxhdGUNCg0K]]></request>
+    <status>200</status>
+    <responselength>750</responselength>
+    <mimetype>JSON</mimetype>
+    <response base64="true"><![CDATA[SFRUUC8xLjEgMjAwIE9LDQpTZXJ2ZXI6IENvd2JveQ0KQ29ubmVjdGlvbjogY2xvc2UNClgtUmF0ZS1MaW1pdC1SZW1haW5pbmc6IDU5DQpYLVJhdGUtTGltaXQtTGltaXQ6IDYwDQpYLVJhdGUtTGltaXQtUmVzZXQ6IDE1NDM5ODQwNzgNCkNhY2hlLUNvbnRyb2w6IHByaXZhdGUNCkNvbnRlbnQtVHlwZTogYXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA0KVmFyeTogYWNjZXB0LWVuY29kaW5nDQpEYXRlOiBXZWQsIDA1IERlYyAyMDE4IDA0OjI2OjU4IEdNVA0KVmlhOiAxLjEgdmVndXINCkNvbnRlbnQtTGVuZ3RoOiA0NDQNCg0KeyJhbHRjdXJyZW5jeSI6IkJBVCIsInByb2JpIjoiMCIsImJhbGFuY2UiOiIwLjAwMDAiLCJ1bmNvbmZpcm1lZCI6IjAuMDAwMCIsInJhdGVzIjp7IkJUQyI6MC4wMDAwNDA0MjQ2NTI5OTg2NTksIkVUSCI6MC4wMDE0NjA1NTc5Nzc0NTc4NDksIlhSUCI6MC40NTE5Mjk5MDI1NzU2MDQ4LCJCQ0giOjAuMDAxMTA3NDE5MTQ4NDg1NDksIkxUQyI6MC4wMDUxNzMxNTE3NTA5NzI3NjMsIkRBU0giOjAuMDAxOTI0MzU2MTc0MDYyMDg3LCJCVEciOjAuMDA5ODIwMDUwMjE5Mjk0Nzc3LCJVU0QiOjAuMTU2ODQzNzc0LCJFVVIiOjAuMTM4NDYwODk5NDY4MzN9LCJwYXJhbWV0ZXJzIjp7ImFkRnJlZSI6eyJjdXJyZW5jeSI6IkJBVCIsImZlZSI6eyJCQVQiOjMwfSwiY2hvaWNlcyI6eyJCQVQiOlsyMCwzMCw1MCw4NSwxMDBdfSwicmFuZ2UiOnsiQkFUIjpbMjAsMTAwXX0sImRheXMiOjMwfX19]]></response>
+    <comment></comment>
+  </item>
+  <item>
+    <time>Tue Dec 04 22:27:57 CST 2018</time>
+    <url><![CDATA[https://balance.mercury.basicattentiontoken.org/v2/wallet/ec30a106-addb-42dd-9c61-699822cc93ee/balance]]></url>
+    <host ip="52.73.9.93">balance.mercury.basicattentiontoken.org</host>
+    <port>443</port>
+    <protocol>https</protocol>
+    <method><![CDATA[GET]]></method>
+    <path><![CDATA[/v2/wallet/ec30a106-addb-42dd-9c61-699822cc93ee/balance]]></path>
+    <extension>null</extension>
+    <request base64="true"><![CDATA[R0VUIC92Mi93YWxsZXQvZWMzMGExMDYtYWRkYi00MmRkLTljNjEtNjk5ODIyY2M5M2VlL2JhbGFuY2UgSFRUUC8xLjENCkhvc3Q6IGJhbGFuY2UubWVyY3VyeS5iYXNpY2F0dGVudGlvbnRva2VuLm9yZw0KQ29ubmVjdGlvbjogY2xvc2UNClVzZXItQWdlbnQ6IE1vemlsbGEvNS4wIChYMTE7IExpbnV4IHg4Nl82NCkgQXBwbGVXZWJLaXQvNTM3LjM2IChLSFRNTCwgbGlrZSBHZWNrbykgQ2hyb21lLzcwLjAuMzUzOC43NyBTYWZhcmkvNTM3LjM2DQpBY2NlcHQtRW5jb2Rpbmc6IGd6aXAsIGRlZmxhdGUNCg0K]]></request>
+    <status>200</status>
+    <responselength>750</responselength>
+    <mimetype>JSON</mimetype>
+    <response base64="true"><![CDATA[SFRUUC8xLjEgMjAwIE9LDQpTZXJ2ZXI6IENvd2JveQ0KQ29ubmVjdGlvbjogY2xvc2UNClgtUmF0ZS1MaW1pdC1SZW1haW5pbmc6IDU4DQpYLVJhdGUtTGltaXQtTGltaXQ6IDYwDQpYLVJhdGUtTGltaXQtUmVzZXQ6IDE1NDM5ODQwNzgNCkNhY2hlLUNvbnRyb2w6IHByaXZhdGUNCkNvbnRlbnQtVHlwZTogYXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA0KVmFyeTogYWNjZXB0LWVuY29kaW5nDQpEYXRlOiBXZWQsIDA1IERlYyAyMDE4IDA0OjI3OjU4IEdNVA0KVmlhOiAxLjEgdmVndXINCkNvbnRlbnQtTGVuZ3RoOiA0NDQNCg0KeyJhbHRjdXJyZW5jeSI6IkJBVCIsInByb2JpIjoiMCIsImJhbGFuY2UiOiIwLjAwMDAiLCJ1bmNvbmZpcm1lZCI6IjAuMDAwMCIsInJhdGVzIjp7IkJUQyI6MC4wMDAwNDA0MjQ2NTI5OTg2NTksIkVUSCI6MC4wMDE0NjA1NTc5Nzc0NTc4NDksIlhSUCI6MC40NTE5Mjk5MDI1NzU2MDQ4LCJCQ0giOjAuMDAxMTA3NDE5MTQ4NDg1NDksIkxUQyI6MC4wMDUxNzMxNTE3NTA5NzI3NjMsIkRBU0giOjAuMDAxOTI0MzU2MTc0MDYyMDg3LCJCVEciOjAuMDA5ODIwMDUwMjE5Mjk0Nzc3LCJVU0QiOjAuMTU2ODQzNzc0LCJFVVIiOjAuMTM4NDYwODk5NDY4MzN9LCJwYXJhbWV0ZXJzIjp7ImFkRnJlZSI6eyJjdXJyZW5jeSI6IkJBVCIsImZlZSI6eyJCQVQiOjMwfSwiY2hvaWNlcyI6eyJCQVQiOlsyMCwzMCw1MCw4NSwxMDBdfSwicmFuZ2UiOnsiQkFUIjpbMjAsMTAwXX0sImRheXMiOjMwfX19]]></response>
+    <comment></comment>
+  </item>
+  <item>
+    <time>Tue Dec 04 22:28:23 CST 2018</time>
+    <url><![CDATA[https://ledger.mercury.basicattentiontoken.org/v2/grants/ec30a106-addb-42dd-9c61-699822cc93ee]]></url>
+    <host ip="52.203.53.176">ledger.mercury.basicattentiontoken.org</host>
+    <port>443</port>
+    <protocol>https</protocol>
+    <method><![CDATA[PUT]]></method>
+    <path><![CDATA[/v2/grants/ec30a106-addb-42dd-9c61-699822cc93ee]]></path>
+    <extension>null</extension>
+    <request base64="true"><![CDATA[UFVUIC92Mi9ncmFudHMvZWMzMGExMDYtYWRkYi00MmRkLTljNjEtNjk5ODIyY2M5M2VlIEhUVFAvMS4xDQpIb3N0OiBsZWRnZXIubWVyY3VyeS5iYXNpY2F0dGVudGlvbnRva2VuLm9yZw0KQ29ubmVjdGlvbjogY2xvc2UNCkNvbnRlbnQtTGVuZ3RoOiA5OA0KQ29udGVudC1UeXBlOiBhcHBsaWNhdGlvbi9qc29uOyBjaGFyc2V0PXV0Zi04DQpVc2VyLUFnZW50OiBNb3ppbGxhLzUuMCAoWDExOyBMaW51eCB4ODZfNjQpIEFwcGxlV2ViS2l0LzUzNy4zNiAoS0hUTUwsIGxpa2UgR2Vja28pIENocm9tZS83MC4wLjM1MzguNzcgU2FmYXJpLzUzNy4zNg0KQWNjZXB0LUVuY29kaW5nOiBnemlwLCBkZWZsYXRlDQoNCnsicHJvbW90aW9uSWQiOiI1MGQzZTIxYy01ZGUxLTQwNDUtYWQ4Yy0wZDcwMjFiZjBhNGIiLCJjYXB0Y2hhUmVzcG9uc2UiOiJ7XCJ4XCI6MTQwLjUsXCJ5XCI6MjYzfSJ9]]></request>
+    <status>200</status>
+    <responselength>381</responselength>
+    <mimetype>JSON</mimetype>
+    <response base64="true"><![CDATA[SFRUUC8xLjEgMjAwIE9LDQpTZXJ2ZXI6IENvd2JveQ0KQ29ubmVjdGlvbjogY2xvc2UNClgtUmF0ZS1MaW1pdC1SZW1haW5pbmc6IDQ5DQpYLVJhdGUtTGltaXQtTGltaXQ6IDUwDQpYLVJhdGUtTGltaXQtUmVzZXQ6IDE1NDM5OTQ5MDMNCkNhY2hlLUNvbnRyb2w6IHByaXZhdGUNCkNvbnRlbnQtVHlwZTogYXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA0KVmFyeTogYWNjZXB0LWVuY29kaW5nDQpEYXRlOiBXZWQsIDA1IERlYyAyMDE4IDA0OjI4OjI0IEdNVA0KVmlhOiAxLjEgdmVndXINCkNvbnRlbnQtTGVuZ3RoOiA3Ng0KDQp7ImFsdGN1cnJlbmN5IjoiQkFUIiwicHJvYmkiOiIzMDAwMDAwMDAwMDAwMDAwMDAwMCIsImV4cGlyeVRpbWUiOjE1NTI2MDgwMDB9]]></response>
+    <comment></comment>
+  </item>
+  <item>
+    <time>Tue Dec 04 22:28:24 CST 2018</time>
+    <url><![CDATA[https://balance.mercury.basicattentiontoken.org/v2/wallet/ec30a106-addb-42dd-9c61-699822cc93ee/balance]]></url>
+    <host ip="52.73.9.93">balance.mercury.basicattentiontoken.org</host>
+    <port>443</port>
+    <protocol>https</protocol>
+    <method><![CDATA[GET]]></method>
+    <path><![CDATA[/v2/wallet/ec30a106-addb-42dd-9c61-699822cc93ee/balance]]></path>
+    <extension>null</extension>
+    <request base64="true"><![CDATA[R0VUIC92Mi93YWxsZXQvZWMzMGExMDYtYWRkYi00MmRkLTljNjEtNjk5ODIyY2M5M2VlL2JhbGFuY2UgSFRUUC8xLjENCkhvc3Q6IGJhbGFuY2UubWVyY3VyeS5iYXNpY2F0dGVudGlvbnRva2VuLm9yZw0KQ29ubmVjdGlvbjogY2xvc2UNClVzZXItQWdlbnQ6IE1vemlsbGEvNS4wIChYMTE7IExpbnV4IHg4Nl82NCkgQXBwbGVXZWJLaXQvNTM3LjM2IChLSFRNTCwgbGlrZSBHZWNrbykgQ2hyb21lLzcwLjAuMzUzOC43NyBTYWZhcmkvNTM3LjM2DQpBY2NlcHQtRW5jb2Rpbmc6IGd6aXAsIGRlZmxhdGUNCg0K]]></request>
+    <status>200</status>
+    <responselength>859</responselength>
+    <mimetype>JSON</mimetype>
+    <response base64="true"><![CDATA[SFRUUC8xLjEgMjAwIE9LDQpTZXJ2ZXI6IENvd2JveQ0KQ29ubmVjdGlvbjogY2xvc2UNClgtUmF0ZS1MaW1pdC1SZW1haW5pbmc6IDU5DQpYLVJhdGUtTGltaXQtTGltaXQ6IDYwDQpYLVJhdGUtTGltaXQtUmVzZXQ6IDE1NDM5ODQxNjQNCkNhY2hlLUNvbnRyb2w6IHByaXZhdGUNCkNvbnRlbnQtVHlwZTogYXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA0KVmFyeTogYWNjZXB0LWVuY29kaW5nDQpEYXRlOiBXZWQsIDA1IERlYyAyMDE4IDA0OjI4OjI1IEdNVA0KVmlhOiAxLjEgdmVndXINCkNvbnRlbnQtTGVuZ3RoOiA1NTMNCg0KeyJhbHRjdXJyZW5jeSI6IkJBVCIsInByb2JpIjoiMzAwMDAwMDAwMDAwMDAwMDAwMDAiLCJiYWxhbmNlIjoiMzAuMDAwMCIsInVuY29uZmlybWVkIjoiMC4wMDAwIiwicmF0ZXMiOnsiQlRDIjowLjAwMDA0MDQwNzcwNDUxODU5MSwiRVRIIjowLjAwMTQ1ODQzMDQwMDI0MDY3NiwiWFJQIjowLjQ1MDk4Mzc0MzQzMzg2NiwiQkNIIjowLjAwMTEwMTYzMzc0MzE1MDIwNCwiTFRDIjowLjAwNTE0MjAyMzM0NjMwMzUwMiwiREFTSCI6MC4wMDE5MTYxMDExOTMxNzMzNTksIkJURyI6MC4wMDk3OTY3MDgyMDU0NDI5NzYsIlVTRCI6MC4xNTY4MDY1NDcsIkVVUiI6MC4xMzgzOTMzODE0MTE5Nzh9LCJwYXJhbWV0ZXJzIjp7ImFkRnJlZSI6eyJjdXJyZW5jeSI6IkJBVCIsImZlZSI6eyJCQVQiOjMwfSwiY2hvaWNlcyI6eyJCQVQiOlsyMCwzMCw1MCw4NSwxMDBdfSwicmFuZ2UiOnsiQkFUIjpbMjAsMTAwXX0sImRheXMiOjMwfX0sImdyYW50cyI6W3siYWx0Y3VycmVuY3kiOiJCQVQiLCJleHBpcnlUaW1lIjoxNTUyNjA4MDAwLCJwcm9iaSI6IjMwMDAwMDAwMDAwMDAwMDAwMDAwIn1dfQ==]]></response>
+    <comment></comment>
+  </item>
+  <item>
+    <time>Tue Dec 04 22:28:57 CST 2018</time>
+    <url><![CDATA[https://balance.mercury.basicattentiontoken.org/v2/wallet/ec30a106-addb-42dd-9c61-699822cc93ee/balance]]></url>
+    <host ip="52.73.9.93">balance.mercury.basicattentiontoken.org</host>
+    <port>443</port>
+    <protocol>https</protocol>
+    <method><![CDATA[GET]]></method>
+    <path><![CDATA[/v2/wallet/ec30a106-addb-42dd-9c61-699822cc93ee/balance]]></path>
+    <extension>null</extension>
+    <request base64="true"><![CDATA[R0VUIC92Mi93YWxsZXQvZWMzMGExMDYtYWRkYi00MmRkLTljNjEtNjk5ODIyY2M5M2VlL2JhbGFuY2UgSFRUUC8xLjENCkhvc3Q6IGJhbGFuY2UubWVyY3VyeS5iYXNpY2F0dGVudGlvbnRva2VuLm9yZw0KQ29ubmVjdGlvbjogY2xvc2UNClVzZXItQWdlbnQ6IE1vemlsbGEvNS4wIChYMTE7IExpbnV4IHg4Nl82NCkgQXBwbGVXZWJLaXQvNTM3LjM2IChLSFRNTCwgbGlrZSBHZWNrbykgQ2hyb21lLzcwLjAuMzUzOC43NyBTYWZhcmkvNTM3LjM2DQpBY2NlcHQtRW5jb2Rpbmc6IGd6aXAsIGRlZmxhdGUNCg0K]]></request>
+    <status>200</status>
+    <responselength>859</responselength>
+    <mimetype>JSON</mimetype>
+    <response base64="true"><![CDATA[SFRUUC8xLjEgMjAwIE9LDQpTZXJ2ZXI6IENvd2JveQ0KQ29ubmVjdGlvbjogY2xvc2UNClgtUmF0ZS1MaW1pdC1SZW1haW5pbmc6IDU4DQpYLVJhdGUtTGltaXQtTGltaXQ6IDYwDQpYLVJhdGUtTGltaXQtUmVzZXQ6IDE1NDM5ODQxNjQNCkNhY2hlLUNvbnRyb2w6IHByaXZhdGUNCkNvbnRlbnQtVHlwZTogYXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA0KVmFyeTogYWNjZXB0LWVuY29kaW5nDQpEYXRlOiBXZWQsIDA1IERlYyAyMDE4IDA0OjI4OjU4IEdNVA0KVmlhOiAxLjEgdmVndXINCkNvbnRlbnQtTGVuZ3RoOiA1NTMNCg0KeyJhbHRjdXJyZW5jeSI6IkJBVCIsInByb2JpIjoiMzAwMDAwMDAwMDAwMDAwMDAwMDAiLCJiYWxhbmNlIjoiMzAuMDAwMCIsInVuY29uZmlybWVkIjoiMC4wMDAwIiwicmF0ZXMiOnsiQlRDIjowLjAwMDA0MDQwNzcwNDUxODU5MSwiRVRIIjowLjAwMTQ1ODQzMDQwMDI0MDY3NiwiWFJQIjowLjQ1MDk4Mzc0MzQzMzg2NiwiQkNIIjowLjAwMTEwMTYzMzc0MzE1MDIwNCwiTFRDIjowLjAwNTE0MjAyMzM0NjMwMzUwMiwiREFTSCI6MC4wMDE5MTYxMDExOTMxNzMzNTksIkJURyI6MC4wMDk3OTY3MDgyMDU0NDI5NzYsIlVTRCI6MC4xNTY4MDY1NDcsIkVVUiI6MC4xMzgzOTMzODE0MTE5Nzh9LCJwYXJhbWV0ZXJzIjp7ImFkRnJlZSI6eyJjdXJyZW5jeSI6IkJBVCIsImZlZSI6eyJCQVQiOjMwfSwiY2hvaWNlcyI6eyJCQVQiOlsyMCwzMCw1MCw4NSwxMDBdfSwicmFuZ2UiOnsiQkFUIjpbMjAsMTAwXX0sImRheXMiOjMwfX0sImdyYW50cyI6W3siYWx0Y3VycmVuY3kiOiJCQVQiLCJleHBpcnlUaW1lIjoxNTUyNjA4MDAwLCJwcm9iaSI6IjMwMDAwMDAwMDAwMDAwMDAwMDAwIn1dfQ==]]></response>
+    <comment></comment>
+  </item>
+  <item>
+    <time>Tue Dec 04 22:29:57 CST 2018</time>
+    <url><![CDATA[https://balance.mercury.basicattentiontoken.org/v2/wallet/ec30a106-addb-42dd-9c61-699822cc93ee/balance]]></url>
+    <host ip="52.73.9.93">balance.mercury.basicattentiontoken.org</host>
+    <port>443</port>
+    <protocol>https</protocol>
+    <method><![CDATA[GET]]></method>
+    <path><![CDATA[/v2/wallet/ec30a106-addb-42dd-9c61-699822cc93ee/balance]]></path>
+    <extension>null</extension>
+    <request base64="true"><![CDATA[R0VUIC92Mi93YWxsZXQvZWMzMGExMDYtYWRkYi00MmRkLTljNjEtNjk5ODIyY2M5M2VlL2JhbGFuY2UgSFRUUC8xLjENCkhvc3Q6IGJhbGFuY2UubWVyY3VyeS5iYXNpY2F0dGVudGlvbnRva2VuLm9yZw0KQ29ubmVjdGlvbjogY2xvc2UNClVzZXItQWdlbnQ6IE1vemlsbGEvNS4wIChYMTE7IExpbnV4IHg4Nl82NCkgQXBwbGVXZWJLaXQvNTM3LjM2IChLSFRNTCwgbGlrZSBHZWNrbykgQ2hyb21lLzcwLjAuMzUzOC43NyBTYWZhcmkvNTM3LjM2DQpBY2NlcHQtRW5jb2Rpbmc6IGd6aXAsIGRlZmxhdGUNCg0K]]></request>
+    <status>200</status>
+    <responselength>859</responselength>
+    <mimetype>JSON</mimetype>
+    <response base64="true"><![CDATA[SFRUUC8xLjEgMjAwIE9LDQpTZXJ2ZXI6IENvd2JveQ0KQ29ubmVjdGlvbjogY2xvc2UNClgtUmF0ZS1MaW1pdC1SZW1haW5pbmc6IDU5DQpYLVJhdGUtTGltaXQtTGltaXQ6IDYwDQpYLVJhdGUtTGltaXQtUmVzZXQ6IDE1NDM5ODQyNTgNCkNhY2hlLUNvbnRyb2w6IHByaXZhdGUNCkNvbnRlbnQtVHlwZTogYXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA0KVmFyeTogYWNjZXB0LWVuY29kaW5nDQpEYXRlOiBXZWQsIDA1IERlYyAyMDE4IDA0OjI5OjU4IEdNVA0KVmlhOiAxLjEgdmVndXINCkNvbnRlbnQtTGVuZ3RoOiA1NTMNCg0KeyJhbHRjdXJyZW5jeSI6IkJBVCIsInByb2JpIjoiMzAwMDAwMDAwMDAwMDAwMDAwMDAiLCJiYWxhbmNlIjoiMzAuMDAwMCIsInVuY29uZmlybWVkIjoiMC4wMDAwIiwicmF0ZXMiOnsiQlRDIjowLjAwMDA0MDQwNzcwNDUxODU5MSwiRVRIIjowLjAwMTQ1ODQzMDQwMDI0MDY3NiwiWFJQIjowLjQ1MDk4Mzc0MzQzMzg2NiwiQkNIIjowLjAwMTEwMTYzMzc0MzE1MDIwNCwiTFRDIjowLjAwNTE0MjAyMzM0NjMwMzUwMiwiREFTSCI6MC4wMDE5MTYxMDExOTMxNzMzNTksIkJURyI6MC4wMDk3OTY3MDgyMDU0NDI5NzYsIlVTRCI6MC4xNTY4MDY1NDcsIkVVUiI6MC4xMzgzOTMzODE0MTE5Nzh9LCJwYXJhbWV0ZXJzIjp7ImFkRnJlZSI6eyJjdXJyZW5jeSI6IkJBVCIsImZlZSI6eyJCQVQiOjMwfSwiY2hvaWNlcyI6eyJCQVQiOlsyMCwzMCw1MCw4NSwxMDBdfSwicmFuZ2UiOnsiQkFUIjpbMjAsMTAwXX0sImRheXMiOjMwfX0sImdyYW50cyI6W3siYWx0Y3VycmVuY3kiOiJCQVQiLCJleHBpcnlUaW1lIjoxNTUyNjA4MDAwLCJwcm9iaSI6IjMwMDAwMDAwMDAwMDAwMDAwMDAwIn1dfQ==]]></response>
+    <comment></comment>
+  </item>
+  <item>
+    <time>Tue Dec 04 22:30:56 CST 2018</time>
+    <url><![CDATA[https://go-updater.brave.com/extensions]]></url>
+    <host ip="151.101.185.7">go-updater.brave.com</host>
+    <port>443</port>
+    <protocol>https</protocol>
+    <method><![CDATA[POST]]></method>
+    <path><![CDATA[/extensions]]></path>
+    <extension>null</extension>
+    <request base64="true"><![CDATA[UE9TVCAvZXh0ZW5zaW9ucyBIVFRQLzEuMQ0KSG9zdDogZ28tdXBkYXRlci5icmF2ZS5jb20NCkNvbm5lY3Rpb246IGNsb3NlDQpDb250ZW50LUxlbmd0aDogMjExNQ0KWC1Hb29nLVVwZGF0ZS1BcHBJZDogYWZhbGFrcGxmZm5ubmxrbmNqaGJtYWhqZmpobWxrYWwsb29maWFuYW5ib29kamJibWRlbGdkb21taWhqYmtmYWcsY2Zma3BiYWxtbGxrZG9lbmhtZG1wYmthamlwZGpmYW0sYmlhaHBnYmRtZGtmZ25kY21maWlwZ2NlYm9ib2pqa3AsZ2NtamttZ2RsZ25ra2NvY21vZWltaW5haWptbWpuaWksb2VtbW5kY2JsZGJvaWViZm5sYWRkYWNiZGZtYWRhZG0saGZua3BpbWxoaGdpZWFkZGdmZW1qaG9mbWZibG1uaWIsb2pqZ25wa2lvb25kZWxtZ2diZWtmaGxsaGRhaW1uaG8sbGxrZ2pmZmNkcGZmbWhpYWttZmNkY2Jsb2hjY3BmbW8sa2hhb2llYm5ka29qbG1wcGVlbWpoYnBiYW5kaWxqcGUsZ2lla2NtbWxua2xlbmxhb21wcGtwaGtuam1ubnBuZWgsYWVtb21rZG5jYXBkbmZhampiYmNiZGViamxqYnBtcGosY29wamJtamJvamJha3BhZWRtcGtobWlwbG1tZWhmY2sNClgtR29vZy1VcGRhdGUtSW50ZXJhY3Rpdml0eTogYmcNClgtR29vZy1VcGRhdGUtVXBkYXRlcjogLTcwLjAuNTYuMTINCkNvbnRlbnQtVHlwZTogYXBwbGljYXRpb24veG1sDQpVc2VyLUFnZW50OiBNb3ppbGxhLzUuMCAoWDExOyBMaW51eCB4ODZfNjQpIEFwcGxlV2ViS2l0LzUzNy4zNiAoS0hUTUwsIGxpa2UgR2Vja28pIENocm9tZS83MC4wLjM1MzguNzcgU2FmYXJpLzUzNy4zNg0KQWNjZXB0LUVuY29kaW5nOiBnemlwLCBkZWZsYXRlDQoNCjw/eG1sIHZlcnNpb249IjEuMCIgZW5jb2Rpbmc9IlVURi04Ij8+PHJlcXVlc3QgcHJvdG9jb2w9IjMuMSIgZGVkdXA9ImNyIiBhY2NlcHRmb3JtYXQ9ImNyeDIsY3J4MyIgc2Vzc2lvbmlkPSJ7ZTI2YjY4YzgtNjBjMC00YzIxLWIzNWEtMGNkMjI3ZjhkM2NmfSIgcmVxdWVzdGlkPSJ7ZjQ3ZjYyMzItMzIwZS00MjRmLTk2MTAtYmI5ZjJiMWJjZDRkfSIgdXBkYXRlcj0iIiB1cGRhdGVydmVyc2lvbj0iNzAuMC41Ni4xMiIgcHJvZHZlcnNpb249IjcwLjAuNTYuMTIiIGxhbmc9IiIgdXBkYXRlcmNoYW5uZWw9InN0YWJsZSIgcHJvZGNoYW5uZWw9InN0YWJsZSIgb3M9ImxpbnV4IiBhcmNoPSJ4NjQiIG5hY2xfYXJjaD0ieDg2LTY0Ij48aHcgcGh5c21lbW9yeT0iOCIvPjxvcyBwbGF0Zm9ybT0iTGludXgiIGFyY2g9Ing4Nl82NCIgdmVyc2lvbj0iNC4xOC4xMy0xMDAuZmMyNy54ODZfNjQiLz48YXBwIGFwcGlkPSJhZmFsYWtwbGZmbm5ubGtuY2poYm1haGpmamhtbGthbCIgdmVyc2lvbj0iMS4wLjMiIGVuYWJsZWQ9IjEiPjx1cGRhdGVjaGVjay8+PHBpbmcgcj0iLTIiIHBpbmdfZnJlc2huZXNzPSIiLz48L2FwcD48YXBwIGFwcGlkPSJvb2ZpYW5hbmJvb2RqYmJtZGVsZ2RvbW1paGpia2ZhZyIgdmVyc2lvbj0iMS4wLjgiIGVuYWJsZWQ9IjEiPjx1cGRhdGVjaGVjay8+PHBpbmcgcj0iLTIiIHBpbmdfZnJlc2huZXNzPSIiLz48L2FwcD48YXBwIGFwcGlkPSJjZmZrcGJhbG1sbGtkb2VuaG1kbXBia2FqaXBkamZhbSIgdmVyc2lvbj0iMS4wLjYyIiBlbmFibGVkPSIxIj48dXBkYXRlY2hlY2svPjxwaW5nIHI9Ii0yIiBwaW5nX2ZyZXNobmVzcz0iIi8+PC9hcHA+PGFwcCBhcHBpZD0iYmlhaHBnYmRtZGtmZ25kY21maWlwZ2NlYm9ib2pqa3AiIHZlcnNpb249IjEuMC4zIiBlbmFibGVkPSIxIj48dXBkYXRlY2hlY2svPjxwaW5nIHI9Ii0yIiBwaW5nX2ZyZXNobmVzcz0iIi8+PC9hcHA+PGFwcCBhcHBpZD0iZ2NtamttZ2RsZ25ra2NvY21vZWltaW5haWptbWpuaWkiIHZlcnNpb249IjAuMC4wLjAiIGVuYWJsZWQ9IjEiPjx1cGRhdGVjaGVjay8+PHBpbmcgcj0iLTIiIHBpbmdfZnJlc2huZXNzPSIiLz48L2FwcD48YXBwIGFwcGlkPSJvZW1tbmRjYmxkYm9pZWJmbmxhZGRhY2JkZm1hZGFkbSIgdmVyc2lvbj0iMi4wLjY3MyIgZW5hYmxlZD0iMSI+PHVwZGF0ZWNoZWNrLz48cGluZyByPSItMiIgcGluZ19mcmVzaG5lc3M9IiIvPjwvYXBwPjxhcHAgYXBwaWQ9ImhmbmtwaW1saGhnaWVhZGRnZmVtamhvZm1mYmxtbmliIiB2ZXJzaW9uPSIwLjAuMC4wIiBlbmFibGVkPSIxIj48dXBkYXRlY2hlY2svPjxwaW5nIHI9Ii0yIiBwaW5nX2ZyZXNobmVzcz0iIi8+PC9hcHA+PGFwcCBhcHBpZD0ib2pqZ25wa2lvb25kZWxtZ2diZWtmaGxsaGRhaW1uaG8iIHZlcnNpb249IjAuMC4wLjAiIGVuYWJsZWQ9IjEiPjx1cGRhdGVjaGVjay8+PHBpbmcgcj0iLTIiIHBpbmdfZnJlc2huZXNzPSIiLz48L2FwcD48YXBwIGFwcGlkPSJsbGtnamZmY2RwZmZtaGlha21mY2RjYmxvaGNjcGZtbyIgdmVyc2lvbj0iMC4wLjAuMCIgZW5hYmxlZD0iMSI+PHVwZGF0ZWNoZWNrLz48cGluZyByPSItMiIgcGluZ19mcmVzaG5lc3M9IiIvPjwvYXBwPjxhcHAgYXBwaWQ9ImtoYW9pZWJuZGtvamxtcHBlZW1qaGJwYmFuZGlsanBlIiB2ZXJzaW9uPSIwLjAuMC4wIiBlbmFibGVkPSIxIj48dXBkYXRlY2hlY2svPjxwaW5nIHI9Ii0yIiBwaW5nX2ZyZXNobmVzcz0iIi8+PC9hcHA+PGFwcCBhcHBpZD0iZ2lla2NtbWxua2xlbmxhb21wcGtwaGtuam1ubnBuZWgiIHZlcnNpb249IjAuMC4wLjAiIGVuYWJsZWQ9IjEiPjx1cGRhdGVjaGVjay8+PHBpbmcgcj0iLTIiIHBpbmdfZnJlc2huZXNzPSIiLz48L2FwcD48YXBwIGFwcGlkPSJhZW1vbWtkbmNhcGRuZmFqamJiY2JkZWJqbGpicG1waiIgdmVyc2lvbj0iMC4wLjAuMCIgZW5hYmxlZD0iMSI+PHVwZGF0ZWNoZWNrLz48cGluZyByPSItMiIgcGluZ19mcmVzaG5lc3M9IiIvPjwvYXBwPjxhcHAgYXBwaWQ9ImNvcGpibWpib2piYWtwYWVkbXBraG1pcGxtbWVoZmNrIiB2ZXJzaW9uPSIwLjAuMC4wIiBlbmFibGVkPSIxIj48dXBkYXRlY2hlY2svPjxwaW5nIHI9Ii0yIiBwaW5nX2ZyZXNobmVzcz0iIi8+PC9hcHA+PC9yZXF1ZXN0Pg==]]></request>
+    <status>200</status>
+    <responselength>319</responselength>
+    <mimetype>XML</mimetype>
+    <response base64="true"><![CDATA[SFRUUC8xLjEgMjAwIE9LDQpDb250ZW50LVR5cGU6IGFwcGxpY2F0aW9uL3htbA0KQ29udGVudC1MZW5ndGg6IDUwDQpBY2NlcHQtUmFuZ2VzOiBieXRlcw0KRGF0ZTogV2VkLCAwNSBEZWMgMjAxOCAwNDozMDo1NiBHTVQNClZpYTogMS4xIHZhcm5pc2gNCkNvbm5lY3Rpb246IGNsb3NlDQpYLVNlcnZlZC1CeTogY2FjaGUtbWR3MTczODItTURXDQpYLUNhY2hlOiBNSVNTDQpYLUNhY2hlLUhpdHM6IDANClgtVGltZXI6IFMxNTQzOTg0MjU2LjQzMzA2NCxWUzAsVkU0OA0KDQo8cmVzcG9uc2UgcHJvdG9jb2w9IjMuMSIgc2VydmVyPSJwcm9kIj48L3Jlc3BvbnNlPg==]]></response>
+    <comment></comment>
+  </item>
+  <item>
+    <time>Tue Dec 04 22:30:57 CST 2018</time>
+    <url><![CDATA[https://balance.mercury.basicattentiontoken.org/v2/wallet/ec30a106-addb-42dd-9c61-699822cc93ee/balance]]></url>
+    <host ip="52.73.9.93">balance.mercury.basicattentiontoken.org</host>
+    <port>443</port>
+    <protocol>https</protocol>
+    <method><![CDATA[GET]]></method>
+    <path><![CDATA[/v2/wallet/ec30a106-addb-42dd-9c61-699822cc93ee/balance]]></path>
+    <extension>null</extension>
+    <request base64="true"><![CDATA[R0VUIC92Mi93YWxsZXQvZWMzMGExMDYtYWRkYi00MmRkLTljNjEtNjk5ODIyY2M5M2VlL2JhbGFuY2UgSFRUUC8xLjENCkhvc3Q6IGJhbGFuY2UubWVyY3VyeS5iYXNpY2F0dGVudGlvbnRva2VuLm9yZw0KQ29ubmVjdGlvbjogY2xvc2UNClVzZXItQWdlbnQ6IE1vemlsbGEvNS4wIChYMTE7IExpbnV4IHg4Nl82NCkgQXBwbGVXZWJLaXQvNTM3LjM2IChLSFRNTCwgbGlrZSBHZWNrbykgQ2hyb21lLzcwLjAuMzUzOC43NyBTYWZhcmkvNTM3LjM2DQpBY2NlcHQtRW5jb2Rpbmc6IGd6aXAsIGRlZmxhdGUNCg0K]]></request>
+    <status>200</status>
+    <responselength>859</responselength>
+    <mimetype>JSON</mimetype>
+    <response base64="true"><![CDATA[SFRUUC8xLjEgMjAwIE9LDQpTZXJ2ZXI6IENvd2JveQ0KQ29ubmVjdGlvbjogY2xvc2UNClgtUmF0ZS1MaW1pdC1SZW1haW5pbmc6IDU5DQpYLVJhdGUtTGltaXQtTGltaXQ6IDYwDQpYLVJhdGUtTGltaXQtUmVzZXQ6IDE1NDM5ODQzMTgNCkNhY2hlLUNvbnRyb2w6IHByaXZhdGUNCkNvbnRlbnQtVHlwZTogYXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA0KVmFyeTogYWNjZXB0LWVuY29kaW5nDQpEYXRlOiBXZWQsIDA1IERlYyAyMDE4IDA0OjMwOjU4IEdNVA0KVmlhOiAxLjEgdmVndXINCkNvbnRlbnQtTGVuZ3RoOiA1NTMNCg0KeyJhbHRjdXJyZW5jeSI6IkJBVCIsInByb2JpIjoiMzAwMDAwMDAwMDAwMDAwMDAwMDAiLCJiYWxhbmNlIjoiMzAuMDAwMCIsInVuY29uZmlybWVkIjoiMC4wMDAwIiwicmF0ZXMiOnsiQlRDIjowLjAwMDA0MDQwNzcwNDUxODU5MSwiRVRIIjowLjAwMTQ1ODQzMDQwMDI0MDY3NiwiWFJQIjowLjQ1MDk4Mzc0MzQzMzg2NiwiQkNIIjowLjAwMTEwMTYzMzc0MzE1MDIwNCwiTFRDIjowLjAwNTE0MjAyMzM0NjMwMzUwMiwiREFTSCI6MC4wMDE5MTYxMDExOTMxNzMzNTksIkJURyI6MC4wMDk3OTY3MDgyMDU0NDI5NzYsIlVTRCI6MC4xNTY4MDY1NDcsIkVVUiI6MC4xMzgzOTMzODE0MTE5Nzh9LCJwYXJhbWV0ZXJzIjp7ImFkRnJlZSI6eyJjdXJyZW5jeSI6IkJBVCIsImZlZSI6eyJCQVQiOjMwfSwiY2hvaWNlcyI6eyJCQVQiOlsyMCwzMCw1MCw4NSwxMDBdfSwicmFuZ2UiOnsiQkFUIjpbMjAsMTAwXX0sImRheXMiOjMwfX0sImdyYW50cyI6W3siYWx0Y3VycmVuY3kiOiJCQVQiLCJleHBpcnlUaW1lIjoxNTUyNjA4MDAwLCJwcm9iaSI6IjMwMDAwMDAwMDAwMDAwMDAwMDAwIn1dfQ==]]></response>
+    <comment></comment>
+  </item>
+  <item>
+    <time>Tue Dec 04 22:31:57 CST 2018</time>
+    <url><![CDATA[https://balance.mercury.basicattentiontoken.org/v2/wallet/ec30a106-addb-42dd-9c61-699822cc93ee/balance]]></url>
+    <host ip="52.73.9.93">balance.mercury.basicattentiontoken.org</host>
+    <port>443</port>
+    <protocol>https</protocol>
+    <method><![CDATA[GET]]></method>
+    <path><![CDATA[/v2/wallet/ec30a106-addb-42dd-9c61-699822cc93ee/balance]]></path>
+    <extension>null</extension>
+    <request base64="true"><![CDATA[R0VUIC92Mi93YWxsZXQvZWMzMGExMDYtYWRkYi00MmRkLTljNjEtNjk5ODIyY2M5M2VlL2JhbGFuY2UgSFRUUC8xLjENCkhvc3Q6IGJhbGFuY2UubWVyY3VyeS5iYXNpY2F0dGVudGlvbnRva2VuLm9yZw0KQ29ubmVjdGlvbjogY2xvc2UNClVzZXItQWdlbnQ6IE1vemlsbGEvNS4wIChYMTE7IExpbnV4IHg4Nl82NCkgQXBwbGVXZWJLaXQvNTM3LjM2IChLSFRNTCwgbGlrZSBHZWNrbykgQ2hyb21lLzcwLjAuMzUzOC43NyBTYWZhcmkvNTM3LjM2DQpBY2NlcHQtRW5jb2Rpbmc6IGd6aXAsIGRlZmxhdGUNCg0K]]></request>
+    <status>200</status>
+    <responselength>859</responselength>
+    <mimetype>JSON</mimetype>
+    <response base64="true"><![CDATA[SFRUUC8xLjEgMjAwIE9LDQpTZXJ2ZXI6IENvd2JveQ0KQ29ubmVjdGlvbjogY2xvc2UNClgtUmF0ZS1MaW1pdC1SZW1haW5pbmc6IDU5DQpYLVJhdGUtTGltaXQtTGltaXQ6IDYwDQpYLVJhdGUtTGltaXQtUmVzZXQ6IDE1NDM5ODQzNzgNCkNhY2hlLUNvbnRyb2w6IHByaXZhdGUNCkNvbnRlbnQtVHlwZTogYXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA0KVmFyeTogYWNjZXB0LWVuY29kaW5nDQpEYXRlOiBXZWQsIDA1IERlYyAyMDE4IDA0OjMxOjU4IEdNVA0KVmlhOiAxLjEgdmVndXINCkNvbnRlbnQtTGVuZ3RoOiA1NTMNCg0KeyJhbHRjdXJyZW5jeSI6IkJBVCIsInByb2JpIjoiMzAwMDAwMDAwMDAwMDAwMDAwMDAiLCJiYWxhbmNlIjoiMzAuMDAwMCIsInVuY29uZmlybWVkIjoiMC4wMDAwIiwicmF0ZXMiOnsiQlRDIjowLjAwMDA0MDQwNzcwNDUxODU5MSwiRVRIIjowLjAwMTQ1ODQzMDQwMDI0MDY3NiwiWFJQIjowLjQ1MDk4Mzc0MzQzMzg2NiwiQkNIIjowLjAwMTEwMTYzMzc0MzE1MDIwNCwiTFRDIjowLjAwNTE0MjAyMzM0NjMwMzUwMiwiREFTSCI6MC4wMDE5MTYxMDExOTMxNzMzNTksIkJURyI6MC4wMDk3OTY3MDgyMDU0NDI5NzYsIlVTRCI6MC4xNTY4MDY1NDcsIkVVUiI6MC4xMzgzOTMzODE0MTE5Nzh9LCJwYXJhbWV0ZXJzIjp7ImFkRnJlZSI6eyJjdXJyZW5jeSI6IkJBVCIsImZlZSI6eyJCQVQiOjMwfSwiY2hvaWNlcyI6eyJCQVQiOlsyMCwzMCw1MCw4NSwxMDBdfSwicmFuZ2UiOnsiQkFUIjpbMjAsMTAwXX0sImRheXMiOjMwfX0sImdyYW50cyI6W3siYWx0Y3VycmVuY3kiOiJCQVQiLCJleHBpcnlUaW1lIjoxNTUyNjA4MDAwLCJwcm9iaSI6IjMwMDAwMDAwMDAwMDAwMDAwMDAwIn1dfQ==]]></response>
+    <comment></comment>
+  </item>
+  <item>
+    <time>Tue Dec 04 22:32:57 CST 2018</time>
+    <url><![CDATA[https://balance.mercury.basicattentiontoken.org/v2/wallet/ec30a106-addb-42dd-9c61-699822cc93ee/balance]]></url>
+    <host ip="52.73.9.93">balance.mercury.basicattentiontoken.org</host>
+    <port>443</port>
+    <protocol>https</protocol>
+    <method><![CDATA[GET]]></method>
+    <path><![CDATA[/v2/wallet/ec30a106-addb-42dd-9c61-699822cc93ee/balance]]></path>
+    <extension>null</extension>
+    <request base64="true"><![CDATA[R0VUIC92Mi93YWxsZXQvZWMzMGExMDYtYWRkYi00MmRkLTljNjEtNjk5ODIyY2M5M2VlL2JhbGFuY2UgSFRUUC8xLjENCkhvc3Q6IGJhbGFuY2UubWVyY3VyeS5iYXNpY2F0dGVudGlvbnRva2VuLm9yZw0KQ29ubmVjdGlvbjogY2xvc2UNClVzZXItQWdlbnQ6IE1vemlsbGEvNS4wIChYMTE7IExpbnV4IHg4Nl82NCkgQXBwbGVXZWJLaXQvNTM3LjM2IChLSFRNTCwgbGlrZSBHZWNrbykgQ2hyb21lLzcwLjAuMzUzOC43NyBTYWZhcmkvNTM3LjM2DQpBY2NlcHQtRW5jb2Rpbmc6IGd6aXAsIGRlZmxhdGUNCg0K]]></request>
+    <status>200</status>
+    <responselength>859</responselength>
+    <mimetype>JSON</mimetype>
+    <response base64="true"><![CDATA[SFRUUC8xLjEgMjAwIE9LDQpTZXJ2ZXI6IENvd2JveQ0KQ29ubmVjdGlvbjogY2xvc2UNClgtUmF0ZS1MaW1pdC1SZW1haW5pbmc6IDU4DQpYLVJhdGUtTGltaXQtTGltaXQ6IDYwDQpYLVJhdGUtTGltaXQtUmVzZXQ6IDE1NDM5ODQzNzgNCkNhY2hlLUNvbnRyb2w6IHByaXZhdGUNCkNvbnRlbnQtVHlwZTogYXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA0KVmFyeTogYWNjZXB0LWVuY29kaW5nDQpEYXRlOiBXZWQsIDA1IERlYyAyMDE4IDA0OjMyOjU4IEdNVA0KVmlhOiAxLjEgdmVndXINCkNvbnRlbnQtTGVuZ3RoOiA1NTMNCg0KeyJhbHRjdXJyZW5jeSI6IkJBVCIsInByb2JpIjoiMzAwMDAwMDAwMDAwMDAwMDAwMDAiLCJiYWxhbmNlIjoiMzAuMDAwMCIsInVuY29uZmlybWVkIjoiMC4wMDAwIiwicmF0ZXMiOnsiQlRDIjowLjAwMDA0MDQwNzcwNDUxODU5MSwiRVRIIjowLjAwMTQ1ODQzMDQwMDI0MDY3NiwiWFJQIjowLjQ1MDk4Mzc0MzQzMzg2NiwiQkNIIjowLjAwMTEwMTYzMzc0MzE1MDIwNCwiTFRDIjowLjAwNTE0MjAyMzM0NjMwMzUwMiwiREFTSCI6MC4wMDE5MTYxMDExOTMxNzMzNTksIkJURyI6MC4wMDk3OTY3MDgyMDU0NDI5NzYsIlVTRCI6MC4xNTY4MDY1NDcsIkVVUiI6MC4xMzgzOTMzODE0MTE5Nzh9LCJwYXJhbWV0ZXJzIjp7ImFkRnJlZSI6eyJjdXJyZW5jeSI6IkJBVCIsImZlZSI6eyJCQVQiOjMwfSwiY2hvaWNlcyI6eyJCQVQiOlsyMCwzMCw1MCw4NSwxMDBdfSwicmFuZ2UiOnsiQkFUIjpbMjAsMTAwXX0sImRheXMiOjMwfX0sImdyYW50cyI6W3siYWx0Y3VycmVuY3kiOiJCQVQiLCJleHBpcnlUaW1lIjoxNTUyNjA4MDAwLCJwcm9iaSI6IjMwMDAwMDAwMDAwMDAwMDAwMDAwIn1dfQ==]]></response>
+    <comment></comment>
+  </item>
+  <item>
+    <time>Tue Dec 04 22:33:57 CST 2018</time>
+    <url><![CDATA[https://balance.mercury.basicattentiontoken.org/v2/wallet/ec30a106-addb-42dd-9c61-699822cc93ee/balance]]></url>
+    <host ip="52.73.9.93">balance.mercury.basicattentiontoken.org</host>
+    <port>443</port>
+    <protocol>https</protocol>
+    <method><![CDATA[GET]]></method>
+    <path><![CDATA[/v2/wallet/ec30a106-addb-42dd-9c61-699822cc93ee/balance]]></path>
+    <extension>null</extension>
+    <request base64="true"><![CDATA[R0VUIC92Mi93YWxsZXQvZWMzMGExMDYtYWRkYi00MmRkLTljNjEtNjk5ODIyY2M5M2VlL2JhbGFuY2UgSFRUUC8xLjENCkhvc3Q6IGJhbGFuY2UubWVyY3VyeS5iYXNpY2F0dGVudGlvbnRva2VuLm9yZw0KQ29ubmVjdGlvbjogY2xvc2UNClVzZXItQWdlbnQ6IE1vemlsbGEvNS4wIChYMTE7IExpbnV4IHg4Nl82NCkgQXBwbGVXZWJLaXQvNTM3LjM2IChLSFRNTCwgbGlrZSBHZWNrbykgQ2hyb21lLzcwLjAuMzUzOC43NyBTYWZhcmkvNTM3LjM2DQpBY2NlcHQtRW5jb2Rpbmc6IGd6aXAsIGRlZmxhdGUNCg0K]]></request>
+    <status>200</status>
+    <responselength>859</responselength>
+    <mimetype>JSON</mimetype>
+    <response base64="true"><![CDATA[SFRUUC8xLjEgMjAwIE9LDQpTZXJ2ZXI6IENvd2JveQ0KQ29ubmVjdGlvbjogY2xvc2UNClgtUmF0ZS1MaW1pdC1SZW1haW5pbmc6IDU5DQpYLVJhdGUtTGltaXQtTGltaXQ6IDYwDQpYLVJhdGUtTGltaXQtUmVzZXQ6IDE1NDM5ODQ0OTgNCkNhY2hlLUNvbnRyb2w6IHByaXZhdGUNCkNvbnRlbnQtVHlwZTogYXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA0KVmFyeTogYWNjZXB0LWVuY29kaW5nDQpEYXRlOiBXZWQsIDA1IERlYyAyMDE4IDA0OjMzOjU4IEdNVA0KVmlhOiAxLjEgdmVndXINCkNvbnRlbnQtTGVuZ3RoOiA1NTMNCg0KeyJhbHRjdXJyZW5jeSI6IkJBVCIsInByb2JpIjoiMzAwMDAwMDAwMDAwMDAwMDAwMDAiLCJiYWxhbmNlIjoiMzAuMDAwMCIsInVuY29uZmlybWVkIjoiMC4wMDAwIiwicmF0ZXMiOnsiQlRDIjowLjAwMDA0MDQwNzcwNDUxODU5MSwiRVRIIjowLjAwMTQ1ODQzMDQwMDI0MDY3NiwiWFJQIjowLjQ1MDk4Mzc0MzQzMzg2NiwiQkNIIjowLjAwMTEwMTYzMzc0MzE1MDIwNCwiTFRDIjowLjAwNTE0MjAyMzM0NjMwMzUwMiwiREFTSCI6MC4wMDE5MTYxMDExOTMxNzMzNTksIkJURyI6MC4wMDk3OTY3MDgyMDU0NDI5NzYsIlVTRCI6MC4xNTY4MDY1NDcsIkVVUiI6MC4xMzgzOTMzODE0MTE5Nzh9LCJwYXJhbWV0ZXJzIjp7ImFkRnJlZSI6eyJjdXJyZW5jeSI6IkJBVCIsImZlZSI6eyJCQVQiOjMwfSwiY2hvaWNlcyI6eyJCQVQiOlsyMCwzMCw1MCw4NSwxMDBdfSwicmFuZ2UiOnsiQkFUIjpbMjAsMTAwXX0sImRheXMiOjMwfX0sImdyYW50cyI6W3siYWx0Y3VycmVuY3kiOiJCQVQiLCJleHBpcnlUaW1lIjoxNTUyNjA4MDAwLCJwcm9iaSI6IjMwMDAwMDAwMDAwMDAwMDAwMDAwIn1dfQ==]]></response>
+    <comment></comment>
+  </item>
+  <item>
+    <time>Tue Dec 04 22:34:57 CST 2018</time>
+    <url><![CDATA[https://balance.mercury.basicattentiontoken.org/v2/wallet/ec30a106-addb-42dd-9c61-699822cc93ee/balance]]></url>
+    <host ip="52.73.9.93">balance.mercury.basicattentiontoken.org</host>
+    <port>443</port>
+    <protocol>https</protocol>
+    <method><![CDATA[GET]]></method>
+    <path><![CDATA[/v2/wallet/ec30a106-addb-42dd-9c61-699822cc93ee/balance]]></path>
+    <extension>null</extension>
+    <request base64="true"><![CDATA[R0VUIC92Mi93YWxsZXQvZWMzMGExMDYtYWRkYi00MmRkLTljNjEtNjk5ODIyY2M5M2VlL2JhbGFuY2UgSFRUUC8xLjENCkhvc3Q6IGJhbGFuY2UubWVyY3VyeS5iYXNpY2F0dGVudGlvbnRva2VuLm9yZw0KQ29ubmVjdGlvbjogY2xvc2UNClVzZXItQWdlbnQ6IE1vemlsbGEvNS4wIChYMTE7IExpbnV4IHg4Nl82NCkgQXBwbGVXZWJLaXQvNTM3LjM2IChLSFRNTCwgbGlrZSBHZWNrbykgQ2hyb21lLzcwLjAuMzUzOC43NyBTYWZhcmkvNTM3LjM2DQpBY2NlcHQtRW5jb2Rpbmc6IGd6aXAsIGRlZmxhdGUNCg0K]]></request>
+    <status>200</status>
+    <responselength>859</responselength>
+    <mimetype>JSON</mimetype>
+    <response base64="true"><![CDATA[SFRUUC8xLjEgMjAwIE9LDQpTZXJ2ZXI6IENvd2JveQ0KQ29ubmVjdGlvbjogY2xvc2UNClgtUmF0ZS1MaW1pdC1SZW1haW5pbmc6IDU5DQpYLVJhdGUtTGltaXQtTGltaXQ6IDYwDQpYLVJhdGUtTGltaXQtUmVzZXQ6IDE1NDM5ODQ1NTgNCkNhY2hlLUNvbnRyb2w6IHByaXZhdGUNCkNvbnRlbnQtVHlwZTogYXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA0KVmFyeTogYWNjZXB0LWVuY29kaW5nDQpEYXRlOiBXZWQsIDA1IERlYyAyMDE4IDA0OjM0OjU4IEdNVA0KVmlhOiAxLjEgdmVndXINCkNvbnRlbnQtTGVuZ3RoOiA1NTMNCg0KeyJhbHRjdXJyZW5jeSI6IkJBVCIsInByb2JpIjoiMzAwMDAwMDAwMDAwMDAwMDAwMDAiLCJiYWxhbmNlIjoiMzAuMDAwMCIsInVuY29uZmlybWVkIjoiMC4wMDAwIiwicmF0ZXMiOnsiQlRDIjowLjAwMDA0MDQwNzcwNDUxODU5MSwiRVRIIjowLjAwMTQ1ODQzMDQwMDI0MDY3NiwiWFJQIjowLjQ1MDk4Mzc0MzQzMzg2NiwiQkNIIjowLjAwMTEwMTYzMzc0MzE1MDIwNCwiTFRDIjowLjAwNTE0MjAyMzM0NjMwMzUwMiwiREFTSCI6MC4wMDE5MTYxMDExOTMxNzMzNTksIkJURyI6MC4wMDk3OTY3MDgyMDU0NDI5NzYsIlVTRCI6MC4xNTY4MDY1NDcsIkVVUiI6MC4xMzgzOTMzODE0MTE5Nzh9LCJwYXJhbWV0ZXJzIjp7ImFkRnJlZSI6eyJjdXJyZW5jeSI6IkJBVCIsImZlZSI6eyJCQVQiOjMwfSwiY2hvaWNlcyI6eyJCQVQiOlsyMCwzMCw1MCw4NSwxMDBdfSwicmFuZ2UiOnsiQkFUIjpbMjAsMTAwXX0sImRheXMiOjMwfX0sImdyYW50cyI6W3siYWx0Y3VycmVuY3kiOiJCQVQiLCJleHBpcnlUaW1lIjoxNTUyNjA4MDAwLCJwcm9iaSI6IjMwMDAwMDAwMDAwMDAwMDAwMDAwIn1dfQ==]]></response>
+    <comment></comment>
+  </item>
+  <item>
+    <time>Tue Dec 04 22:35:57 CST 2018</time>
+    <url><![CDATA[https://balance.mercury.basicattentiontoken.org/v2/wallet/ec30a106-addb-42dd-9c61-699822cc93ee/balance]]></url>
+    <host ip="52.73.9.93">balance.mercury.basicattentiontoken.org</host>
+    <port>443</port>
+    <protocol>https</protocol>
+    <method><![CDATA[GET]]></method>
+    <path><![CDATA[/v2/wallet/ec30a106-addb-42dd-9c61-699822cc93ee/balance]]></path>
+    <extension>null</extension>
+    <request base64="true"><![CDATA[R0VUIC92Mi93YWxsZXQvZWMzMGExMDYtYWRkYi00MmRkLTljNjEtNjk5ODIyY2M5M2VlL2JhbGFuY2UgSFRUUC8xLjENCkhvc3Q6IGJhbGFuY2UubWVyY3VyeS5iYXNpY2F0dGVudGlvbnRva2VuLm9yZw0KQ29ubmVjdGlvbjogY2xvc2UNClVzZXItQWdlbnQ6IE1vemlsbGEvNS4wIChYMTE7IExpbnV4IHg4Nl82NCkgQXBwbGVXZWJLaXQvNTM3LjM2IChLSFRNTCwgbGlrZSBHZWNrbykgQ2hyb21lLzcwLjAuMzUzOC43NyBTYWZhcmkvNTM3LjM2DQpBY2NlcHQtRW5jb2Rpbmc6IGd6aXAsIGRlZmxhdGUNCg0K]]></request>
+    <status>200</status>
+    <responselength>859</responselength>
+    <mimetype>JSON</mimetype>
+    <response base64="true"><![CDATA[SFRUUC8xLjEgMjAwIE9LDQpTZXJ2ZXI6IENvd2JveQ0KQ29ubmVjdGlvbjogY2xvc2UNClgtUmF0ZS1MaW1pdC1SZW1haW5pbmc6IDU4DQpYLVJhdGUtTGltaXQtTGltaXQ6IDYwDQpYLVJhdGUtTGltaXQtUmVzZXQ6IDE1NDM5ODQ1NTgNCkNhY2hlLUNvbnRyb2w6IHByaXZhdGUNCkNvbnRlbnQtVHlwZTogYXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA0KVmFyeTogYWNjZXB0LWVuY29kaW5nDQpEYXRlOiBXZWQsIDA1IERlYyAyMDE4IDA0OjM1OjU4IEdNVA0KVmlhOiAxLjEgdmVndXINCkNvbnRlbnQtTGVuZ3RoOiA1NTMNCg0KeyJhbHRjdXJyZW5jeSI6IkJBVCIsInByb2JpIjoiMzAwMDAwMDAwMDAwMDAwMDAwMDAiLCJiYWxhbmNlIjoiMzAuMDAwMCIsInVuY29uZmlybWVkIjoiMC4wMDAwIiwicmF0ZXMiOnsiQlRDIjowLjAwMDA0MDQwNzcwNDUxODU5MSwiRVRIIjowLjAwMTQ1ODQzMDQwMDI0MDY3NiwiWFJQIjowLjQ1MDk4Mzc0MzQzMzg2NiwiQkNIIjowLjAwMTEwMTYzMzc0MzE1MDIwNCwiTFRDIjowLjAwNTE0MjAyMzM0NjMwMzUwMiwiREFTSCI6MC4wMDE5MTYxMDExOTMxNzMzNTksIkJURyI6MC4wMDk3OTY3MDgyMDU0NDI5NzYsIlVTRCI6MC4xNTY4MDY1NDcsIkVVUiI6MC4xMzgzOTMzODE0MTE5Nzh9LCJwYXJhbWV0ZXJzIjp7ImFkRnJlZSI6eyJjdXJyZW5jeSI6IkJBVCIsImZlZSI6eyJCQVQiOjMwfSwiY2hvaWNlcyI6eyJCQVQiOlsyMCwzMCw1MCw4NSwxMDBdfSwicmFuZ2UiOnsiQkFUIjpbMjAsMTAwXX0sImRheXMiOjMwfX0sImdyYW50cyI6W3siYWx0Y3VycmVuY3kiOiJCQVQiLCJleHBpcnlUaW1lIjoxNTUyNjA4MDAwLCJwcm9iaSI6IjMwMDAwMDAwMDAwMDAwMDAwMDAwIn1dfQ==]]></response>
+    <comment></comment>
+  </item>
+  <item>
+    <time>Tue Dec 04 22:36:57 CST 2018</time>
+    <url><![CDATA[https://balance.mercury.basicattentiontoken.org/v2/wallet/ec30a106-addb-42dd-9c61-699822cc93ee/balance]]></url>
+    <host ip="52.73.9.93">balance.mercury.basicattentiontoken.org</host>
+    <port>443</port>
+    <protocol>https</protocol>
+    <method><![CDATA[GET]]></method>
+    <path><![CDATA[/v2/wallet/ec30a106-addb-42dd-9c61-699822cc93ee/balance]]></path>
+    <extension>null</extension>
+    <request base64="true"><![CDATA[R0VUIC92Mi93YWxsZXQvZWMzMGExMDYtYWRkYi00MmRkLTljNjEtNjk5ODIyY2M5M2VlL2JhbGFuY2UgSFRUUC8xLjENCkhvc3Q6IGJhbGFuY2UubWVyY3VyeS5iYXNpY2F0dGVudGlvbnRva2VuLm9yZw0KQ29ubmVjdGlvbjogY2xvc2UNClVzZXItQWdlbnQ6IE1vemlsbGEvNS4wIChYMTE7IExpbnV4IHg4Nl82NCkgQXBwbGVXZWJLaXQvNTM3LjM2IChLSFRNTCwgbGlrZSBHZWNrbykgQ2hyb21lLzcwLjAuMzUzOC43NyBTYWZhcmkvNTM3LjM2DQpBY2NlcHQtRW5jb2Rpbmc6IGd6aXAsIGRlZmxhdGUNCg0K]]></request>
+    <status>200</status>
+    <responselength>859</responselength>
+    <mimetype>JSON</mimetype>
+    <response base64="true"><![CDATA[SFRUUC8xLjEgMjAwIE9LDQpTZXJ2ZXI6IENvd2JveQ0KQ29ubmVjdGlvbjogY2xvc2UNClgtUmF0ZS1MaW1pdC1SZW1haW5pbmc6IDU5DQpYLVJhdGUtTGltaXQtTGltaXQ6IDYwDQpYLVJhdGUtTGltaXQtUmVzZXQ6IDE1NDM5ODQ2NzgNCkNhY2hlLUNvbnRyb2w6IHByaXZhdGUNCkNvbnRlbnQtVHlwZTogYXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA0KVmFyeTogYWNjZXB0LWVuY29kaW5nDQpEYXRlOiBXZWQsIDA1IERlYyAyMDE4IDA0OjM2OjU4IEdNVA0KVmlhOiAxLjEgdmVndXINCkNvbnRlbnQtTGVuZ3RoOiA1NTMNCg0KeyJhbHRjdXJyZW5jeSI6IkJBVCIsInByb2JpIjoiMzAwMDAwMDAwMDAwMDAwMDAwMDAiLCJiYWxhbmNlIjoiMzAuMDAwMCIsInVuY29uZmlybWVkIjoiMC4wMDAwIiwicmF0ZXMiOnsiQlRDIjowLjAwMDA0MDQwNzcwNDUxODU5MSwiRVRIIjowLjAwMTQ1ODQzMDQwMDI0MDY3NiwiWFJQIjowLjQ1MDk4Mzc0MzQzMzg2NiwiQkNIIjowLjAwMTEwMTYzMzc0MzE1MDIwNCwiTFRDIjowLjAwNTE0MjAyMzM0NjMwMzUwMiwiREFTSCI6MC4wMDE5MTYxMDExOTMxNzMzNTksIkJURyI6MC4wMDk3OTY3MDgyMDU0NDI5NzYsIlVTRCI6MC4xNTY4MDY1NDcsIkVVUiI6MC4xMzgzOTMzODE0MTE5Nzh9LCJwYXJhbWV0ZXJzIjp7ImFkRnJlZSI6eyJjdXJyZW5jeSI6IkJBVCIsImZlZSI6eyJCQVQiOjMwfSwiY2hvaWNlcyI6eyJCQVQiOlsyMCwzMCw1MCw4NSwxMDBdfSwicmFuZ2UiOnsiQkFUIjpbMjAsMTAwXX0sImRheXMiOjMwfX0sImdyYW50cyI6W3siYWx0Y3VycmVuY3kiOiJCQVQiLCJleHBpcnlUaW1lIjoxNTUyNjA4MDAwLCJwcm9iaSI6IjMwMDAwMDAwMDAwMDAwMDAwMDAwIn1dfQ==]]></response>
+    <comment></comment>
+  </item>
+  <item>
+    <time>Tue Dec 04 22:37:57 CST 2018</time>
+    <url><![CDATA[https://balance.mercury.basicattentiontoken.org/v2/wallet/ec30a106-addb-42dd-9c61-699822cc93ee/balance]]></url>
+    <host ip="52.73.9.93">balance.mercury.basicattentiontoken.org</host>
+    <port>443</port>
+    <protocol>https</protocol>
+    <method><![CDATA[GET]]></method>
+    <path><![CDATA[/v2/wallet/ec30a106-addb-42dd-9c61-699822cc93ee/balance]]></path>
+    <extension>null</extension>
+    <request base64="true"><![CDATA[R0VUIC92Mi93YWxsZXQvZWMzMGExMDYtYWRkYi00MmRkLTljNjEtNjk5ODIyY2M5M2VlL2JhbGFuY2UgSFRUUC8xLjENCkhvc3Q6IGJhbGFuY2UubWVyY3VyeS5iYXNpY2F0dGVudGlvbnRva2VuLm9yZw0KQ29ubmVjdGlvbjogY2xvc2UNClVzZXItQWdlbnQ6IE1vemlsbGEvNS4wIChYMTE7IExpbnV4IHg4Nl82NCkgQXBwbGVXZWJLaXQvNTM3LjM2IChLSFRNTCwgbGlrZSBHZWNrbykgQ2hyb21lLzcwLjAuMzUzOC43NyBTYWZhcmkvNTM3LjM2DQpBY2NlcHQtRW5jb2Rpbmc6IGd6aXAsIGRlZmxhdGUNCg0K]]></request>
+    <status>200</status>
+    <responselength>859</responselength>
+    <mimetype>JSON</mimetype>
+    <response base64="true"><![CDATA[SFRUUC8xLjEgMjAwIE9LDQpTZXJ2ZXI6IENvd2JveQ0KQ29ubmVjdGlvbjogY2xvc2UNClgtUmF0ZS1MaW1pdC1SZW1haW5pbmc6IDU4DQpYLVJhdGUtTGltaXQtTGltaXQ6IDYwDQpYLVJhdGUtTGltaXQtUmVzZXQ6IDE1NDM5ODQ2NzgNCkNhY2hlLUNvbnRyb2w6IHByaXZhdGUNCkNvbnRlbnQtVHlwZTogYXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA0KVmFyeTogYWNjZXB0LWVuY29kaW5nDQpEYXRlOiBXZWQsIDA1IERlYyAyMDE4IDA0OjM3OjU4IEdNVA0KVmlhOiAxLjEgdmVndXINCkNvbnRlbnQtTGVuZ3RoOiA1NTMNCg0KeyJhbHRjdXJyZW5jeSI6IkJBVCIsInByb2JpIjoiMzAwMDAwMDAwMDAwMDAwMDAwMDAiLCJiYWxhbmNlIjoiMzAuMDAwMCIsInVuY29uZmlybWVkIjoiMC4wMDAwIiwicmF0ZXMiOnsiQlRDIjowLjAwMDA0MDQwNzcwNDUxODU5MSwiRVRIIjowLjAwMTQ1ODQzMDQwMDI0MDY3NiwiWFJQIjowLjQ1MDk4Mzc0MzQzMzg2NiwiQkNIIjowLjAwMTEwMTYzMzc0MzE1MDIwNCwiTFRDIjowLjAwNTE0MjAyMzM0NjMwMzUwMiwiREFTSCI6MC4wMDE5MTYxMDExOTMxNzMzNTksIkJURyI6MC4wMDk3OTY3MDgyMDU0NDI5NzYsIlVTRCI6MC4xNTY4MDY1NDcsIkVVUiI6MC4xMzgzOTMzODE0MTE5Nzh9LCJwYXJhbWV0ZXJzIjp7ImFkRnJlZSI6eyJjdXJyZW5jeSI6IkJBVCIsImZlZSI6eyJCQVQiOjMwfSwiY2hvaWNlcyI6eyJCQVQiOlsyMCwzMCw1MCw4NSwxMDBdfSwicmFuZ2UiOnsiQkFUIjpbMjAsMTAwXX0sImRheXMiOjMwfX0sImdyYW50cyI6W3siYWx0Y3VycmVuY3kiOiJCQVQiLCJleHBpcnlUaW1lIjoxNTUyNjA4MDAwLCJwcm9iaSI6IjMwMDAwMDAwMDAwMDAwMDAwMDAwIn1dfQ==]]></response>
+    <comment></comment>
+  </item>
+  <item>
+    <time>Tue Dec 04 22:38:53 CST 2018</time>
+    <url><![CDATA[https://no-thanks.invalid/ListAccounts?gpsia=1&source=durations_metrics,counter:0,load_time_ms:50&json=standard]]></url>
+    <host ip="">no-thanks.invalid</host>
+    <port>443</port>
+    <protocol>https</protocol>
+    <method><![CDATA[POST]]></method>
+    <path><![CDATA[/ListAccounts?gpsia=1&source=durations_metrics,counter:0,load_time_ms:50&json=standard]]></path>
+    <extension>null</extension>
+    <request base64="true"><![CDATA[UE9TVCAvTGlzdEFjY291bnRzP2dwc2lhPTEmc291cmNlPWR1cmF0aW9uc19tZXRyaWNzLGNvdW50ZXI6MCxsb2FkX3RpbWVfbXM6NTAmanNvbj1zdGFuZGFyZCBIVFRQLzEuMQ0KSG9zdDogbm8tdGhhbmtzLmludmFsaWQNCkNvbm5lY3Rpb246IGNsb3NlDQpDb250ZW50LUxlbmd0aDogMQ0KT3JpZ2luOiBodHRwczovL3d3dy5nb29nbGUuY29tDQpDb250ZW50LVR5cGU6IGFwcGxpY2F0aW9uL3gtd3d3LWZvcm0tdXJsZW5jb2RlZA0KVXNlci1BZ2VudDogTW96aWxsYS81LjAgKFgxMTsgTGludXggeDg2XzY0KSBBcHBsZVdlYktpdC81MzcuMzYgKEtIVE1MLCBsaWtlIEdlY2tvKSBDaHJvbWUvNzAuMC4zNTM4Ljc3IFNhZmFyaS81MzcuMzYNCkFjY2VwdC1FbmNvZGluZzogZ3ppcCwgZGVmbGF0ZQ0KQWNjZXB0LUxhbmd1YWdlOiBlbi1VUyxlbjtxPTAuOQ0KDQog]]></request>
+    <status></status>
+    <responselength></responselength>
+    <mimetype></mimetype>
+    <response base64="true"></response>
+    <comment></comment>
+  </item>
+  <item>
+    <time>Tue Dec 04 22:38:53 CST 2018</time>
+    <url><![CDATA[https://balance.mercury.basicattentiontoken.org/v2/wallet/ec30a106-addb-42dd-9c61-699822cc93ee/balance]]></url>
+    <host ip="52.73.9.93">balance.mercury.basicattentiontoken.org</host>
+    <port>443</port>
+    <protocol>https</protocol>
+    <method><![CDATA[GET]]></method>
+    <path><![CDATA[/v2/wallet/ec30a106-addb-42dd-9c61-699822cc93ee/balance]]></path>
+    <extension>null</extension>
+    <request base64="true"><![CDATA[R0VUIC92Mi93YWxsZXQvZWMzMGExMDYtYWRkYi00MmRkLTljNjEtNjk5ODIyY2M5M2VlL2JhbGFuY2UgSFRUUC8xLjENCkhvc3Q6IGJhbGFuY2UubWVyY3VyeS5iYXNpY2F0dGVudGlvbnRva2VuLm9yZw0KQ29ubmVjdGlvbjogY2xvc2UNClVzZXItQWdlbnQ6IE1vemlsbGEvNS4wIChYMTE7IExpbnV4IHg4Nl82NCkgQXBwbGVXZWJLaXQvNTM3LjM2IChLSFRNTCwgbGlrZSBHZWNrbykgQ2hyb21lLzcwLjAuMzUzOC43NyBTYWZhcmkvNTM3LjM2DQpBY2NlcHQtRW5jb2Rpbmc6IGd6aXAsIGRlZmxhdGUNCg0K]]></request>
+    <status>200</status>
+    <responselength>859</responselength>
+    <mimetype>JSON</mimetype>
+    <response base64="true"><![CDATA[SFRUUC8xLjEgMjAwIE9LDQpTZXJ2ZXI6IENvd2JveQ0KQ29ubmVjdGlvbjogY2xvc2UNClgtUmF0ZS1MaW1pdC1SZW1haW5pbmc6IDU5DQpYLVJhdGUtTGltaXQtTGltaXQ6IDYwDQpYLVJhdGUtTGltaXQtUmVzZXQ6IDE1NDM5ODQ3OTQNCkNhY2hlLUNvbnRyb2w6IHByaXZhdGUNCkNvbnRlbnQtVHlwZTogYXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA0KVmFyeTogYWNjZXB0LWVuY29kaW5nDQpEYXRlOiBXZWQsIDA1IERlYyAyMDE4IDA0OjM4OjU0IEdNVA0KVmlhOiAxLjEgdmVndXINCkNvbnRlbnQtTGVuZ3RoOiA1NTMNCg0KeyJhbHRjdXJyZW5jeSI6IkJBVCIsInByb2JpIjoiMzAwMDAwMDAwMDAwMDAwMDAwMDAiLCJiYWxhbmNlIjoiMzAuMDAwMCIsInVuY29uZmlybWVkIjoiMC4wMDAwIiwicmF0ZXMiOnsiQlRDIjowLjAwMDA0MDQwNzcwNDUxODU5MSwiRVRIIjowLjAwMTQ1ODQzMDQwMDI0MDY3NiwiWFJQIjowLjQ1MDk4Mzc0MzQzMzg2NiwiQkNIIjowLjAwMTEwMTYzMzc0MzE1MDIwNCwiTFRDIjowLjAwNTE0MjAyMzM0NjMwMzUwMiwiREFTSCI6MC4wMDE5MTYxMDExOTMxNzMzNTksIkJURyI6MC4wMDk3OTY3MDgyMDU0NDI5NzYsIlVTRCI6MC4xNTY4MDY1NDcsIkVVUiI6MC4xMzgzOTMzODE0MTE5Nzh9LCJwYXJhbWV0ZXJzIjp7ImFkRnJlZSI6eyJjdXJyZW5jeSI6IkJBVCIsImZlZSI6eyJCQVQiOjMwfSwiY2hvaWNlcyI6eyJCQVQiOlsyMCwzMCw1MCw4NSwxMDBdfSwicmFuZ2UiOnsiQkFUIjpbMjAsMTAwXX0sImRheXMiOjMwfX0sImdyYW50cyI6W3siYWx0Y3VycmVuY3kiOiJCQVQiLCJleHBpcnlUaW1lIjoxNTUyNjA4MDAwLCJwcm9iaSI6IjMwMDAwMDAwMDAwMDAwMDAwMDAwIn1dfQ==]]></response>
+    <comment></comment>
+  </item>
+  <item>
+    <time>Tue Dec 04 22:38:53 CST 2018</time>
+    <url><![CDATA[https://go-updater.brave.com/extensions]]></url>
+    <host ip="151.101.185.7">go-updater.brave.com</host>
+    <port>443</port>
+    <protocol>https</protocol>
+    <method><![CDATA[POST]]></method>
+    <path><![CDATA[/extensions]]></path>
+    <extension>null</extension>
+    <request base64="true"><![CDATA[UE9TVCAvZXh0ZW5zaW9ucyBIVFRQLzEuMQ0KSG9zdDogZ28tdXBkYXRlci5icmF2ZS5jb20NCkNvbm5lY3Rpb246IGNsb3NlDQpDb250ZW50LUxlbmd0aDogNjA5DQpYLUdvb2ctVXBkYXRlLUFwcElkOiBhZmFsYWtwbGZmbm5ubGtuY2poYm1haGpmamhtbGthbA0KWC1Hb29nLVVwZGF0ZS1JbnRlcmFjdGl2aXR5OiBmZw0KWC1Hb29nLVVwZGF0ZS1VcGRhdGVyOiAtNzAuMC41Ni4xMg0KQ29udGVudC1UeXBlOiBhcHBsaWNhdGlvbi94bWwNClVzZXItQWdlbnQ6IE1vemlsbGEvNS4wIChYMTE7IExpbnV4IHg4Nl82NCkgQXBwbGVXZWJLaXQvNTM3LjM2IChLSFRNTCwgbGlrZSBHZWNrbykgQ2hyb21lLzcwLjAuMzUzOC43NyBTYWZhcmkvNTM3LjM2DQpBY2NlcHQtRW5jb2Rpbmc6IGd6aXAsIGRlZmxhdGUNCg0KPD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48cmVxdWVzdCBwcm90b2NvbD0iMy4xIiBkZWR1cD0iY3IiIGFjY2VwdGZvcm1hdD0iY3J4MixjcngzIiBzZXNzaW9uaWQ9IntjZDM3MGZhNi1lODQzLTQzMmYtOGRiOS1kMGZiYjAzOTY0YTZ9IiByZXF1ZXN0aWQ9InthMDkzMjYyMC1iNzY4LTQ2YTktODk2ZC03NDEzYjNmMjE1MDJ9IiB1cGRhdGVyPSIiIHVwZGF0ZXJ2ZXJzaW9uPSI3MC4wLjU2LjEyIiBwcm9kdmVyc2lvbj0iNzAuMC41Ni4xMiIgbGFuZz0iIiB1cGRhdGVyY2hhbm5lbD0ic3RhYmxlIiBwcm9kY2hhbm5lbD0ic3RhYmxlIiBvcz0ibGludXgiIGFyY2g9Ing2NCIgbmFjbF9hcmNoPSJ4ODYtNjQiPjxodyBwaHlzbWVtb3J5PSI4Ii8+PG9zIHBsYXRmb3JtPSJMaW51eCIgYXJjaD0ieDg2XzY0IiB2ZXJzaW9uPSI0LjE4LjEzLTEwMC5mYzI3Lng4Nl82NCIvPjxhcHAgYXBwaWQ9ImFmYWxha3BsZmZubm5sa25jamhibWFoamZqaG1sa2FsIiB2ZXJzaW9uPSIxLjAuMyIgaW5zdGFsbHNvdXJjZT0ib25kZW1hbmQiIGVuYWJsZWQ9IjEiPjx1cGRhdGVjaGVjay8+PHBpbmcgcj0iLTIiIHBpbmdfZnJlc2huZXNzPSIiLz48L2FwcD48L3JlcXVlc3Q+]]></request>
+    <status>200</status>
+    <responselength>319</responselength>
+    <mimetype>XML</mimetype>
+    <response base64="true"><![CDATA[SFRUUC8xLjEgMjAwIE9LDQpDb250ZW50LVR5cGU6IGFwcGxpY2F0aW9uL3htbA0KQ29udGVudC1MZW5ndGg6IDUwDQpBY2NlcHQtUmFuZ2VzOiBieXRlcw0KRGF0ZTogV2VkLCAwNSBEZWMgMjAxOCAwNDozODo1NCBHTVQNClZpYTogMS4xIHZhcm5pc2gNCkNvbm5lY3Rpb246IGNsb3NlDQpYLVNlcnZlZC1CeTogY2FjaGUtbWR3MTczMzEtTURXDQpYLUNhY2hlOiBNSVNTDQpYLUNhY2hlLUhpdHM6IDANClgtVGltZXI6IFMxNTQzOTg0NzM0LjAzMDA5MSxWUzAsVkUxMg0KDQo8cmVzcG9uc2UgcHJvdG9jb2w9IjMuMSIgc2VydmVyPSJwcm9kIj48L3Jlc3BvbnNlPg==]]></response>
+    <comment></comment>
+  </item>
+  <item>
+    <time>Tue Dec 04 22:38:53 CST 2018</time>
+    <url><![CDATA[https://go-updater.brave.com/extensions]]></url>
+    <host ip="151.101.185.7">go-updater.brave.com</host>
+    <port>443</port>
+    <protocol>https</protocol>
+    <method><![CDATA[POST]]></method>
+    <path><![CDATA[/extensions]]></path>
+    <extension>null</extension>
+    <request base64="true"><![CDATA[UE9TVCAvZXh0ZW5zaW9ucyBIVFRQLzEuMQ0KSG9zdDogZ28tdXBkYXRlci5icmF2ZS5jb20NCkNvbm5lY3Rpb246IGNsb3NlDQpDb250ZW50LUxlbmd0aDogNjExDQpYLUdvb2ctVXBkYXRlLUFwcElkOiBvZW1tbmRjYmxkYm9pZWJmbmxhZGRhY2JkZm1hZGFkbQ0KWC1Hb29nLVVwZGF0ZS1JbnRlcmFjdGl2aXR5OiBmZw0KWC1Hb29nLVVwZGF0ZS1VcGRhdGVyOiAtNzAuMC41Ni4xMg0KQ29udGVudC1UeXBlOiBhcHBsaWNhdGlvbi94bWwNClVzZXItQWdlbnQ6IE1vemlsbGEvNS4wIChYMTE7IExpbnV4IHg4Nl82NCkgQXBwbGVXZWJLaXQvNTM3LjM2IChLSFRNTCwgbGlrZSBHZWNrbykgQ2hyb21lLzcwLjAuMzUzOC43NyBTYWZhcmkvNTM3LjM2DQpBY2NlcHQtRW5jb2Rpbmc6IGd6aXAsIGRlZmxhdGUNCg0KPD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48cmVxdWVzdCBwcm90b2NvbD0iMy4xIiBkZWR1cD0iY3IiIGFjY2VwdGZvcm1hdD0iY3J4MixjcngzIiBzZXNzaW9uaWQ9InthODBkNmI4YS0yNzY5LTRiOWYtYWIwNy1lNmVkYmE4OTZkOWZ9IiByZXF1ZXN0aWQ9IntlOTBjMDhhNy1kZDg3LTRhMzMtYWM2OC00YTJlNzI0NmUyZWF9IiB1cGRhdGVyPSIiIHVwZGF0ZXJ2ZXJzaW9uPSI3MC4wLjU2LjEyIiBwcm9kdmVyc2lvbj0iNzAuMC41Ni4xMiIgbGFuZz0iIiB1cGRhdGVyY2hhbm5lbD0ic3RhYmxlIiBwcm9kY2hhbm5lbD0ic3RhYmxlIiBvcz0ibGludXgiIGFyY2g9Ing2NCIgbmFjbF9hcmNoPSJ4ODYtNjQiPjxodyBwaHlzbWVtb3J5PSI4Ii8+PG9zIHBsYXRmb3JtPSJMaW51eCIgYXJjaD0ieDg2XzY0IiB2ZXJzaW9uPSI0LjE4LjEzLTEwMC5mYzI3Lng4Nl82NCIvPjxhcHAgYXBwaWQ9Im9lbW1uZGNibGRib2llYmZubGFkZGFjYmRmbWFkYWRtIiB2ZXJzaW9uPSIyLjAuNjczIiBpbnN0YWxsc291cmNlPSJvbmRlbWFuZCIgZW5hYmxlZD0iMSI+PHVwZGF0ZWNoZWNrLz48cGluZyByPSItMiIgcGluZ19mcmVzaG5lc3M9IiIvPjwvYXBwPjwvcmVxdWVzdD4=]]></request>
+    <status>200</status>
+    <responselength>319</responselength>
+    <mimetype>XML</mimetype>
+    <response base64="true"><![CDATA[SFRUUC8xLjEgMjAwIE9LDQpDb250ZW50LVR5cGU6IGFwcGxpY2F0aW9uL3htbA0KQ29udGVudC1MZW5ndGg6IDUwDQpBY2NlcHQtUmFuZ2VzOiBieXRlcw0KRGF0ZTogV2VkLCAwNSBEZWMgMjAxOCAwNDozODo1NCBHTVQNClZpYTogMS4xIHZhcm5pc2gNCkNvbm5lY3Rpb246IGNsb3NlDQpYLVNlcnZlZC1CeTogY2FjaGUtbWR3MTczNTYtTURXDQpYLUNhY2hlOiBNSVNTDQpYLUNhY2hlLUhpdHM6IDANClgtVGltZXI6IFMxNTQzOTg0NzM0LjAzNDMzMSxWUzAsVkU4OQ0KDQo8cmVzcG9uc2UgcHJvdG9jb2w9IjMuMSIgc2VydmVyPSJwcm9kIj48L3Jlc3BvbnNlPg==]]></response>
+    <comment></comment>
+  </item>
+  <item>
+    <time>Tue Dec 04 22:38:53 CST 2018</time>
+    <url><![CDATA[https://go-updater.brave.com/extensions]]></url>
+    <host ip="151.101.185.7">go-updater.brave.com</host>
+    <port>443</port>
+    <protocol>https</protocol>
+    <method><![CDATA[POST]]></method>
+    <path><![CDATA[/extensions]]></path>
+    <extension>null</extension>
+    <request base64="true"><![CDATA[UE9TVCAvZXh0ZW5zaW9ucyBIVFRQLzEuMQ0KSG9zdDogZ28tdXBkYXRlci5icmF2ZS5jb20NCkNvbm5lY3Rpb246IGNsb3NlDQpDb250ZW50LUxlbmd0aDogNjEwDQpYLUdvb2ctVXBkYXRlLUFwcElkOiBjZmZrcGJhbG1sbGtkb2VuaG1kbXBia2FqaXBkamZhbQ0KWC1Hb29nLVVwZGF0ZS1JbnRlcmFjdGl2aXR5OiBmZw0KWC1Hb29nLVVwZGF0ZS1VcGRhdGVyOiAtNzAuMC41Ni4xMg0KQ29udGVudC1UeXBlOiBhcHBsaWNhdGlvbi94bWwNClVzZXItQWdlbnQ6IE1vemlsbGEvNS4wIChYMTE7IExpbnV4IHg4Nl82NCkgQXBwbGVXZWJLaXQvNTM3LjM2IChLSFRNTCwgbGlrZSBHZWNrbykgQ2hyb21lLzcwLjAuMzUzOC43NyBTYWZhcmkvNTM3LjM2DQpBY2NlcHQtRW5jb2Rpbmc6IGd6aXAsIGRlZmxhdGUNCg0KPD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48cmVxdWVzdCBwcm90b2NvbD0iMy4xIiBkZWR1cD0iY3IiIGFjY2VwdGZvcm1hdD0iY3J4MixjcngzIiBzZXNzaW9uaWQ9InswNWVlYmU1Yi1kMWJhLTQ0ZjQtOGFmNS04MWU1M2M2OGUzNzB9IiByZXF1ZXN0aWQ9InthZTQ4NDI3MC0wZmY1LTQ1OWQtYTI4My00OGMzZDdhZjEzZWN9IiB1cGRhdGVyPSIiIHVwZGF0ZXJ2ZXJzaW9uPSI3MC4wLjU2LjEyIiBwcm9kdmVyc2lvbj0iNzAuMC41Ni4xMiIgbGFuZz0iIiB1cGRhdGVyY2hhbm5lbD0ic3RhYmxlIiBwcm9kY2hhbm5lbD0ic3RhYmxlIiBvcz0ibGludXgiIGFyY2g9Ing2NCIgbmFjbF9hcmNoPSJ4ODYtNjQiPjxodyBwaHlzbWVtb3J5PSI4Ii8+PG9zIHBsYXRmb3JtPSJMaW51eCIgYXJjaD0ieDg2XzY0IiB2ZXJzaW9uPSI0LjE4LjEzLTEwMC5mYzI3Lng4Nl82NCIvPjxhcHAgYXBwaWQ9ImNmZmtwYmFsbWxsa2RvZW5obWRtcGJrYWppcGRqZmFtIiB2ZXJzaW9uPSIxLjAuNjIiIGluc3RhbGxzb3VyY2U9Im9uZGVtYW5kIiBlbmFibGVkPSIxIj48dXBkYXRlY2hlY2svPjxwaW5nIHI9Ii0yIiBwaW5nX2ZyZXNobmVzcz0iIi8+PC9hcHA+PC9yZXF1ZXN0Pg==]]></request>
+    <status>200</status>
+    <responselength>319</responselength>
+    <mimetype>XML</mimetype>
+    <response base64="true"><![CDATA[SFRUUC8xLjEgMjAwIE9LDQpDb250ZW50LVR5cGU6IGFwcGxpY2F0aW9uL3htbA0KQ29udGVudC1MZW5ndGg6IDUwDQpBY2NlcHQtUmFuZ2VzOiBieXRlcw0KRGF0ZTogV2VkLCAwNSBEZWMgMjAxOCAwNDozODo1NCBHTVQNClZpYTogMS4xIHZhcm5pc2gNCkNvbm5lY3Rpb246IGNsb3NlDQpYLVNlcnZlZC1CeTogY2FjaGUtbWR3MTczMzEtTURXDQpYLUNhY2hlOiBNSVNTDQpYLUNhY2hlLUhpdHM6IDANClgtVGltZXI6IFMxNTQzOTg0NzM0LjAzMDIwOCxWUzAsVkU4OQ0KDQo8cmVzcG9uc2UgcHJvdG9jb2w9IjMuMSIgc2VydmVyPSJwcm9kIj48L3Jlc3BvbnNlPg==]]></response>
+    <comment></comment>
+  </item>
+  <item>
+    <time>Tue Dec 04 22:38:53 CST 2018</time>
+    <url><![CDATA[https://go-updater.brave.com/extensions]]></url>
+    <host ip="151.101.185.7">go-updater.brave.com</host>
+    <port>443</port>
+    <protocol>https</protocol>
+    <method><![CDATA[POST]]></method>
+    <path><![CDATA[/extensions]]></path>
+    <extension>null</extension>
+    <request base64="true"><![CDATA[UE9TVCAvZXh0ZW5zaW9ucyBIVFRQLzEuMQ0KSG9zdDogZ28tdXBkYXRlci5icmF2ZS5jb20NCkNvbm5lY3Rpb246IGNsb3NlDQpDb250ZW50LUxlbmd0aDogNjA5DQpYLUdvb2ctVXBkYXRlLUFwcElkOiBiaWFocGdiZG1ka2ZnbmRjbWZpaXBnY2Vib2JvamprcA0KWC1Hb29nLVVwZGF0ZS1JbnRlcmFjdGl2aXR5OiBmZw0KWC1Hb29nLVVwZGF0ZS1VcGRhdGVyOiAtNzAuMC41Ni4xMg0KQ29udGVudC1UeXBlOiBhcHBsaWNhdGlvbi94bWwNClVzZXItQWdlbnQ6IE1vemlsbGEvNS4wIChYMTE7IExpbnV4IHg4Nl82NCkgQXBwbGVXZWJLaXQvNTM3LjM2IChLSFRNTCwgbGlrZSBHZWNrbykgQ2hyb21lLzcwLjAuMzUzOC43NyBTYWZhcmkvNTM3LjM2DQpBY2NlcHQtRW5jb2Rpbmc6IGd6aXAsIGRlZmxhdGUNCg0KPD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48cmVxdWVzdCBwcm90b2NvbD0iMy4xIiBkZWR1cD0iY3IiIGFjY2VwdGZvcm1hdD0iY3J4MixjcngzIiBzZXNzaW9uaWQ9InszYzEzM2I5MC01ZjNjLTQ2ZTgtYjg2OS0xMDZlZTE0ZmQyZTl9IiByZXF1ZXN0aWQ9Ins0OWRlYmNjNi1mNGRlLTQ4MTgtYmEzMy1lZThjZGQ1YWE0Mjh9IiB1cGRhdGVyPSIiIHVwZGF0ZXJ2ZXJzaW9uPSI3MC4wLjU2LjEyIiBwcm9kdmVyc2lvbj0iNzAuMC41Ni4xMiIgbGFuZz0iIiB1cGRhdGVyY2hhbm5lbD0ic3RhYmxlIiBwcm9kY2hhbm5lbD0ic3RhYmxlIiBvcz0ibGludXgiIGFyY2g9Ing2NCIgbmFjbF9hcmNoPSJ4ODYtNjQiPjxodyBwaHlzbWVtb3J5PSI4Ii8+PG9zIHBsYXRmb3JtPSJMaW51eCIgYXJjaD0ieDg2XzY0IiB2ZXJzaW9uPSI0LjE4LjEzLTEwMC5mYzI3Lng4Nl82NCIvPjxhcHAgYXBwaWQ9ImJpYWhwZ2JkbWRrZmduZGNtZmlpcGdjZWJvYm9qamtwIiB2ZXJzaW9uPSIxLjAuMyIgaW5zdGFsbHNvdXJjZT0ib25kZW1hbmQiIGVuYWJsZWQ9IjEiPjx1cGRhdGVjaGVjay8+PHBpbmcgcj0iLTIiIHBpbmdfZnJlc2huZXNzPSIiLz48L2FwcD48L3JlcXVlc3Q+]]></request>
+    <status>200</status>
+    <responselength>319</responselength>
+    <mimetype>XML</mimetype>
+    <response base64="true"><![CDATA[SFRUUC8xLjEgMjAwIE9LDQpDb250ZW50LVR5cGU6IGFwcGxpY2F0aW9uL3htbA0KQ29udGVudC1MZW5ndGg6IDUwDQpBY2NlcHQtUmFuZ2VzOiBieXRlcw0KRGF0ZTogV2VkLCAwNSBEZWMgMjAxOCAwNDozODo1NCBHTVQNClZpYTogMS4xIHZhcm5pc2gNCkNvbm5lY3Rpb246IGNsb3NlDQpYLVNlcnZlZC1CeTogY2FjaGUtbWR3MTczNzItTURXDQpYLUNhY2hlOiBNSVNTDQpYLUNhY2hlLUhpdHM6IDANClgtVGltZXI6IFMxNTQzOTg0NzM0LjAzNDM4NSxWUzAsVkU4Ng0KDQo8cmVzcG9uc2UgcHJvdG9jb2w9IjMuMSIgc2VydmVyPSJwcm9kIj48L3Jlc3BvbnNlPg==]]></response>
+    <comment></comment>
+  </item>
+  <item>
+    <time>Tue Dec 04 22:38:53 CST 2018</time>
+    <url><![CDATA[https://go-updater.brave.com/extensions]]></url>
+    <host ip="151.101.185.7">go-updater.brave.com</host>
+    <port>443</port>
+    <protocol>https</protocol>
+    <method><![CDATA[POST]]></method>
+    <path><![CDATA[/extensions]]></path>
+    <extension>null</extension>
+    <request base64="true"><![CDATA[UE9TVCAvZXh0ZW5zaW9ucyBIVFRQLzEuMQ0KSG9zdDogZ28tdXBkYXRlci5icmF2ZS5jb20NCkNvbm5lY3Rpb246IGNsb3NlDQpDb250ZW50LUxlbmd0aDogNjA5DQpYLUdvb2ctVXBkYXRlLUFwcElkOiBvb2ZpYW5hbmJvb2RqYmJtZGVsZ2RvbW1paGpia2ZhZw0KWC1Hb29nLVVwZGF0ZS1JbnRlcmFjdGl2aXR5OiBmZw0KWC1Hb29nLVVwZGF0ZS1VcGRhdGVyOiAtNzAuMC41Ni4xMg0KQ29udGVudC1UeXBlOiBhcHBsaWNhdGlvbi94bWwNClVzZXItQWdlbnQ6IE1vemlsbGEvNS4wIChYMTE7IExpbnV4IHg4Nl82NCkgQXBwbGVXZWJLaXQvNTM3LjM2IChLSFRNTCwgbGlrZSBHZWNrbykgQ2hyb21lLzcwLjAuMzUzOC43NyBTYWZhcmkvNTM3LjM2DQpBY2NlcHQtRW5jb2Rpbmc6IGd6aXAsIGRlZmxhdGUNCg0KPD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48cmVxdWVzdCBwcm90b2NvbD0iMy4xIiBkZWR1cD0iY3IiIGFjY2VwdGZvcm1hdD0iY3J4MixjcngzIiBzZXNzaW9uaWQ9InswMzY0NTVhNy1hYzRiLTQzYTMtYWQxNC02MGNiNDdlMjM3ODh9IiByZXF1ZXN0aWQ9InsyNmUxODQ1NS0yOWFlLTRiMWYtODZmMS1mZDM0YTEwYjdiM2N9IiB1cGRhdGVyPSIiIHVwZGF0ZXJ2ZXJzaW9uPSI3MC4wLjU2LjEyIiBwcm9kdmVyc2lvbj0iNzAuMC41Ni4xMiIgbGFuZz0iIiB1cGRhdGVyY2hhbm5lbD0ic3RhYmxlIiBwcm9kY2hhbm5lbD0ic3RhYmxlIiBvcz0ibGludXgiIGFyY2g9Ing2NCIgbmFjbF9hcmNoPSJ4ODYtNjQiPjxodyBwaHlzbWVtb3J5PSI4Ii8+PG9zIHBsYXRmb3JtPSJMaW51eCIgYXJjaD0ieDg2XzY0IiB2ZXJzaW9uPSI0LjE4LjEzLTEwMC5mYzI3Lng4Nl82NCIvPjxhcHAgYXBwaWQ9Im9vZmlhbmFuYm9vZGpiYm1kZWxnZG9tbWloamJrZmFnIiB2ZXJzaW9uPSIxLjAuOCIgaW5zdGFsbHNvdXJjZT0ib25kZW1hbmQiIGVuYWJsZWQ9IjEiPjx1cGRhdGVjaGVjay8+PHBpbmcgcj0iLTIiIHBpbmdfZnJlc2huZXNzPSIiLz48L2FwcD48L3JlcXVlc3Q+]]></request>
+    <status>200</status>
+    <responselength>319</responselength>
+    <mimetype>XML</mimetype>
+    <response base64="true"><![CDATA[SFRUUC8xLjEgMjAwIE9LDQpDb250ZW50LVR5cGU6IGFwcGxpY2F0aW9uL3htbA0KQ29udGVudC1MZW5ndGg6IDUwDQpBY2NlcHQtUmFuZ2VzOiBieXRlcw0KRGF0ZTogV2VkLCAwNSBEZWMgMjAxOCAwNDozODo1NCBHTVQNClZpYTogMS4xIHZhcm5pc2gNCkNvbm5lY3Rpb246IGNsb3NlDQpYLVNlcnZlZC1CeTogY2FjaGUtbWR3MTczNDYtTURXDQpYLUNhY2hlOiBNSVNTDQpYLUNhY2hlLUhpdHM6IDANClgtVGltZXI6IFMxNTQzOTg0NzM0LjAzNzY3MSxWUzAsVkU4Ng0KDQo8cmVzcG9uc2UgcHJvdG9jb2w9IjMuMSIgc2VydmVyPSJwcm9kIj48L3Jlc3BvbnNlPg==]]></response>
+    <comment></comment>
+  </item>
+  <item>
+    <time>Tue Dec 04 22:38:53 CST 2018</time>
+    <url><![CDATA[https://ledger.mercury.basicattentiontoken.org/v2/grants?paymentId=ec30a106-addb-42dd-9c61-699822cc93ee]]></url>
+    <host ip="52.203.53.176">ledger.mercury.basicattentiontoken.org</host>
+    <port>443</port>
+    <protocol>https</protocol>
+    <method><![CDATA[GET]]></method>
+    <path><![CDATA[/v2/grants?paymentId=ec30a106-addb-42dd-9c61-699822cc93ee]]></path>
+    <extension>null</extension>
+    <request base64="true"><![CDATA[R0VUIC92Mi9ncmFudHM/cGF5bWVudElkPWVjMzBhMTA2LWFkZGItNDJkZC05YzYxLTY5OTgyMmNjOTNlZSBIVFRQLzEuMQ0KSG9zdDogbGVkZ2VyLm1lcmN1cnkuYmFzaWNhdHRlbnRpb250b2tlbi5vcmcNCkNvbm5lY3Rpb246IGNsb3NlDQpVc2VyLUFnZW50OiBNb3ppbGxhLzUuMCAoWDExOyBMaW51eCB4ODZfNjQpIEFwcGxlV2ViS2l0LzUzNy4zNiAoS0hUTUwsIGxpa2UgR2Vja28pIENocm9tZS83MC4wLjM1MzguNzcgU2FmYXJpLzUzNy4zNg0KQWNjZXB0LUVuY29kaW5nOiBnemlwLCBkZWZsYXRlDQoNCg==]]></request>
+    <status>404</status>
+    <responselength>387</responselength>
+    <mimetype>JSON</mimetype>
+    <response base64="true"><![CDATA[SFRUUC8xLjEgNDA0IE5vdCBGb3VuZA0KU2VydmVyOiBDb3dib3kNCkNvbm5lY3Rpb246IGNsb3NlDQpYLVJhdGUtTGltaXQtUmVtYWluaW5nOiA1OQ0KWC1SYXRlLUxpbWl0LUxpbWl0OiA2MA0KWC1SYXRlLUxpbWl0LVJlc2V0OiAxNTQzOTg0Nzk0DQpDb250ZW50LVR5cGU6IGFwcGxpY2F0aW9uL2pzb247IGNoYXJzZXQ9dXRmLTgNCkNhY2hlLUNvbnRyb2w6IG5vLWNhY2hlDQpWYXJ5OiBhY2NlcHQtZW5jb2RpbmcNCkRhdGU6IFdlZCwgMDUgRGVjIDIwMTggMDQ6Mzg6NTQgR01UDQpWaWE6IDEuMSB2ZWd1cg0KQ29udGVudC1MZW5ndGg6IDc0DQoNCnsic3RhdHVzQ29kZSI6NDA0LCJlcnJvciI6Ik5vdCBGb3VuZCIsIm1lc3NhZ2UiOiJubyBwcm9tb3Rpb25zIGF2YWlsYWJsZSJ9]]></response>
+    <comment></comment>
+  </item>
+  <item>
+    <time>Tue Dec 04 22:38:54 CST 2018</time>
+    <url><![CDATA[https://laptop-updates.brave.com/promo/custom-headers]]></url>
+    <host ip="151.101.185.7">laptop-updates.brave.com</host>
+    <port>443</port>
+    <protocol>https</protocol>
+    <method><![CDATA[GET]]></method>
+    <path><![CDATA[/promo/custom-headers]]></path>
+    <extension>null</extension>
+    <request base64="true"><![CDATA[R0VUIC9wcm9tby9jdXN0b20taGVhZGVycyBIVFRQLzEuMQ0KSG9zdDogbGFwdG9wLXVwZGF0ZXMuYnJhdmUuY29tDQpDb25uZWN0aW9uOiBjbG9zZQ0KUHJhZ21hOiBuby1jYWNoZQ0KQ2FjaGUtQ29udHJvbDogbm8tY2FjaGUNClVzZXItQWdlbnQ6IE1vemlsbGEvNS4wIChYMTE7IExpbnV4IHg4Nl82NCkgQXBwbGVXZWJLaXQvNTM3LjM2IChLSFRNTCwgbGlrZSBHZWNrbykgQ2hyb21lLzcwLjAuMzUzOC43NyBTYWZhcmkvNTM3LjM2DQpBY2NlcHQtRW5jb2Rpbmc6IGd6aXAsIGRlZmxhdGUNCg0K]]></request>
+    <status>200</status>
+    <responselength>753</responselength>
+    <mimetype>JSON</mimetype>
+    <response base64="true"><![CDATA[SFRUUC8xLjEgMjAwIE9LDQpTZXJ2ZXI6IENvd2JveQ0KQ2FjaGUtQ29udHJvbDogbm8tY2FjaGUsIG5vLXN0b3JlLCBtdXN0LXJldmFsaWRhdGUsIHByaXZhdGUsIG1heC1hZ2U9MA0KUHJhZ21hOiBuby1jYWNoZQ0KRXhwaXJlczogMA0KVmlhOiAxLjEgdmVndXINCkFjY2VwdC1SYW5nZXM6IGJ5dGVzDQpBY2NlcHQtUmFuZ2VzOiBieXRlcw0KRGF0ZTogV2VkLCAwNSBEZWMgMjAxOCAwNDozODo1NCBHTVQNClZpYTogMS4xIHZhcm5pc2gNCkFnZTogMA0KQ29ubmVjdGlvbjogY2xvc2UNClgtU2VydmVkLUJ5OiBjYWNoZS1tZHcxNzMyMS1NRFcNClgtQ2FjaGU6IE1JU1MNClgtQ2FjaGUtSGl0czogMA0KWC1UaW1lcjogUzE1NDM5ODQ3MzUuNTU1NzEzLFZTMCxWRTE1Mg0KVmFyeTogYWNjZXB0LWVuY29kaW5nDQpDb250ZW50LUxlbmd0aDogMzI2DQoNClt7ImRvbWFpbnMiOlsibWFya2V0d2F0Y2guY29tIiwiYmFycm9ucy5jb20iXSwiaGVhZGVycyI6eyJYLUJyYXZlLVBhcnRuZXIiOiJkb3dqb25lcyJ9LCJjb29raWVOYW1lcyI6W10sImV4cGlyYXRpb24iOjMxNTM2MDAwMDAwfSx7ImRvbWFpbnMiOlsidG93bnNxdWFyZWJsb2dzLmNvbSIsInRhc3Rlb2Zjb3VudHJ5LmNvbSIsInVsdGltYXRlY2xhc3NpY3JvY2suY29tIiwieHhsbWFnLmNvbSIsInBvcGNydXNoLmNvbSJdLCJoZWFkZXJzIjp7IlgtQnJhdmUtUGFydG5lciI6InRvd25zcXVhcmUifSwiY29va2llTmFtZXMiOltdLCJleHBpcmF0aW9uIjozMTUzNjAwMDAwMH1d]]></response>
+    <comment></comment>
+  </item>
+  <item>
+    <time>Tue Dec 04 22:38:58 CST 2018</time>
+    <url><![CDATA[http://czbllgwhx/]]></url>
+    <host ip="">czbllgwhx</host>
+    <port>80</port>
+    <protocol>http</protocol>
+    <method><![CDATA[HEAD]]></method>
+    <path><![CDATA[/]]></path>
+    <extension>null</extension>
+    <request base64="true"><![CDATA[SEVBRCAvIEhUVFAvMS4xDQpIb3N0OiBjemJsbGd3aHgNClVzZXItQWdlbnQ6IE1vemlsbGEvNS4wIChYMTE7IExpbnV4IHg4Nl82NCkgQXBwbGVXZWJLaXQvNTM3LjM2IChLSFRNTCwgbGlrZSBHZWNrbykgQ2hyb21lLzcwLjAuMzUzOC43NyBTYWZhcmkvNTM3LjM2DQpBY2NlcHQtRW5jb2Rpbmc6IGd6aXAsIGRlZmxhdGUNCkNvbm5lY3Rpb246IGNsb3NlDQoNCg==]]></request>
+    <status></status>
+    <responselength></responselength>
+    <mimetype></mimetype>
+    <response base64="true"></response>
+    <comment></comment>
+  </item>
+  <item>
+    <time>Tue Dec 04 22:38:58 CST 2018</time>
+    <url><![CDATA[http://bnbdwxvk/]]></url>
+    <host ip="">bnbdwxvk</host>
+    <port>80</port>
+    <protocol>http</protocol>
+    <method><![CDATA[HEAD]]></method>
+    <path><![CDATA[/]]></path>
+    <extension>null</extension>
+    <request base64="true"><![CDATA[SEVBRCAvIEhUVFAvMS4xDQpIb3N0OiBibmJkd3h2aw0KVXNlci1BZ2VudDogTW96aWxsYS81LjAgKFgxMTsgTGludXggeDg2XzY0KSBBcHBsZVdlYktpdC81MzcuMzYgKEtIVE1MLCBsaWtlIEdlY2tvKSBDaHJvbWUvNzAuMC4zNTM4Ljc3IFNhZmFyaS81MzcuMzYNCkFjY2VwdC1FbmNvZGluZzogZ3ppcCwgZGVmbGF0ZQ0KQ29ubmVjdGlvbjogY2xvc2UNCg0K]]></request>
+    <status></status>
+    <responselength></responselength>
+    <mimetype></mimetype>
+    <response base64="true"></response>
+    <comment></comment>
+  </item>
+  <item>
+    <time>Tue Dec 04 22:38:58 CST 2018</time>
+    <url><![CDATA[http://aoeknuspxq/]]></url>
+    <host ip="">aoeknuspxq</host>
+    <port>80</port>
+    <protocol>http</protocol>
+    <method><![CDATA[HEAD]]></method>
+    <path><![CDATA[/]]></path>
+    <extension>null</extension>
+    <request base64="true"><![CDATA[SEVBRCAvIEhUVFAvMS4xDQpIb3N0OiBhb2VrbnVzcHhxDQpVc2VyLUFnZW50OiBNb3ppbGxhLzUuMCAoWDExOyBMaW51eCB4ODZfNjQpIEFwcGxlV2ViS2l0LzUzNy4zNiAoS0hUTUwsIGxpa2UgR2Vja28pIENocm9tZS83MC4wLjM1MzguNzcgU2FmYXJpLzUzNy4zNg0KQWNjZXB0LUVuY29kaW5nOiBnemlwLCBkZWZsYXRlDQpDb25uZWN0aW9uOiBjbG9zZQ0KDQo=]]></request>
+    <status></status>
+    <responselength></responselength>
+    <mimetype></mimetype>
+    <response base64="true"></response>
+    <comment></comment>
+  </item>
+  <item>
+    <time>Tue Dec 04 22:39:53 CST 2018</time>
+    <url><![CDATA[https://balance.mercury.basicattentiontoken.org/v2/wallet/ec30a106-addb-42dd-9c61-699822cc93ee/balance]]></url>
+    <host ip="52.73.9.93">balance.mercury.basicattentiontoken.org</host>
+    <port>443</port>
+    <protocol>https</protocol>
+    <method><![CDATA[GET]]></method>
+    <path><![CDATA[/v2/wallet/ec30a106-addb-42dd-9c61-699822cc93ee/balance]]></path>
+    <extension>null</extension>
+    <request base64="true"><![CDATA[R0VUIC92Mi93YWxsZXQvZWMzMGExMDYtYWRkYi00MmRkLTljNjEtNjk5ODIyY2M5M2VlL2JhbGFuY2UgSFRUUC8xLjENCkhvc3Q6IGJhbGFuY2UubWVyY3VyeS5iYXNpY2F0dGVudGlvbnRva2VuLm9yZw0KQ29ubmVjdGlvbjogY2xvc2UNClVzZXItQWdlbnQ6IE1vemlsbGEvNS4wIChYMTE7IExpbnV4IHg4Nl82NCkgQXBwbGVXZWJLaXQvNTM3LjM2IChLSFRNTCwgbGlrZSBHZWNrbykgQ2hyb21lLzcwLjAuMzUzOC43NyBTYWZhcmkvNTM3LjM2DQpBY2NlcHQtRW5jb2Rpbmc6IGd6aXAsIGRlZmxhdGUNCg0K]]></request>
+    <status>200</status>
+    <responselength>859</responselength>
+    <mimetype>JSON</mimetype>
+    <response base64="true"><![CDATA[SFRUUC8xLjEgMjAwIE9LDQpTZXJ2ZXI6IENvd2JveQ0KQ29ubmVjdGlvbjogY2xvc2UNClgtUmF0ZS1MaW1pdC1SZW1haW5pbmc6IDU4DQpYLVJhdGUtTGltaXQtTGltaXQ6IDYwDQpYLVJhdGUtTGltaXQtUmVzZXQ6IDE1NDM5ODQ3OTQNCkNhY2hlLUNvbnRyb2w6IHByaXZhdGUNCkNvbnRlbnQtVHlwZTogYXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA0KVmFyeTogYWNjZXB0LWVuY29kaW5nDQpEYXRlOiBXZWQsIDA1IERlYyAyMDE4IDA0OjM5OjU0IEdNVA0KVmlhOiAxLjEgdmVndXINCkNvbnRlbnQtTGVuZ3RoOiA1NTMNCg0KeyJhbHRjdXJyZW5jeSI6IkJBVCIsInByb2JpIjoiMzAwMDAwMDAwMDAwMDAwMDAwMDAiLCJiYWxhbmNlIjoiMzAuMDAwMCIsInVuY29uZmlybWVkIjoiMC4wMDAwIiwicmF0ZXMiOnsiQlRDIjowLjAwMDA0MDQwNzcwNDUxODU5MSwiRVRIIjowLjAwMTQ1ODQzMDQwMDI0MDY3NiwiWFJQIjowLjQ1MDk4Mzc0MzQzMzg2NiwiQkNIIjowLjAwMTEwMTYzMzc0MzE1MDIwNCwiTFRDIjowLjAwNTE0MjAyMzM0NjMwMzUwMiwiREFTSCI6MC4wMDE5MTYxMDExOTMxNzMzNTksIkJURyI6MC4wMDk3OTY3MDgyMDU0NDI5NzYsIlVTRCI6MC4xNTY4MDY1NDcsIkVVUiI6MC4xMzgzOTMzODE0MTE5Nzh9LCJwYXJhbWV0ZXJzIjp7ImFkRnJlZSI6eyJjdXJyZW5jeSI6IkJBVCIsImZlZSI6eyJCQVQiOjMwfSwiY2hvaWNlcyI6eyJCQVQiOlsyMCwzMCw1MCw4NSwxMDBdfSwicmFuZ2UiOnsiQkFUIjpbMjAsMTAwXX0sImRheXMiOjMwfX0sImdyYW50cyI6W3siYWx0Y3VycmVuY3kiOiJCQVQiLCJleHBpcnlUaW1lIjoxNTUyNjA4MDAwLCJwcm9iaSI6IjMwMDAwMDAwMDAwMDAwMDAwMDAwIn1dfQ==]]></response>
+    <comment></comment>
+  </item>
+</items>
